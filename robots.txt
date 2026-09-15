@@ -1,0 +1,8 @@
+# The public site and the location network. The four portals are not part
+# of this deployment at all - they are not in the bundle to disallow.
+User-agent: *
+Allow: /
+
+# Not ready for a family to arrive on from a search.
+
+Sitemap: https://mymusiclessons.uk/sitemap.xml
