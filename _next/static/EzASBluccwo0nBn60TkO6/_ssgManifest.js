@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fscreen","\u002Fmusic-lessons\u002Fplace","\u002Fsite\u002Fslug"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
