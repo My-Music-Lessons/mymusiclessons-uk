@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PIANO. The lid comes into focus and crashes shut on the bell beat.
+     Replaces piano-existing. Drawn, not photographed. No people. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="A grand piano in a music room, its lid raised">
+  <defs>
+    <filter id="far" x="-14%" y="-14%" width="128%" height="128%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="13"/></filter>
+    <filter id="near" x="-14%" y="-14%" width="128%" height="128%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="3.4"/></filter>
+    <linearGradient id="wall" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#3f2a4c"/><stop offset="0.6" stop-color="#32203c"/><stop offset="1" stop-color="#2b1933"/>
+    </linearGradient>
+    <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5c4069"/><stop offset="1" stop-color="#33223c"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#d5fbff" stop-opacity="0.5"/><stop offset="1" stop-color="#ff98ae" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="shaft" x1="0.68" y1="0" x2="0.2" y2="1">
+      <stop offset="0" stop-color="#ffe9cf" stop-opacity="0.2"/><stop offset="0.55" stop-color="#ffdcc0" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffdcc0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="bloom" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff0dc" stop-opacity="0.26"/><stop offset="0.55" stop-color="#ffd6bf" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#ffd6bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx="0.72" cy="0.26" r="0.74">
+      <stop offset="0" stop-color="#ffdcb8" stop-opacity="0.3"/><stop offset="0.55" stop-color="#ffc8d4" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#ffc8d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="focusglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd9c4" stop-opacity="0.55"/><stop offset="1" stop-color="#ffd9c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="settle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1933" stop-opacity="0"/><stop offset="1" stop-color="#2b1933" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .sun { animation: sun 9s ease-in-out infinite alternate; }
+    .night { animation: night 9s ease-in-out infinite alternate; }
+    .warm { animation: warm 9s ease-in-out infinite alternate; }
+    .beam { filter: blur(15px); animation: beamlight 9s ease-in-out infinite alternate, beamdrift 31s ease-in-out infinite alternate; }
+    .bloom { filter: blur(11px); }
+    .subject { filter: blur(3.4px); animation: focuspull 6s ease-in-out infinite; }
+    .subject-body {{ transform-box: fill-box; transform-origin: 50% 100%; animation: crash 6s cubic-bezier(0.4, 0, 0.2, 1) infinite; }}
+    .subject-glow { transform-box: fill-box; transform-origin: center; opacity: 0; animation: glow 6s ease-in-out infinite; }
+    @keyframes night { from { opacity: 0.56; } to { opacity: 0; } }
+    @keyframes warm { from { opacity: 0; } to { opacity: 0.82; } }
+    @keyframes sun { from { opacity: 0.12; } to { opacity: 1; } }
+    @keyframes beamlight { from { opacity: 0.05; } to { opacity: 1; } }
+    @keyframes beamdrift { from { transform: translateX(-16px); } to { transform: translateX(20px); } }
+    @keyframes focuspull {
+      0%, 40% { filter: blur(3.4px); } 52%, 78% { filter: blur(0px); } 92%, 100% { filter: blur(3.4px); }
+    }
+    @keyframes glow {
+      0%, 42% { opacity: 0; transform: scale(0.7); } 54% { opacity: 1; transform: scale(1.14); }
+      82%, 100% { opacity: 0; transform: scale(0.7); }
+    }
+    @keyframes crash {
+      0%, 38% { transform: scaleY(1); }
+      46% { transform: scaleY(1.03); animation-timing-function: cubic-bezier(0.85, 0, 1, 0.35); }
+      53% { transform: scaleY(0.05); animation-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1); }
+      57% { transform: scaleY(0.22); animation-timing-function: cubic-bezier(0.8, 0, 1, 0.4); }
+      61% { transform: scaleY(0.06); }
+      65% { transform: scaleY(0.13); }
+      69% { transform: scaleY(0.07); }
+      73% { transform: scaleY(0.10); }
+      78%, 86% { transform: scaleY(0.07); }
+      100% { transform: scaleY(1); }
+    }
+    .keybed { transform-box: fill-box; transform-origin: 50% 0%;
+      animation: keybed 6s ease-out infinite; }
+    .key { transform-box: fill-box; transform-origin: 50% 0%;
+      animation: keyjump 6s cubic-bezier(0.2, 0.8, 0.3, 1) infinite; }
+    @keyframes keybed {
+      0%, 52% { transform: translateY(0); }
+      54% { transform: translateY(5px); }
+      59% { transform: translateY(-2px); }
+      64% { transform: translateY(1px); }
+      70%, 100% { transform: translateY(0); }
+    }
+    @keyframes keyjump {
+      0%, 52% { transform: translateY(0) scaleY(1); }
+      55% { transform: translateY(9px) scaleY(0.88); }
+      60% { transform: translateY(-5px) scaleY(1.06); }
+      65% { transform: translateY(4px) scaleY(0.96); }
+      70% { transform: translateY(-2px) scaleY(1.02); }
+      76%, 100% { transform: translateY(0) scaleY(1); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .sun, .night, .warm, .beam, .subject, .subject-body, .subject-glow,
+      .keybed, .key, .shock, .pop, .env, .note,
+      .hat-top, .hat-low, .hat-flash, .shudder, .sheen { animation: none; }
+      .shock, .pop, .note, .hat-flash { opacity: 0; }
+      .night { opacity: 0.1; } .warm { opacity: 0.7; } .subject-glow { opacity: 0; }
+    }
+  </style>
+
+  <rect width="1200" height="800" fill="url(#wall)"/>
+  <g filter="url(#far)">
+    <rect width="1200" height="800" fill="url(#wall)"/>
+    <rect x="760" y="70" width="230" height="300" rx="10" fill="url(#glass)"/>
+    <rect x="760" y="70" width="230" height="300" rx="10" fill="none" stroke="#d8c1dd" stroke-opacity="0.34" stroke-width="4"/>
+    <g stroke="#2b1933" stroke-opacity="0.5" stroke-width="9"><path d="M875 70V370M760 220H990"/></g>
+    <path d="M0 596H1200" stroke="#664c70" stroke-opacity="0.4" stroke-width="3"/>
+    <g fill="none" stroke="#d8c1dd" stroke-opacity="0.22" stroke-width="4">
+      <rect x="120" y="120" width="260" height="170" rx="6"/>
+    </g>
+    <g stroke="#d5fbff" stroke-opacity="0.26" stroke-width="3">
+      <path d="M142 160H358M142 180H358M142 200H358M142 220H358M142 240H358"/>
+    </g>
+    <g fill="#ff98ae" fill-opacity="0.55">
+      <ellipse cx="186" cy="220" rx="8" ry="6"/><ellipse cx="248" cy="180" rx="8" ry="6"/><ellipse cx="310" cy="200" rx="8" ry="6"/>
+    </g>
+    <g stroke="#ff98ae" stroke-opacity="0.5" stroke-width="3.4" stroke-linecap="round">
+      <path d="M194 220V182M256 180V146M318 200V166"/>
+    </g>
+    <g fill="#d8c1dd" fill-opacity="0.16">
+      <rect x="452" y="470" width="16" height="126" rx="3"/><rect x="474" y="484" width="16" height="112" rx="3"/>
+      <rect x="496" y="462" width="16" height="134" rx="3"/>
+    </g>
+  </g>
+  <g class="sun">
+    <path class="beam" d="M760 370 L990 370 L1150 800 L560 800 Z" fill="url(#shaft)"/>
+    <ellipse class="bloom" cx="875" cy="230" rx="230" ry="210" fill="url(#bloom)"/>
+  </g>
+  <g filter="url(#near)">
+    <ellipse cx="620" cy="770" rx="470" ry="26" fill="#160c1a" fill-opacity="0.5"/>
+    <path d="M300 620h500a86 86 0 0 1 86 86v34a24 24 0 0 1-24 24H324a24 24 0 0 1-24-24z" fill="#4b3357"/>
+    <path d="M300 620h500a86 86 0 0 1 86 86H300z" fill="url(#surface)"/>
+  </g>
+  <g class="keyboard" filter="url(#near)">
+    <g class="keybed">
+      <rect x="316" y="702" width="452" height="28" rx="6" fill="#f4eaf6" fill-opacity="0.3"/>
+      <g class="key" style="animation-delay:0.175s"><rect x="322" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.165s"><rect x="338" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.154s"><rect x="354" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.143s"><rect x="370" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.133s"><rect x="386" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.122s"><rect x="402" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.112s"><rect x="418" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.101s"><rect x="434" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.090s"><rect x="450" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.080s"><rect x="466" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.069s"><rect x="482" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.058s"><rect x="498" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.048s"><rect x="514" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.037s"><rect x="530" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.027s"><rect x="546" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.016s"><rect x="562" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.005s"><rect x="578" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.005s"><rect x="594" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.016s"><rect x="610" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.027s"><rect x="626" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.037s"><rect x="642" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.048s"><rect x="658" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.058s"><rect x="674" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.069s"><rect x="690" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.080s"><rect x="706" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.090s"><rect x="722" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.101s"><rect x="738" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.112s"><rect x="754" y="704" width="13" height="24" rx="2" fill="#f4eaf6" fill-opacity="0.16"/></g>
+      <g class="key" style="animation-delay:0.165s"><rect x="338" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.149s"><rect x="362" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.123s"><rect x="400" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.108s"><rect x="424" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.092s"><rect x="448" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.066s"><rect x="486" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.050s"><rect x="510" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.025s"><rect x="548" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.009s"><rect x="572" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.007s"><rect x="596" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.032s"><rect x="634" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.048s"><rect x="658" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.073s"><rect x="696" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+      <g class="key" style="animation-delay:0.089s"><rect x="720" y="702" width="9" height="17" rx="1.5" fill="#241429" fill-opacity="0.82"/></g>
+    </g>
+
+  </g>
+
+  <g class="subject">
+    <ellipse class="subject-glow" cx="590" cy="540" rx="280" ry="160" fill="url(#focusglow)"/>
+    <g class="subject-body">
+      <path d="M306 616 L520 430 L870 466 L836 618 Z" fill="#6b4a78" fill-opacity="0.94"/>
+      <path d="M306 616 L520 430 L870 466 L836 618 Z" fill="none" stroke="#d8c1dd" stroke-opacity="0.5" stroke-width="3"/>
+      <path d="M520 430 L870 466" stroke="#f4eaf6" stroke-opacity="0.62" stroke-width="4"/>
+      <path d="M436 520 L714 550" stroke="#d8c1dd" stroke-opacity="0.2" stroke-width="2.5"/>
+    </g>
+  </g>
+  <rect class="night" width="1200" height="800" fill="#170c1c"/>
+  <rect class="warm" width="1200" height="800" fill="url(#warm)"/>
+  <rect y="600" width="1200" height="200" fill="url(#settle)"/>
+</svg>
