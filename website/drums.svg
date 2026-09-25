@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- DRUMS. Skins lit from the window, and a hi-hat that actually closes.
-     Replaces drums-detail. Drawn, not photographed. No people. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="A drum kit with a hi-hat in a music room">
+<!-- THE DRUMS, on the stage, from the hall floor. The wide one: every other scene in the set
+     is close, so this is the room with the kit small in it. Light from the rig above, which no
+     other scene has - the rest are lit sideways or from behind. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="A drawing of a drum kit set up on a school stage, seen from the hall floor">
   <defs>
-    <filter id="far" x="-14%" y="-14%" width="128%" height="128%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="13"/></filter>
-    <filter id="near" x="-14%" y="-14%" width="128%" height="128%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="3.4"/></filter>
-    <linearGradient id="wall" x1="0" y1="0" x2="0.3" y2="1">
-      <stop offset="0" stop-color="#3f2a4c"/><stop offset="0.6" stop-color="#32203c"/><stop offset="1" stop-color="#2b1933"/>
+    <filter id="far" x="-16%" y="-16%" width="132%" height="132%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="13"/></filter>
+    <filter id="near" x="-16%" y="-16%" width="132%" height="132%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="3.4"/></filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="9"/></filter>
+    <linearGradient id="wall" x1="0" y1="0" x2="0.16" y2="1">
+      <stop offset="0" stop-color="#3a2645"/><stop offset="0.6" stop-color="#2e1d38"/><stop offset="1" stop-color="#2b1933"/>
     </linearGradient>
-    <linearGradient id="surface" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#5c4069"/><stop offset="1" stop-color="#33223c"/>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241429"/><stop offset="1" stop-color="#2b1933"/>
     </linearGradient>
     <linearGradient id="glass" x1="0" y1="0" x2="0.25" y2="1">
       <stop offset="0" stop-color="#d5fbff" stop-opacity="0.5"/><stop offset="1" stop-color="#ff98ae" stop-opacity="0.16"/>
     </linearGradient>
-    <linearGradient id="shaft" x1="0.68" y1="0" x2="0.2" y2="1">
+    <linearGradient id="shaft" x1="0.5" y1="0" x2="0.5" y2="1">
       <stop offset="0" stop-color="#ffe9cf" stop-opacity="0.2"/><stop offset="0.55" stop-color="#ffdcc0" stop-opacity="0.05"/>
       <stop offset="1" stop-color="#ffdcc0" stop-opacity="0"/>
     </linearGradient>
@@ -22,174 +24,130 @@
       <stop offset="0" stop-color="#fff0dc" stop-opacity="0.26"/><stop offset="0.55" stop-color="#ffd6bf" stop-opacity="0.09"/>
       <stop offset="1" stop-color="#ffd6bf" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="warm" cx="0.72" cy="0.26" r="0.74">
+    <radialGradient id="warm" cx="0.5" cy="0.12" r="0.74">
       <stop offset="0" stop-color="#ffdcb8" stop-opacity="0.3"/><stop offset="0.55" stop-color="#ffc8d4" stop-opacity="0.1"/>
       <stop offset="1" stop-color="#ffc8d4" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="focusglow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffe0a3" stop-opacity="0.55"/><stop offset="1" stop-color="#ffe0a3" stop-opacity="0"/>
+      <stop offset="0" stop-color="#ffd9c4" stop-opacity="0.5"/><stop offset="1" stop-color="#ffd9c4" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="settle" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2b1933" stop-opacity="0"/><stop offset="1" stop-color="#2b1933" stop-opacity="0.4"/>
+    <linearGradient id="settletop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1933" stop-opacity="0.3"/><stop offset="1" stop-color="#2b1933" stop-opacity="0"/>
     </linearGradient>
-    <radialGradient id="skin" cx="0.36" cy="0.3" r="0.8">
-      <stop offset="0" stop-color="#fff6e8" stop-opacity="0.3"/>
-      <stop offset="0.6" stop-color="#f4eaf6" stop-opacity="0.08"/>
-      <stop offset="1" stop-color="#2b1933" stop-opacity="0.22"/>
-    </radialGradient>
+    <linearGradient id="settlebottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1933" stop-opacity="0"/><stop offset="1" stop-color="#2b1933" stop-opacity="0.34"/>
+    </linearGradient>
   </defs>
+
   <style>
-    .sun { animation: sun 9s ease-in-out infinite alternate; }
+    /* The same clock the three big rooms run, so a slice and a band read as
+       one building. */
     .night { animation: night 9s ease-in-out infinite alternate; }
     .warm { animation: warm 9s ease-in-out infinite alternate; }
-    .beam { filter: blur(15px); animation: beamlight 9s ease-in-out infinite alternate, beamdrift 31s ease-in-out infinite alternate; }
+    .sun { animation: sun 9s ease-in-out infinite alternate; }
+    .beam { filter: blur(15px); animation: sun 9s ease-in-out infinite alternate, drift 31s ease-in-out infinite alternate; }
     .bloom { filter: blur(11px); }
-    .subject { filter: blur(3.4px); animation: focuspull 6s ease-in-out infinite; }
-    
-    .subject-glow { transform-box: fill-box; transform-origin: center; opacity: 0; animation: glow 6s ease-in-out infinite; }
-    @keyframes night { from { opacity: 0.56; } to { opacity: 0; } }
-    @keyframes warm { from { opacity: 0; } to { opacity: 0.82; } }
-    @keyframes sun { from { opacity: 0.12; } to { opacity: 1; } }
-    @keyframes beamlight { from { opacity: 0.05; } to { opacity: 1; } }
-    @keyframes beamdrift { from { transform: translateX(-16px); } to { transform: translateX(20px); } }
-    @keyframes focuspull {
-      0%, 40% { filter: blur(3.4px); } 52%, 78% { filter: blur(0px); } 92%, 100% { filter: blur(3.4px); }
+    /* One object comes into focus, on the 6s beat the front desk bell set. */
+    .subject { filter: blur(3.4px); animation: subjectfocus 6s ease-in-out infinite; }
+    .subject-body { transform-box: fill-box; transform-origin: 50% 100%; animation: crash 6s ease-in-out infinite; }
+    .subject-glow { transform-box: fill-box; transform-origin: center; opacity: 0; animation: subjectglow 6s ease-in-out infinite; }
+    @keyframes night { from { opacity: 0.5; } to { opacity: 0.04; } }
+    @keyframes warm { from { opacity: 0; } to { opacity: 0.7; } }
+    @keyframes sun { from { opacity: 0.14; } to { opacity: 0.74; } }
+    @keyframes drift { from { transform: translateX(-16px); } to { transform: translateX(20px); } }
+    @keyframes subjectfocus {
+      0%, 44% { filter: blur(3.4px); } 56%, 76% { filter: blur(0px); } 92%, 100% { filter: blur(3.4px); }
     }
-    @keyframes glow {
-      0%, 42% { opacity: 0; transform: scale(0.7); } 54% { opacity: 1; transform: scale(1.14); }
-      82%, 100% { opacity: 0; transform: scale(0.7); }
+    @keyframes subjectglow {
+      0%, 46% { opacity: 0; transform: scale(0.76); } 58% { opacity: 1; transform: scale(1.1); }
+      84%, 100% { opacity: 0; transform: scale(0.76); }
     }
-    /* THE HI-HAT CLOSES. Owner, 24 September: "instead of circles coming from
-       high hat make the top hat crash down on the bottom". So there are no
-       rings on this one either - the top cymbal lifts, drops onto the bottom
-       one, and both take the shock: the top squashes and rebounds, the bottom
-       gives a little under it, and a flash sits between them for a fifth of a
-       second. It is the only thing in the set that hits something. */
-    .hat-top { transform-box: fill-box; transform-origin: 50% 100%;
-      animation: hattop 6s infinite; }
-    .hat-low { transform-box: fill-box; transform-origin: 50% 0%;
-      animation: hatlow 6s infinite; }
-    .hat-flash { transform-box: fill-box; transform-origin: center; opacity: 0;
-      animation: hatflash 6s ease-out infinite; }
-    @keyframes hattop {
-      0%, 34% { transform: translateY(0) scaleY(1); }
-      44% { transform: translateY(-46px) scaleY(1); animation-timing-function: cubic-bezier(0.85, 0, 1, 0.4); }
-      50% { transform: translateY(20px) scaleY(0.62); animation-timing-function: cubic-bezier(0.2, 0.9, 0.4, 1); }
-      55% { transform: translateY(-14px) scaleY(1.1); }
-      60% { transform: translateY(14px) scaleY(0.82); }
-      65% { transform: translateY(-5px) scaleY(1.04); }
-      70% { transform: translateY(6px) scaleY(0.96); }
-      78%, 100% { transform: translateY(0) scaleY(1); }
+    @keyframes lift {
+      0%, 48% { transform: translateY(0) scale(1); } 60% { transform: translateY(-10px) scale(1.02); }
+      76% { transform: translateY(-4px) scale(1.008); } 90%, 100% { transform: translateY(0) scale(1); }
     }
-    @keyframes hatlow {
-      0%, 48% { transform: translateY(0) scaleY(1); }
-      52% { transform: translateY(7px) scaleY(0.8); }
-      58% { transform: translateY(-3px) scaleY(1.06); }
-      64% { transform: translateY(2px) scaleY(0.96); }
-      72%, 100% { transform: translateY(0) scaleY(1); }
+    @keyframes sway {
+      0%, 48% { transform: rotate(0deg); } 60% { transform: rotate(-2.2deg); }
+      74% { transform: rotate(1.4deg); } 88%, 100% { transform: rotate(0deg); }
     }
-    @keyframes hatflash {
-      0%, 49% { opacity: 0; transform: scaleX(0.6); }
-      51% { opacity: 0.9; transform: scaleX(1); }
-      66%, 100% { opacity: 0; transform: scaleX(1.3); }
+    @keyframes crash {
+      0%, 46% { transform: translateY(0); } 56% { transform: translateY(16px); }
+      64% { transform: translateY(9px); } 72% { transform: translateY(14px); }
+      86%, 100% { transform: translateY(0); }
     }
+    @keyframes breathe {
+      0%, 48% { transform: scale(1); } 60% { transform: scale(1.035); }
+      78% { transform: scale(1.012); } 92%, 100% { transform: scale(1); }
+    }
+    /* An image cannot be told by the page that embeds it, so the guard lives
+       in here, and every scene settles lit rather than dark. */
     @media (prefers-reduced-motion: reduce) {
-      .sun, .night, .warm, .beam, .subject, .subject-body, .subject-glow,
-      .keybed, .key, .shock, .pop, .env, .note,
-      .hat-top, .hat-low, .hat-flash, .shudder, .sheen { animation: none; }
-      .shock, .pop, .note, .hat-flash { opacity: 0; }
-      .night { opacity: 0.1; } .warm { opacity: 0.7; } .subject-glow { opacity: 0; }
+      .night, .warm, .sun, .beam, .subject, .subject-body, .subject-glow { animation: none; }
+      .night { opacity: 0.08; } .warm { opacity: 0.6; } .sun { opacity: 0.66; }
+      .subject-glow { opacity: 0; }
     }
   </style>
 
   <rect width="1200" height="800" fill="url(#wall)"/>
+  <rect y="560" width="1200" height="240" fill="url(#ground)"/>
+
   <g filter="url(#far)">
     <rect width="1200" height="800" fill="url(#wall)"/>
-    <rect x="760" y="70" width="230" height="300" rx="10" fill="url(#glass)"/>
-    <rect x="760" y="70" width="230" height="300" rx="10" fill="none" stroke="#d8c1dd" stroke-opacity="0.34" stroke-width="4"/>
-    <g stroke="#2b1933" stroke-opacity="0.5" stroke-width="9"><path d="M875 70V370M760 220H990"/></g>
-    <path d="M0 596H1200" stroke="#664c70" stroke-opacity="0.4" stroke-width="3"/>
-    <g fill="none" stroke="#d8c1dd" stroke-opacity="0.22" stroke-width="4">
-      <rect x="120" y="120" width="260" height="170" rx="6"/>
+    <rect y="560" width="1200" height="240" fill="url(#ground)"/>
+    <!-- the curtain, which is the whole back wall -->
+    <g fill="#241429" fill-opacity="0.72">
+      <path d="M180 40 h840 v520 h-840z"/>
     </g>
-    <g stroke="#d5fbff" stroke-opacity="0.26" stroke-width="3">
-      <path d="M142 160H358M142 180H358M142 200H358M142 220H358M142 240H358"/>
+    <g stroke="#664c70" stroke-opacity="0.34" stroke-width="9">
+      <path d="M250 40V560M330 40V560M410 40V560M490 40V560M570 40V560M650 40V560M730 40V560M810 40V560M890 40V560M970 40V560"/>
     </g>
-    <g fill="#ff98ae" fill-opacity="0.55">
-      <ellipse cx="186" cy="220" rx="8" ry="6"/><ellipse cx="248" cy="180" rx="8" ry="6"/><ellipse cx="310" cy="200" rx="8" ry="6"/>
+    <!-- the rig above, and the lamps on it -->
+    <path d="M120 60 H1080" stroke="#664c70" stroke-opacity="0.5" stroke-width="12"/>
+    <g fill="#ffe0a3" fill-opacity="0.5">
+      <circle cx="320" cy="86" r="18"/><circle cx="600" cy="86" r="18"/><circle cx="880" cy="86" r="18"/>
     </g>
-    <g stroke="#ff98ae" stroke-opacity="0.5" stroke-width="3.4" stroke-linecap="round">
-      <path d="M194 220V182M256 180V146M318 200V166"/>
-    </g>
-    <g fill="#d8c1dd" fill-opacity="0.16">
-      <rect x="452" y="470" width="16" height="126" rx="3"/><rect x="474" y="484" width="16" height="112" rx="3"/>
-      <rect x="496" y="462" width="16" height="134" rx="3"/>
-    </g>
+    <path d="M0 560H1200" stroke="#8a6096" stroke-opacity="0.44" stroke-width="7"/>
   </g>
-  <g class="sun">
-    <path class="beam" d="M760 370 L990 370 L1150 800 L560 800 Z" fill="url(#shaft)"/>
-    <ellipse class="bloom" cx="875" cy="230" rx="230" ry="210" fill="url(#bloom)"/>
-  </g>
+
+  <path class="beam" d="M520 70 L690 70 L860 800 L340 800 Z" fill="url(#shaft)"/>
+  <ellipse class="sun bloom" cx="600" cy="300" rx="420" ry="360" fill="url(#bloom)"/>
+
   <g filter="url(#near)">
-    <ellipse cx="600" cy="784" rx="430" ry="24" fill="#160c1a" fill-opacity="0.5"/>
-
-    <!-- BASS DRUM. The skin is the point: a big pale head, lit from the
-         window, with a hoop round it and the shell only showing at the edge. -->
-    <ellipse cx="540" cy="640" rx="186" ry="146" fill="#4b3357"/>
-    <ellipse cx="540" cy="640" rx="186" ry="146" fill="none" stroke="#d8c1dd" stroke-opacity="0.34" stroke-width="7"/>
-    <ellipse cx="540" cy="640" rx="168" ry="129" fill="#f4eaf6" fill-opacity="0.2"/>
-    <ellipse cx="540" cy="640" rx="168" ry="129" fill="url(#skin)"/>
-    <ellipse cx="540" cy="640" rx="168" ry="129" fill="none" stroke="#f4eaf6" stroke-opacity="0.24" stroke-width="2.5"/>
-    <g fill="#d8c1dd" fill-opacity="0.4">
-      <circle cx="540" cy="500" r="6"/><circle cx="540" cy="780" r="6"/>
-      <circle cx="378" cy="640" r="6"/><circle cx="702" cy="640" r="6"/>
-      <circle cx="426" cy="540" r="5"/><circle cx="654" cy="540" r="5"/>
-      <circle cx="426" cy="740" r="5"/><circle cx="654" cy="740" r="5"/>
-    </g>
-    <path d="M370 690 L320 786M710 690 L760 786" stroke="#d8c1dd" stroke-opacity="0.24" stroke-width="7" stroke-linecap="round"/>
-
-    <!-- SNARE, seen from above, so its skin reads as an ellipse. -->
-    <ellipse cx="786" cy="606" rx="116" ry="42" fill="#573b64"/>
-    <path d="M670 606v56a116 42 0 0 0 232 0v-56z" fill="#4b3357"/>
-    <ellipse cx="786" cy="606" rx="116" ry="42" fill="#f4eaf6" fill-opacity="0.24"/>
-    <ellipse cx="786" cy="606" rx="116" ry="42" fill="none" stroke="#f4eaf6" stroke-opacity="0.3" stroke-width="3"/>
-    <ellipse cx="786" cy="606" rx="100" ry="34" fill="none" stroke="#d8c1dd" stroke-opacity="0.2" stroke-width="2"/>
-    <path d="M786 664v112M730 782h112" stroke="#d8c1dd" stroke-opacity="0.22" stroke-width="6" stroke-linecap="round"/>
-
-    <!-- TOM, smaller, tilted toward the room. -->
-    <ellipse cx="366" cy="490" rx="86" ry="31" fill="#573b64"/>
-    <path d="M280 490v44a86 31 0 0 0 172 0v-44z" fill="#4b3357"/>
-    <ellipse cx="366" cy="490" rx="86" ry="31" fill="#f4eaf6" fill-opacity="0.22"/>
-    <ellipse cx="366" cy="490" rx="86" ry="31" fill="none" stroke="#f4eaf6" stroke-opacity="0.28" stroke-width="3"/>
-
-    <!-- the hi-hat stand -->
-    <path d="M872 548v228M812 784h120" stroke="#d8c1dd" stroke-opacity="0.24" stroke-width="7" stroke-linecap="round"/>
-    <rect x="860" y="556" width="24" height="10" rx="5" fill="#d8c1dd" fill-opacity="0.3"/>  </g>
-  <g class="keyboard" filter="url(#near)">
+    <ellipse filter="url(#soft)" cx="580" cy="632" rx="360" ry="46" fill="#160c1b" fill-opacity="0.5"/>
+    <!-- the stage lip, nearest the camera and darkest -->
+    <path d="M0 620 H1200 V800 H0 Z" fill="#1c0e22" fill-opacity="0.7"/>
+    <path d="M0 620 H1200" stroke="#d8c1dd" stroke-opacity="0.22" stroke-width="6"/>
+    <!-- the kit: bass drum, two toms, snare, ride -->
+    <circle cx="600" cy="546" r="126" fill="#4b3357"/>
+    <circle cx="600" cy="546" r="96" fill="#c8b2cf" fill-opacity="0.44"/>
+    <circle cx="600" cy="546" r="96" fill="none" stroke="#d8c1dd" stroke-opacity="0.3" stroke-width="5"/>
+    <circle cx="492" cy="432" r="60" fill="#4b3357"/>
+    <circle cx="492" cy="432" r="44" fill="#c8b2cf" fill-opacity="0.44"/>
+    <circle cx="708" cy="432" r="60" fill="#4b3357"/>
+    <circle cx="708" cy="432" r="44" fill="#c8b2cf" fill-opacity="0.44"/>
+    <ellipse cx="396" cy="536" rx="66" ry="22" fill="#5d4069"/>
+    <ellipse cx="396" cy="522" rx="66" ry="22" fill="#c8b2cf" fill-opacity="0.5"/>
+    <path d="M396 536 V608" stroke="#3a2744" stroke-width="9"/>
+    <!-- the ride, off to the right -->
+    <ellipse cx="826" cy="424" rx="88" ry="15" fill="#ffe0a3" fill-opacity="0.56"/>
+    <path d="M826 424 V596" stroke="#3a2744" stroke-width="9"/>
   </g>
 
   <g class="subject">
-    <ellipse class="subject-glow" cx="872" cy="498" rx="220" ry="130" fill="url(#focusglow)"/>
-    <g class="hat">
-      <!-- the bottom cymbal stays where it is -->
-      <g class="hat-low">
-        <ellipse cx="872" cy="540" rx="108" ry="19" fill="#ffe0a3" fill-opacity="0.66"/>
-        <ellipse cx="872" cy="540" rx="108" ry="19" fill="none" stroke="#fff6e8" stroke-opacity="0.44" stroke-width="2.5"/>
-        <ellipse cx="872" cy="538" rx="26" ry="7" fill="#2b1933" fill-opacity="0.34"/>
-      </g>
-      <!-- and the top one comes down on it -->
-      <g class="hat-top">
-        <ellipse cx="872" cy="512" rx="112" ry="20" fill="#ffe0a3" fill-opacity="0.9"/>
-        <ellipse cx="872" cy="512" rx="112" ry="20" fill="none" stroke="#fff6e8" stroke-opacity="0.66" stroke-width="3"/>
-        <ellipse cx="872" cy="510" rx="28" ry="8" fill="#2b1933" fill-opacity="0.4"/>
-        <g stroke="#fff6e8" stroke-opacity="0.26" stroke-width="2">
-          <ellipse cx="872" cy="512" rx="84" ry="15" fill="none"/>
-          <ellipse cx="872" cy="512" rx="56" ry="10" fill="none"/>
-        </g>
-      </g>
-      <ellipse class="hat-flash" cx="872" cy="530" rx="130" ry="26" fill="url(#focusglow)"/>
-    </g>  </g>
+    <ellipse class="subject-glow" cx="330" cy="430" rx="260" ry="210" fill="url(#focusglow)"/>
+    <path d="M330 430 V604" stroke="#3a2744" stroke-width="9"/>
+    <ellipse cx="330" cy="432" rx="82" ry="16" fill="#ffe0a3" fill-opacity="0.7"/>
+    <g class="subject-body">
+      <!-- the hi-hat top, which is the one thing that moves and the one thing
+           that comes into focus. Owner, 24 September: "the top hat crash down
+           on the bottom". -->
+      <ellipse cx="330" cy="388" rx="82" ry="16" fill="#ffe0a3" fill-opacity="0.92"/>
+      <ellipse cx="330" cy="385" rx="42" ry="8" fill="#fff6e8" fill-opacity="0.62"/>
+    </g>
+  </g>
+
   <rect class="night" width="1200" height="800" fill="#170c1c"/>
   <rect class="warm" width="1200" height="800" fill="url(#warm)"/>
-  <rect y="600" width="1200" height="200" fill="url(#settle)"/>
+  <rect width="1200" height="180" fill="url(#settletop)"/>
+  <rect y="620" width="1200" height="180" fill="url(#settlebottom)"/>
 </svg>

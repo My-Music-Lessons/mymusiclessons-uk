@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THE STORE. Cases racked in a school cupboard, one open. The sixth drawing, and the one
+     that breaks the alias: school-partnership-hero and ukulele-detail pointed at the same
+     file. Camera low and close, light from a door off-frame to the left. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="A drawing of instrument cases racked in a school store cupboard, one open">
+  <defs>
+    <filter id="far" x="-16%" y="-16%" width="132%" height="132%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="13"/></filter>
+    <filter id="near" x="-16%" y="-16%" width="132%" height="132%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="3.4"/></filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="9"/></filter>
+    <linearGradient id="wall" x1="0" y1="0" x2="0.1" y2="1">
+      <stop offset="0" stop-color="#422c4f"/><stop offset="0.6" stop-color="#31203c"/><stop offset="1" stop-color="#2b1933"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1830"/><stop offset="1" stop-color="#2b1933"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0" stop-color="#d5fbff" stop-opacity="0.5"/><stop offset="1" stop-color="#ff98ae" stop-opacity="0.16"/>
+    </linearGradient>
+    <linearGradient id="shaft" x1="0.08" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#ffe9cf" stop-opacity="0.2"/><stop offset="0.55" stop-color="#ffdcc0" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#ffdcc0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="bloom" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff0dc" stop-opacity="0.26"/><stop offset="0.55" stop-color="#ffd6bf" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#ffd6bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx="0.18" cy="0.36" r="0.74">
+      <stop offset="0" stop-color="#ffdcb8" stop-opacity="0.3"/><stop offset="0.55" stop-color="#ffc8d4" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#ffc8d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="focusglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd9c4" stop-opacity="0.5"/><stop offset="1" stop-color="#ffd9c4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="settletop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1933" stop-opacity="0.3"/><stop offset="1" stop-color="#2b1933" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="settlebottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1933" stop-opacity="0"/><stop offset="1" stop-color="#2b1933" stop-opacity="0.34"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    /* The same clock the three big rooms run, so a slice and a band read as
+       one building. */
+    .night { animation: night 9s ease-in-out infinite alternate; }
+    .warm { animation: warm 9s ease-in-out infinite alternate; }
+    .sun { animation: sun 9s ease-in-out infinite alternate; }
+    .beam { filter: blur(15px); animation: sun 9s ease-in-out infinite alternate, drift 31s ease-in-out infinite alternate; }
+    .bloom { filter: blur(11px); }
+    /* One object comes into focus, on the 6s beat the front desk bell set. */
+    .subject { filter: blur(3.4px); animation: subjectfocus 6s ease-in-out infinite; }
+    .subject-body { transform-box: fill-box; transform-origin: 50% 100%; animation: lift 6s ease-in-out infinite; }
+    .subject-glow { transform-box: fill-box; transform-origin: center; opacity: 0; animation: subjectglow 6s ease-in-out infinite; }
+    @keyframes night { from { opacity: 0.5; } to { opacity: 0.04; } }
+    @keyframes warm { from { opacity: 0; } to { opacity: 0.7; } }
+    @keyframes sun { from { opacity: 0.14; } to { opacity: 0.74; } }
+    @keyframes drift { from { transform: translateX(-16px); } to { transform: translateX(20px); } }
+    @keyframes subjectfocus {
+      0%, 44% { filter: blur(3.4px); } 56%, 76% { filter: blur(0px); } 92%, 100% { filter: blur(3.4px); }
+    }
+    @keyframes subjectglow {
+      0%, 46% { opacity: 0; transform: scale(0.76); } 58% { opacity: 1; transform: scale(1.1); }
+      84%, 100% { opacity: 0; transform: scale(0.76); }
+    }
+    @keyframes lift {
+      0%, 48% { transform: translateY(0) scale(1); } 60% { transform: translateY(-10px) scale(1.02); }
+      76% { transform: translateY(-4px) scale(1.008); } 90%, 100% { transform: translateY(0) scale(1); }
+    }
+    @keyframes sway {
+      0%, 48% { transform: rotate(0deg); } 60% { transform: rotate(-2.2deg); }
+      74% { transform: rotate(1.4deg); } 88%, 100% { transform: rotate(0deg); }
+    }
+    @keyframes crash {
+      0%, 46% { transform: translateY(0); } 56% { transform: translateY(16px); }
+      64% { transform: translateY(9px); } 72% { transform: translateY(14px); }
+      86%, 100% { transform: translateY(0); }
+    }
+    @keyframes breathe {
+      0%, 48% { transform: scale(1); } 60% { transform: scale(1.035); }
+      78% { transform: scale(1.012); } 92%, 100% { transform: scale(1); }
+    }
+    /* An image cannot be told by the page that embeds it, so the guard lives
+       in here, and every scene settles lit rather than dark. */
+    @media (prefers-reduced-motion: reduce) {
+      .night, .warm, .sun, .beam, .subject, .subject-body, .subject-glow { animation: none; }
+      .night { opacity: 0.08; } .warm { opacity: 0.6; } .sun { opacity: 0.66; }
+      .subject-glow { opacity: 0; }
+    }
+  </style>
+
+  <rect width="1200" height="800" fill="url(#wall)"/>
+  <rect y="612" width="1200" height="188" fill="url(#ground)"/>
+
+  <g filter="url(#far)">
+    <rect width="1200" height="800" fill="url(#wall)"/>
+    <rect y="612" width="1200" height="188" fill="url(#ground)"/>
+    <path d="M0 612H1200" stroke="#664c70" stroke-opacity="0.4" stroke-width="4"/>
+    <!-- the shelving the cases sit on, running away to the right -->
+    <g stroke="#8a6096" stroke-opacity="0.5" stroke-width="9">
+      <path d="M0 300H1200M0 460H1200"/>
+    </g>
+    <g stroke="#664c70" stroke-opacity="0.26" stroke-width="6">
+      <path d="M250 150V612M620 180V612M960 210V612"/>
+    </g>
+    <!-- cases on the upper shelves, stacked flat -->
+    <g fill="#1e1024" fill-opacity="0.8" stroke="#d8c1dd" stroke-opacity="0.4" stroke-width="8">
+      <rect x="290" y="216" width="290" height="78" rx="12"/>
+      <rect x="660" y="238" width="260" height="66" rx="11"/>
+      <rect x="1000" y="252" width="190" height="56" rx="10"/>
+      <rect x="300" y="372" width="270" height="82" rx="12"/>
+      <rect x="668" y="386" width="244" height="70" rx="11"/>
+    </g>
+  </g>
+
+  <path class="beam" d="M0 120 L150 150 L330 800 L0 800 Z" fill="url(#shaft)"/>
+  <ellipse class="sun bloom" cx="150" cy="380" rx="300" ry="360" fill="url(#bloom)"/>
+
+  <g filter="url(#near)">
+    <ellipse cx="420" cy="748" rx="470" ry="34" fill="#160c1b" fill-opacity="0.5"/>
+    <!-- the closed cases leaning against the rack, nearest the camera -->
+    <path d="M700 480 L860 452 L900 760 L730 776 Z" fill="#3c2847"/>
+    <path d="M700 480 L860 452 L864 500 L702 528 Z" fill="#4e3459"/>
+    <path d="M860 452 L900 452 L940 756 L900 760 Z" fill="#2c1c36"/>
+  </g>
+
+  <g class="subject">
+    <ellipse class="subject-glow" cx="360" cy="600" rx="330" ry="220" fill="url(#focusglow)"/>
+    <g class="subject-body">
+      <!-- the open case: lid back, plush lining catching the door light -->
+      <path d="M96 596 L470 548 L512 764 L120 792 Z" fill="#33223d"/>
+      <path d="M118 604 L456 560 L492 748 L142 774 Z" fill="#6b4a78" fill-opacity="0.9"/>
+      <path d="M140 616 L438 576 L468 732 L162 756 Z" fill="#8a6096" fill-opacity="0.55"/>
+      <!-- the lid, standing open behind it -->
+      <path d="M96 596 L470 548 L452 392 L104 428 Z" fill="#2a1a33"/>
+      <path d="M118 584 L452 540 L438 412 L126 444 Z" fill="#4b3357" fill-opacity="0.85"/>
+      <path d="M96 596 L470 548" stroke="#d8c1dd" stroke-opacity="0.5" stroke-width="4"/>
+      <!-- two clasps, which is what says case rather than box -->
+      <g fill="#d8c1dd" fill-opacity="0.62">
+        <rect x="196" y="576" width="34" height="16" rx="4" transform="rotate(-6 213 584)"/>
+        <rect x="352" y="556" width="34" height="16" rx="4" transform="rotate(-6 369 564)"/>
+      </g>
+    </g>
+  </g>
+
+  <rect class="night" width="1200" height="800" fill="#170c1c"/>
+  <rect class="warm" width="1200" height="800" fill="url(#warm)"/>
+  <rect width="1200" height="180" fill="url(#settletop)"/>
+  <rect y="620" width="1200" height="180" fill="url(#settlebottom)"/>
+</svg>
