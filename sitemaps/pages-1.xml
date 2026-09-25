@@ -189,7 +189,7 @@
   <url><loc>https://mymusiclessons.uk/hertfordshire/stevenage/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/hertfordshire/watford/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/hertfordshire/welwyn-garden-city/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mymusiclessons.uk/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/</loc><lastmod>2026-09-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/isle-of-wight/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/isle-of-wight/newport/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/isle-of-wight/ryde/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
@@ -257,15 +257,60 @@
   <url><loc>https://mymusiclessons.uk/north-yorkshire/redcar/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/north-yorkshire/ripon/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/north-yorkshire/scarborough/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/north-yorkshire/selby/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/north-yorkshire/skipton/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/north-yorkshire/york/</loc><lastmod>2026-09-24</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northamptonshire/brackley/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northamptonshire/corby/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northamptonshire/daventry/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/northamptonshire/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/northamptonshire/kettering/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northamptonshire/northampton/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northamptonshire/rushden/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northamptonshire/wellingborough/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northumberland/alnwick/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northumberland/ashington/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northumberland/berwick-upon-tweed/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northumberland/blyth/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northumberland/cramlington/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/northumberland/hexham/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/northumberland/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/northumberland/morpeth/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/nottinghamshire/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/nottinghamshire/mansfield/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/nottinghamshire/newark-on-trent/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/nottinghamshire/nottingham/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/nottinghamshire/retford/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/nottinghamshire/sutton-in-ashfield/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/nottinghamshire/worksop/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/abingdon/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/banbury/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/bicester/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/carterton/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/didcot/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/oxfordshire/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/oxford/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/thame/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/wantage/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/oxfordshire/witney/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/rutland/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/rutland/oakham/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/shropshire/bridgnorth/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/shropshire/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/shropshire/ludlow/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/shropshire/market-drayton/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/shropshire/oswestry/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/shropshire/shrewsbury/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/shropshire/telford/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/shropshire/whitchurch/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/somerset/bath/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/somerset/bridgwater/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/somerset/frome/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/somerset/glastonbury/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/somerset/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/somerset/taunton/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/somerset/weston-super-mare/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/somerset/yeovil/</loc><lastmod>2026-09-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/south-yorkshire/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/staffordshire/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/suffolk/</loc><lastmod>2026-09-24</lastmod><priority>1.0</priority></url>
