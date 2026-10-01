@@ -1,153 +1,580 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- THE DRUMS, on the stage, from the hall floor. The wide one: every other scene in the set
-     is close, so this is the room with the kit small in it. Light from the rig above, which no
-     other scene has - the rest are lit sideways or from behind. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="A drawing of a drum kit set up on a school stage, seen from the hall floor">
+<!-- THE DRUM KIT. Centred and big, on a rug, with a throne behind it and the sticks left
+     across the snare - a kit somebody is about to sit down at, not a display. Window on
+     the right onto hills; the shells take the light on that side. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="A drawing of a drum kit set up on a rug in a music room, sticks resting on the snare and late afternoon light through the window">
   <defs>
-    <filter id="far" x="-16%" y="-16%" width="132%" height="132%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="13"/></filter>
-    <filter id="near" x="-16%" y="-16%" width="132%" height="132%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="3.4"/></filter>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="9"/></filter>
-    <linearGradient id="wall" x1="0" y1="0" x2="0.16" y2="1">
-      <stop offset="0" stop-color="#3a2645"/><stop offset="0.6" stop-color="#2e1d38"/><stop offset="1" stop-color="#2b1933"/>
+    <!-- THE WALL. Bright by the window, gone to almost nothing away from it. -->
+    <radialGradient id="room" cx="0.74" cy="0.28" r="1.02">
+      <stop offset="0" stop-color="#d6aee2"/><stop offset="0.24" stop-color="#9d74ab"/>
+      <stop offset="0.52" stop-color="#674775"/><stop offset="0.8" stop-color="#432b4f"/>
+      <stop offset="1" stop-color="#2a1a34"/>
+    </radialGradient>
+    <linearGradient id="wallFoot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#140a19" stop-opacity="0"/>
+      <stop offset="1" stop-color="#140a19" stop-opacity="0.24"/>
     </linearGradient>
-    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#241429"/><stop offset="1" stop-color="#2b1933"/>
+    <!-- THE FLOOR. Three board tones, so it is boards and not a brown panel. -->
+    <linearGradient id="bdA" x1="1" y1="0" x2="0" y2="0.4">
+      <stop offset="0" stop-color="#b98d78"/><stop offset="0.45" stop-color="#704f52"/>
+      <stop offset="1" stop-color="#3b2733"/>
     </linearGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="0.25" y2="1">
-      <stop offset="0" stop-color="#d5fbff" stop-opacity="0.5"/><stop offset="1" stop-color="#ff98ae" stop-opacity="0.16"/>
+    <linearGradient id="bdB" x1="1" y1="0" x2="0" y2="0.4">
+      <stop offset="0" stop-color="#a87f6d"/><stop offset="0.45" stop-color="#65474d"/>
+      <stop offset="1" stop-color="#34222e"/>
     </linearGradient>
-    <linearGradient id="shaft" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0" stop-color="#ffe9cf" stop-opacity="0.2"/><stop offset="0.55" stop-color="#ffdcc0" stop-opacity="0.05"/>
-      <stop offset="1" stop-color="#ffdcc0" stop-opacity="0"/>
+    <linearGradient id="bdC" x1="1" y1="0" x2="0" y2="0.4">
+      <stop offset="0" stop-color="#c79a80"/><stop offset="0.45" stop-color="#7a565a"/>
+      <stop offset="1" stop-color="#422c38"/>
     </linearGradient>
-    <radialGradient id="bloom" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#fff0dc" stop-opacity="0.26"/><stop offset="0.55" stop-color="#ffd6bf" stop-opacity="0.09"/>
+    <!-- THE VIEW. A cool sky over a low sun is what stops the glass reading
+         as a flat orange hole in the wall. -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0" stop-color="#a9c6de"/><stop offset="0.3" stop-color="#e8cfc6"/>
+      <stop offset="0.62" stop-color="#ffd9a8"/><stop offset="1" stop-color="#ffb07a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff9ec" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ffd9a8" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffd9a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0.35" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#fff5e6" stop-opacity="0.8"/>
+      <stop offset="0.5" stop-color="#ffd6bf" stop-opacity="0.3"/>
       <stop offset="1" stop-color="#ffd6bf" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="warm" cx="0.5" cy="0.12" r="0.74">
-      <stop offset="0" stop-color="#ffdcb8" stop-opacity="0.3"/><stop offset="0.55" stop-color="#ffc8d4" stop-opacity="0.1"/>
-      <stop offset="1" stop-color="#ffc8d4" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="focusglow" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0" stop-color="#ffd9c4" stop-opacity="0.5"/><stop offset="1" stop-color="#ffd9c4" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="settletop" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2b1933" stop-opacity="0.3"/><stop offset="1" stop-color="#2b1933" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="settlebottom" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2b1933" stop-opacity="0"/><stop offset="1" stop-color="#2b1933" stop-opacity="0.34"/>
+    <radialGradient id="spill" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffdcae" stop-opacity="0.62"/>
+      <stop offset="0.6" stop-color="#ffcfa0" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffcfa0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bounce" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ffbe8e" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffbe8e" stop-opacity="0"/>
     </linearGradient>
+    <!-- object shading, always across the light -->
+    <linearGradient id="lit" x1="1" y1="0" x2="0" y2="0.3">
+      <stop offset="0" stop-color="#c79ad6"/><stop offset="0.3" stop-color="#77528a"/>
+      <stop offset="1" stop-color="#34233f"/>
+    </linearGradient>
+    <linearGradient id="litTop" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#f7ecfa"/><stop offset="0.36" stop-color="#a06fb0"/>
+      <stop offset="1" stop-color="#3f2b4c"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="1" y1="0" x2="0" y2="0.2">
+      <stop offset="0" stop-color="#f2c98c"/><stop offset="0.4" stop-color="#c4884a"/>
+      <stop offset="1" stop-color="#6d4824"/>
+    </linearGradient>
+    <linearGradient id="pale" x1="1" y1="0" x2="0" y2="0.2">
+      <stop offset="0" stop-color="#fffdf7"/><stop offset="0.45" stop-color="#eee2f2"/>
+      <stop offset="1" stop-color="#ab99b4"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="1" x2="0.4" y2="0">
+      <stop offset="0" stop-color="#2f7a62"/><stop offset="1" stop-color="#7fe0b8"/>
+    </linearGradient>
+    <linearGradient id="pot" x1="1" y1="0" x2="0" y2="0.2">
+      <stop offset="0" stop-color="#d49ae2"/><stop offset="1" stop-color="#6b4078"/>
+    </linearGradient>
+    <radialGradient id="corner" cx="0.5" cy="0.46" r="0.78">
+      <stop offset="0.46" stop-color="#140a19" stop-opacity="0"/>
+      <stop offset="0.8" stop-color="#140a19" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#140a19" stop-opacity="0.56"/>
+    </radialGradient>
+    <!-- the grain. Very fine, very faint, over everything. It is the single
+         thing that stops a flat vector picture looking like clip art. -->
+    <filter id="soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <filter id="soft2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" seed="17" result="n"/>
+      <feColorMatrix in="n" type="matrix" result="g"
+        values="0 0 0 0 0.06  0 0 0 0 0.03  0 0 0 0 0.08  0.5 0.3 0.2 0 -0.2"/>
+    </filter>
   </defs>
 
   <style>
-    /* The same clock the three big rooms run, so a slice and a band read as
-       one building. */
-    .night { animation: night 9s ease-in-out infinite alternate; }
-    .warm { animation: warm 9s ease-in-out infinite alternate; }
-    .sun { animation: sun 9s ease-in-out infinite alternate; }
-    .beam { filter: blur(15px); animation: sun 9s ease-in-out infinite alternate, drift 31s ease-in-out infinite alternate; }
-    .bloom { filter: blur(11px); }
-    /* One object comes into focus, on the 6s beat the front desk bell set. */
-    .subject { filter: blur(3.4px); animation: subjectfocus 6s ease-in-out infinite; }
-    .subject-body { transform-box: fill-box; transform-origin: 50% 100%; animation: crash 6s ease-in-out infinite; }
-    .subject-glow { transform-box: fill-box; transform-origin: center; opacity: 0; animation: subjectglow 6s ease-in-out infinite; }
-    @keyframes night { from { opacity: 0.5; } to { opacity: 0.04; } }
-    @keyframes warm { from { opacity: 0; } to { opacity: 0.7; } }
-    @keyframes sun { from { opacity: 0.14; } to { opacity: 0.74; } }
-    @keyframes drift { from { transform: translateX(-16px); } to { transform: translateX(20px); } }
-    @keyframes subjectfocus {
-      0%, 44% { filter: blur(3.4px); } 56%, 76% { filter: blur(0px); } 92%, 100% { filter: blur(3.4px); }
+    /* ------------------------------------------------------------------ *
+     * THE ROOM BREATHES. Owner, 25 September: ten times the animation.
+     * The rule every one of these obeys: position lives on an OUTER group,
+     * motion on an INNER one, because a CSS transform REPLACES the transform
+     * attribute rather than composing with it. Transform and opacity only,
+     * so the whole thing composites on the GPU and costs a town page nothing.
+     * ------------------------------------------------------------------ */
+
+    /* the light. A cloud crosses the sun once every half minute and the whole
+       room goes quiet with it, which is the single biggest thing in here. */
+    .cloud { animation: cloud 34s ease-in-out infinite; }
+    .glow { animation: glow 9s ease-in-out infinite alternate; }
+    .beamdrift { animation: beamdrift 29s ease-in-out infinite alternate; transform-box: fill-box; }
+    .shimmer { animation: shimmer 13s ease-in-out infinite alternate; }
+    .warmth { animation: warmth 34s ease-in-out infinite; }
+
+    /* dust. Twelve specks, each on its own clock, drifting as well as falling. */
+    .mote { transform-box: fill-box; opacity: 0; animation: mote 16s linear infinite; }
+    .mote-2 { animation-delay: -1.3s }  .mote-3 { animation-delay: -2.6s }
+    .mote-4 { animation-delay: -4s }    .mote-5 { animation-delay: -5.3s }
+    .mote-6 { animation-delay: -6.6s }  .mote-7 { animation-delay: -8s }
+    .mote-8 { animation-delay: -9.3s }  .mote-9 { animation-delay: -10.6s }
+    .mote-10 { animation-delay: -12s }  .mote-11 { animation-delay: -13.3s }
+    .mote-12 { animation-delay: -14.6s }
+    .drift { transform-box: fill-box; animation: drift 21s ease-in-out infinite alternate; }
+
+    /* green things, on two different clocks so they are not a chorus line */
+    .leaf { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite alternate; }
+    .leaf-2 { animation-delay: -2.4s } .leaf-3 { animation-delay: -4.8s }
+    .frond { transform-box: fill-box; transform-origin: 50% 100%; animation: draught 13s ease-in-out infinite alternate; }
+    .frond-2 { animation-delay: -2.1s; animation-duration: 15s }
+    .frond-3 { animation-delay: -4.2s; animation-duration: 17s }
+    .frond-4 { animation-delay: -6.3s; animation-duration: 14s }
+    .frond-5 { animation-delay: -8.4s; animation-duration: 16s }
+    .frond-6 { animation-delay: -10.5s; animation-duration: 18s }
+
+    /* notes, on a curve now rather than straight up, and on a 12s phrase */
+    .note { transform-box: fill-box; transform-origin: 50% 100%; opacity: 0; animation: note 12s ease-out infinite; }
+    .note-2 { animation-delay: 1.2s }  .note-3 { animation-delay: 2.6s }
+    .note-4 { animation-delay: 4.1s }  .note-5 { animation-delay: 5.4s }
+    .note-6 { animation-delay: 6.8s }  .note-7 { animation-delay: 8.2s }
+    .note-8 { animation-delay: 9.6s }
+
+    /* strings: the string itself wobbles, and a ghost behind it widens on the
+       attack, which is how a vibrating string reads without motion blur */
+    .string { transform-box: fill-box; transform-origin: 50% 50%; animation: strum 6s ease-out infinite; }
+    .string-2 { animation-delay: 0.06s } .string-3 { animation-delay: 0.12s }
+    .string-4 { animation-delay: 0.18s } .string-5 { animation-delay: 0.24s }
+    .string-6 { animation-delay: 0.3s }
+    .ghost { opacity: 0; animation: ghost 6s ease-out infinite; }
+    .ghost-2 { animation-delay: 0.06s } .ghost-3 { animation-delay: 0.12s }
+    .ghost-4 { animation-delay: 0.18s } .ghost-5 { animation-delay: 0.24s }
+    .ghost-6 { animation-delay: 0.3s }
+    .body { transform-box: fill-box; transform-origin: 50% 50%; animation: resonate 6s ease-out infinite; }
+
+    /* steam off a mug, bunting in a draught, birds a long way off */
+    .steam { animation: steam 5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+    .steam-2 { animation-delay: 1.7s } .steam-3 { animation-delay: 3.3s }
+    .bunt { transform-box: fill-box; transform-origin: 50% 0%; animation: flutter 4s ease-in-out infinite alternate; }
+    .bunt-2 { animation-delay: -0.35s } .bunt-3 { animation-delay: -0.7s }
+    .bunt-4 { animation-delay: -1.05s } .bunt-5 { animation-delay: -1.4s }
+    .bunt-6 { animation-delay: -1.75s } .bunt-7 { animation-delay: -2.1s }
+    .bunt-8 { animation-delay: -2.45s } .bunt-9 { animation-delay: -2.8s }
+    .bunt-10 { animation-delay: -3.15s }
+    .bird { transform-box: fill-box; opacity: 0; animation: fly 23s ease-in-out infinite; }
+    .bird-2 { animation-delay: 2.6s } .bird-3 { animation-delay: 11s }
+
+    /* a clock that actually keeps time, one step a second */
+    .tick { transform-box: fill-box; transform-origin: 50% 100%; animation: tick 60s steps(60, end) infinite; }
+    /* paper lifting in the draught, a curtain edge, a page corner */
+    .page { transform-box: fill-box; transform-origin: 0% 100%; animation: lift 8s ease-in-out infinite alternate; }
+    /* a ring of sound leaving whatever is making it */
+    .ring { transform-box: fill-box; transform-origin: 50% 50%; opacity: 0; animation: ring 6s ease-out infinite; }
+    .ring-2 { animation-delay: 2s } .ring-3 { animation-delay: 4s }
+    /* a cymbal rocks on its stand long after it was hit; a drum head gives
+       under the stick and comes back */
+    .swing { transform-box: fill-box; transform-origin: 50% 40%; animation: swing 6s ease-out infinite; }
+    .swing-2 { animation-delay: 0.22s }
+    .head { transform-box: fill-box; transform-origin: 50% 50%; animation: head 6s ease-out infinite; }
+    .head-2 { animation-delay: 0.3s } .head-3 { animation-delay: 1.5s }
+    /* the keyboard plays a phrase rather than twitching at random */
+    .key { transform-box: fill-box; transform-origin: 50% 0%; animation: keypress 12s ease-in-out infinite; }
+    .sticks { transform-box: fill-box; transform-origin: 20% 60%; animation: tap 6s ease-in-out infinite; }
+
+    @keyframes cloud {
+      0%, 34% { opacity: 1; }
+      46%, 58% { opacity: 0.38; }
+      72%, 100% { opacity: 1; }
     }
-    @keyframes subjectglow {
-      0%, 46% { opacity: 0; transform: scale(0.76); } 58% { opacity: 1; transform: scale(1.1); }
-      84%, 100% { opacity: 0; transform: scale(0.76); }
+    @keyframes warmth {
+      0%, 34% { opacity: 0; }
+      46%, 58% { opacity: 0.22; }
+      72%, 100% { opacity: 0; }
     }
-    @keyframes lift {
-      0%, 48% { transform: translateY(0) scale(1); } 60% { transform: translateY(-10px) scale(1.02); }
-      76% { transform: translateY(-4px) scale(1.008); } 90%, 100% { transform: translateY(0) scale(1); }
+    @keyframes glow { from { opacity: 0.7; } to { opacity: 1; } }
+    @keyframes shimmer { from { opacity: 0.5; transform: scale(0.94); } to { opacity: 1; transform: scale(1.06); } }
+    @keyframes beamdrift { from { transform: translateX(-18px) skewX(-0.7deg); }
+                            to { transform: translateX(20px) skewX(0.8deg); } }
+    @keyframes note {
+      0% { opacity: 0; transform: translate(0,0) scale(0.6) rotate(0deg); }
+      6% { opacity: 0.95; }
+      40% { transform: translate(40px,-120px) scale(1.05) rotate(-9deg); }
+      70% { opacity: 0.6; }
+      100% { opacity: 0; transform: translate(-120px,-300px) scale(1.3) rotate(16deg); }
     }
-    @keyframes sway {
-      0%, 48% { transform: rotate(0deg); } 60% { transform: rotate(-2.2deg); }
-      74% { transform: rotate(1.4deg); } 88%, 100% { transform: rotate(0deg); }
+    @keyframes mote {
+      0% { opacity: 0; transform: translate(0,0); }
+      12% { opacity: 0.6; }
+      50% { transform: translate(22px, 120px); }
+      88% { opacity: 0.34; }
+      100% { opacity: 0; transform: translate(-44px, 260px); }
     }
-    @keyframes crash {
-      0%, 46% { transform: translateY(0); } 56% { transform: translateY(16px); }
-      64% { transform: translateY(9px); } 72% { transform: translateY(14px); }
-      86%, 100% { transform: translateY(0); }
+    @keyframes drift { from { transform: translate(-9px, 4px); } to { transform: translate(11px, -5px); } }
+    @keyframes sway { from { transform: rotate(-3deg) scaleY(0.99); } to { transform: rotate(3.2deg) scaleY(1.01); } }
+    @keyframes draught { from { transform: rotate(-2.6deg) translateY(2px); }
+                          to { transform: rotate(2.8deg) translateY(-3px); } }
+    @keyframes flutter { from { transform: rotate(-6deg); } to { transform: rotate(6.5deg); } }
+    @keyframes fly {
+      0%, 3% { opacity: 0; transform: translate(0,0); }
+      7% { opacity: 0.6; } 26% { opacity: 0.6; }
+      34%, 100% { opacity: 0; transform: translate(96px,-34px); }
     }
-    @keyframes breathe {
-      0%, 48% { transform: scale(1); } 60% { transform: scale(1.035); }
-      78% { transform: scale(1.012); } 92%, 100% { transform: scale(1); }
+    @keyframes tick { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes strum {
+      0%, 7% { transform: translateX(0); }
+      0.8% { transform: translateX(-3.2px); } 1.8% { transform: translateX(2.6px); }
+      2.8% { transform: translateX(-1.8px); } 4% { transform: translateX(1.1px); }
+      5.4% { transform: translateX(-0.5px); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes ghost {
+      0% { opacity: 0; }
+      1% { opacity: 0.42; }
+      5% { opacity: 0.22; }
+      12%, 100% { opacity: 0; }
+    }
+    @keyframes resonate {
+      0%, 8% { transform: scale(1); }
+      1.5% { transform: scale(1.012); }
+      3.5% { transform: scale(0.995); }
+      6% { transform: scale(1.004); }
+      100% { transform: scale(1); }
+    }
+    @keyframes steam {
+      0% { opacity: 0; transform: translateY(0) scale(0.6) skewX(0deg); }
+      30% { opacity: 0.55; }
+      60% { transform: translateY(-22px) scale(1.05) skewX(7deg); }
+      100% { opacity: 0; transform: translateY(-44px) scale(1.5) skewX(-5deg); }
+    }
+    @keyframes lift { from { transform: skewX(0deg) translateY(0); }
+                       to { transform: skewX(-6deg) translateY(-3px); } }
+    @keyframes swing {
+      0%, 9% { transform: rotate(0deg); }
+      1% { transform: rotate(-3.4deg) translateY(-2px); }
+      3% { transform: rotate(2.4deg); }
+      5% { transform: rotate(-1.4deg); }
+      7% { transform: rotate(0.7deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes head {
+      0%, 7% { transform: scale(1); }
+      1% { transform: scale(0.985); }
+      3% { transform: scale(1.008); }
+      5% { transform: scale(0.997); }
+      100% { transform: scale(1); }
+    }
+    @keyframes keypress {
+      0%, 4%, 100% { transform: translateY(0); }
+      1.6% { transform: translateY(4px); }
+    }
+    @keyframes ring {
+      0% { opacity: 0.5; transform: scale(0.25); }
+      70% { opacity: 0.12; }
+      100% { opacity: 0; transform: scale(2.6); }
+    }
+    @keyframes tap {
+      0%, 70%, 100% { transform: rotate(0deg); }
+      6% { transform: rotate(-3.4deg); }
+      13% { transform: rotate(1.2deg); }
+      22% { transform: rotate(-2.2deg); }
+      31% { transform: rotate(0.8deg); }
     }
     /* An image cannot be told by the page that embeds it, so the guard lives
-       in here, and every scene settles lit rather than dark. */
+       in here. Every scene settles lit, still, and with nothing missing. */
     @media (prefers-reduced-motion: reduce) {
-      .night, .warm, .sun, .beam, .subject, .subject-body, .subject-glow { animation: none; }
-      .night { opacity: 0.08; } .warm { opacity: 0.6; } .sun { opacity: 0.66; }
-      .subject-glow { opacity: 0; }
+      .cloud, .glow, .beamdrift, .shimmer, .warmth, .mote, .drift, .leaf, .frond,
+      .note, .string, .ghost, .body, .steam, .bunt, .bird, .tick, .page, .ring,
+      .swing, .head, .key, .sticks {
+        animation: none;
+      }
+      .glow { opacity: 0.94; } .shimmer { opacity: 0.8; } .cloud { opacity: 1; }
+      .note, .mote, .steam, .bird, .ring, .ghost, .warmth { opacity: 0; }
     }
   </style>
 
-  <rect width="1200" height="800" fill="url(#wall)"/>
-  <rect y="560" width="1200" height="240" fill="url(#ground)"/>
-
-  <g filter="url(#far)">
-    <rect width="1200" height="800" fill="url(#wall)"/>
-    <rect y="560" width="1200" height="240" fill="url(#ground)"/>
-    <!-- the curtain, which is the whole back wall -->
-    <g fill="#241429" fill-opacity="0.72">
-      <path d="M180 40 h840 v520 h-840z"/>
+  <rect width="1200" height="800" fill="url(#room)"/>
+  <g>
+    <rect y="240" width="1200" height="12" fill="#3f2b4b"/>
+    <rect y="240" width="1200" height="3.4" fill="#a97ab6" fill-opacity="0.68"/>
+    <rect y="252" width="1200" height="7" fill="#160c1b" fill-opacity="0.26"/>
+  </g>
+  <g>
+    <rect y="556" width="1200" height="16" fill="url(#bdB)"/>
+    <rect y="556" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="558" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="571" width="1200" height="21" fill="url(#bdA)"/>
+    <rect y="571" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="573" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="591" width="1200" height="29" fill="url(#bdC)"/>
+    <rect y="591" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="593" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="619" width="1200" height="39" fill="url(#bdA)"/>
+    <rect y="619" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="621" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="657" width="1200" height="52" fill="url(#bdB)"/>
+    <rect y="657" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="659" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="708" width="1200" height="71" fill="url(#bdC)"/>
+    <rect y="708" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="710" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <g stroke="#160c1b" stroke-opacity="0.38" stroke-width="2.4">
+      <path d="M-11 556 -7 571"/>
+      <path d="M319 556 323 571"/>
+      <path d="M649 556 653 571"/>
+      <path d="M979 556 983 571"/>
+      <path d="M326 571 331 591"/>
+      <path d="M702 571 707 591"/>
+      <path d="M1078 571 1083 591"/>
+      <path d="M263 591 270 619"/>
+      <path d="M685 591 692 619"/>
+      <path d="M1107 591 1114 619"/>
+      <path d="M200 619 209 657"/>
+      <path d="M530 619 539 657"/>
+      <path d="M860 619 869 657"/>
+      <path d="M1190 619 1199 657"/>
+      <path d="M137 657 149 708"/>
+      <path d="M513 657 525 708"/>
+      <path d="M889 657 901 708"/>
+      <path d="M1265 657 1277 708"/>
+      <path d="M74 708 91 778"/>
+      <path d="M496 708 513 778"/>
+      <path d="M918 708 935 778"/>
     </g>
-    <g stroke="#664c70" stroke-opacity="0.34" stroke-width="9">
-      <path d="M250 40V560M330 40V560M410 40V560M490 40V560M570 40V560M650 40V560M730 40V560M810 40V560M890 40V560M970 40V560"/>
+    <g fill="#ffd2a8" fill-opacity="0.22">
+      <circle cx="212" cy="628" r="2.4"/><circle cx="212" cy="648" r="2.4"/>
+      <circle cx="542" cy="628" r="2.4"/><circle cx="542" cy="648" r="2.4"/>
+      <circle cx="872" cy="628" r="2.4"/><circle cx="872" cy="648" r="2.4"/>
+      <circle cx="1202" cy="628" r="2.4"/><circle cx="1202" cy="648" r="2.4"/>
+      <circle cx="149" cy="666" r="2.4"/><circle cx="149" cy="699" r="2.4"/>
+      <circle cx="525" cy="666" r="2.4"/><circle cx="525" cy="699" r="2.4"/>
+      <circle cx="901" cy="666" r="2.4"/><circle cx="901" cy="699" r="2.4"/>
+      <circle cx="1277" cy="666" r="2.4"/><circle cx="1277" cy="699" r="2.4"/>
+      <circle cx="86" cy="717" r="2.4"/><circle cx="86" cy="769" r="2.4"/>
+      <circle cx="508" cy="717" r="2.4"/><circle cx="508" cy="769" r="2.4"/>
+      <circle cx="930" cy="717" r="2.4"/><circle cx="930" cy="769" r="2.4"/>
     </g>
-    <!-- the rig above, and the lamps on it -->
-    <path d="M120 60 H1080" stroke="#664c70" stroke-opacity="0.5" stroke-width="12"/>
-    <g fill="#ffe0a3" fill-opacity="0.5">
-      <circle cx="320" cy="86" r="18"/><circle cx="600" cy="86" r="18"/><circle cx="880" cy="86" r="18"/>
-    </g>
-    <path d="M0 560H1200" stroke="#8a6096" stroke-opacity="0.44" stroke-width="7"/>
+  </g>
+  <g>
+    <rect y="492" width="1200" height="64" fill="url(#wallFoot)"/>
+    <rect y="530" width="1200" height="26" fill="#3a2744"/>
+    <rect y="530" width="1200" height="4" fill="#9a72a8"/>
+    <rect y="537" width="1200" height="3" fill="#160c1b" fill-opacity="0.4"/>
+    <rect y="543" width="1200" height="13" fill="#2e1f37"/>
+    <rect y="554" width="1200" height="4" fill="#160c1b" fill-opacity="0.55"/>
   </g>
 
-  <path class="beam" d="M520 70 L690 70 L860 800 L340 800 Z" fill="url(#shaft)"/>
-  <ellipse class="sun bloom" cx="600" cy="300" rx="420" ry="360" fill="url(#bloom)"/>
-
-  <g filter="url(#near)">
-    <ellipse filter="url(#soft)" cx="580" cy="632" rx="360" ry="46" fill="#160c1b" fill-opacity="0.5"/>
-    <!-- the stage lip, nearest the camera and darkest -->
-    <path d="M0 620 H1200 V800 H0 Z" fill="#1c0e22" fill-opacity="0.7"/>
-    <path d="M0 620 H1200" stroke="#d8c1dd" stroke-opacity="0.22" stroke-width="6"/>
-    <!-- the kit: bass drum, two toms, snare, ride -->
-    <circle cx="600" cy="546" r="126" fill="#4b3357"/>
-    <circle cx="600" cy="546" r="96" fill="#c8b2cf" fill-opacity="0.44"/>
-    <circle cx="600" cy="546" r="96" fill="none" stroke="#d8c1dd" stroke-opacity="0.3" stroke-width="5"/>
-    <circle cx="492" cy="432" r="60" fill="#4b3357"/>
-    <circle cx="492" cy="432" r="44" fill="#c8b2cf" fill-opacity="0.44"/>
-    <circle cx="708" cy="432" r="60" fill="#4b3357"/>
-    <circle cx="708" cy="432" r="44" fill="#c8b2cf" fill-opacity="0.44"/>
-    <ellipse cx="396" cy="536" rx="66" ry="22" fill="#5d4069"/>
-    <ellipse cx="396" cy="522" rx="66" ry="22" fill="#c8b2cf" fill-opacity="0.5"/>
-    <path d="M396 536 V608" stroke="#3a2744" stroke-width="9"/>
-    <!-- the ride, off to the right -->
-    <ellipse cx="826" cy="424" rx="88" ry="15" fill="#ffe0a3" fill-opacity="0.56"/>
-    <path d="M826 424 V596" stroke="#3a2744" stroke-width="9"/>
+  <g>
+    <!-- the reveal: the wall has a thickness, and the light gets into it -->
+    <rect x="923" y="135" width="250" height="310" rx="7" fill="#241630"/>
+    <rect x="923" y="135" width="250" height="310" rx="7" fill="none" stroke="#160c1b" stroke-opacity="0.5" stroke-width="5"/>
+    <clipPath id="dw"><rect x="950" y="162" width="196" height="256" rx="4"/></clipPath>
+    <g clip-path="url(#dw)">
+      <rect x="950" y="162" width="196" height="256" fill="url(#sky)"/>
+      <circle class="shimmer" cx="1060" cy="362" r="153" fill="url(#sun)"/>
+      <path d="M950 341 q59 -49 110 13 q55 36 98 -15 V418 H950 Z" fill="#c9a0a4" fill-opacity="0.55"/>
+      <path d="M950 374 q67 -36 125 8 q59 26 90 -5 V418 H950 Z" fill="#9a6f80" fill-opacity="0.72"/>
+      <g stroke="#7d5768" stroke-opacity="0.66" stroke-width="2.6" fill="none" stroke-linecap="round">
+        <g transform="translate(989 213)"><g class="bird"><path d="M0 0 q5 -5 10 0 q5 -5 10 0"/></g></g>
+        <g transform="translate(1036 236)"><g class="bird bird-2"><path d="M0 0 q4 -4 8 0 q4 -4 8 0"/></g></g>
+      </g>
+      <rect x="950" y="162" width="196" height="256" fill="#fff6e2" fill-opacity="0.1"/>
+    </g>
+      <rect x="1042.0" y="162" width="12" height="256" fill="#33203d"/><rect x="1042.0" y="162" width="4" height="256" fill="#8e6aa0" fill-opacity="0.5"/>
+      <rect x="950" y="284.0" width="196" height="12" fill="#33203d"/><rect x="950" y="284.0" width="196" height="4" fill="#a97ab6" fill-opacity="0.55"/>
+    <!-- the frame itself -->
+    <rect x="932" y="144" width="232" height="292" rx="6" fill="none" stroke="#3f2b4b" stroke-width="18"/>
+    <rect x="941" y="153" width="214" height="274" rx="3" fill="none" stroke="#a97ab6" stroke-opacity="0.44" stroke-width="3"/>
+    <rect x="932" y="144" width="232" height="6" rx="3" fill="#c49ad2" fill-opacity="0.5"/>
+    <!-- the sill: a top face that takes the light and a front face that does not -->
+    <path d="M904 440 h288 l-10 20 h-268 Z" fill="#c8a3d3" fill-opacity="0.72"/>
+    <rect x="908" y="458" width="280" height="13" rx="4" fill="#4a3356"/>
+    <rect x="908" y="469" width="280" height="8" fill="#160c1b" fill-opacity="0.34"/>
+  </g>
+  <g transform="rotate(-2 281.0 264.0)">
+    <rect x="211" y="213" width="150" height="116" rx="3" fill="#160c1b" fill-opacity="0.34"/>
+    <rect x="206" y="206" width="150" height="116" rx="3" fill="#ece0f0"/>
+    <rect x="206" y="206" width="150" height="116" rx="3" fill="url(#pale)" fill-opacity="0.45"/>
+<g stroke="#6fd3ab" stroke-width="5" stroke-linecap="round" stroke-opacity="0.8"><path d="M226 296 V236M322 282 V228"/></g><g fill="#6fd3ab" fill-opacity="0.8"><ellipse cx="220" cy="296" rx="11" ry="8"/><ellipse cx="316" cy="282" rx="11" ry="8"/></g>
+    <circle cx="281.0" cy="210" r="6" fill="#d5fbff"/>
+  </g>
+  <g>
+    <rect x="430" y="300" width="212" height="14" rx="5" fill="url(#litTop)"/>
+    <rect x="430" y="300" width="212" height="4" rx="2" fill="#f2e0f7" fill-opacity="0.6"/>
+    <rect x="430" y="314" width="212" height="9" fill="#160c1b" fill-opacity="0.3"/>
+    <g fill="#4a3356"><rect x="448" y="314" width="11" height="24" rx="4"/>
+      <rect x="613" y="314" width="11" height="24" rx="4"/></g>
+  </g>
+  <g>
+    <rect x="448" y="259" width="11" height="41" rx="3" fill="#8d5f8c"/>
+    <rect x="448" y="259" width="3" height="41" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="461" y="252" width="16" height="48" rx="3" fill="#5f7fa8"/>
+    <rect x="461" y="252" width="5" height="48" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="479" y="244" width="12" height="56" rx="3" fill="#a8763f"/>
+    <rect x="479" y="244" width="3" height="56" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="492" y="237" width="16" height="63" rx="3" fill="#6fa88d"/>
+    <rect x="492" y="237" width="5" height="63" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="510" y="252" width="12" height="48" rx="3" fill="#a85f6b"/>
+    <rect x="510" y="252" width="4" height="48" fill="#fff6e2" fill-opacity="0.18"/>
+  </g>
+  <g>
+    <rect x="700" y="490" width="46" height="34" rx="6" fill="#4a3356"/>
+    <rect x="700" y="490" width="46" height="4" rx="2" fill="#c8a3d3" fill-opacity="0.44"/>
+    <g fill="#241630"><rect x="710" y="501" width="8" height="4" rx="1.5"/>
+      <rect x="728" y="501" width="8" height="4" rx="1.5"/>
+      <rect x="719" y="510" width="8" height="4" rx="1.5"/></g>
   </g>
 
-  <g class="subject">
-    <ellipse class="subject-glow" cx="330" cy="430" rx="260" ry="210" fill="url(#focusglow)"/>
-    <path d="M330 430 V604" stroke="#3a2744" stroke-width="9"/>
-    <ellipse cx="330" cy="432" rx="82" ry="16" fill="#ffe0a3" fill-opacity="0.7"/>
-    <g class="subject-body">
-      <!-- the hi-hat top, which is the one thing that moves and the one thing
-           that comes into focus. Owner, 24 September: "the top hat crash down
-           on the bottom". -->
-      <ellipse cx="330" cy="388" rx="82" ry="16" fill="#ffe0a3" fill-opacity="0.92"/>
-      <ellipse cx="330" cy="385" rx="42" ry="8" fill="#fff6e8" fill-opacity="0.62"/>
+  <!-- the beam, the pool it lands in, and the bounce back off the boards -->
+  <g class="cloud">
+    <g class="beamdrift" filter="url(#soft)">
+      <path class="glow" d="M932 476 L1164 476 L1494 810 L1097 810 Z" fill="url(#beam)"/>
+    </g>
+    <ellipse class="glow" filter="url(#soft2)" cx="1266" cy="706"
+             rx="300" ry="112" fill="url(#spill)"/>
+    <rect y="396" width="1200" height="160" fill="url(#bounce)"/>
+  </g>
+  <!-- and the room going cool and quiet while the cloud is over the sun -->
+  <rect class="warmth" width="1200" height="810" fill="#26203f" opacity="0"/>
+
+  <g>
+    <ellipse cx="560" cy="700" rx="410" ry="62" fill="#4d3459"/>
+    <ellipse cx="560" cy="700" rx="410" ry="62" fill="none" stroke="#a5749f" stroke-width="4" stroke-opacity="0.55"/>
+    <ellipse cx="560" cy="700" rx="376" ry="49" fill="none" stroke="#8d5f8c" stroke-width="3" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- the throne, first, so the kit stands in front of it the way it really does -->
+  <g>
+    <ellipse cx="556" cy="648" rx="104.16" ry="13" fill="#160c1b" fill-opacity="0.46"/>
+    <rect x="472.0" y="424" width="168" height="20" rx="7" fill="url(#litTop)"/>
+    <rect x="472.0" y="424" width="168" height="5" rx="2.5" fill="#d8b6e2" fill-opacity="0.7"/>
+    <g fill="#4a3356">
+      <rect x="484.0" y="444" width="12" height="210" rx="5"/>
+      <rect x="616.0" y="444" width="12" height="210" rx="5"/>
+    </g>
+    <rect x="484.0" y="559.5" width="144" height="9" rx="4" fill="#3f2b49"/>
+  </g>
+  <g>
+    <ellipse cx="1078" cy="706" rx="80" ry="15" fill="#160c1b" fill-opacity="0.5"/>
+    <path d="M1030 690 h96 l-12 92 h-72 z" fill="url(#pot)"/>
+    <rect x="1024" y="676" width="108" height="20" rx="7" fill="#c48ad3"/>
+    <g fill="url(#leaf)">
+      <path class="leaf" d="M1078 690 c0 -60 -27 -94 -62 -112 17 46 21 81 35 112 z"/>
+      <path class="leaf leaf-2" d="M1078 690 c0 -50 23 -81 56 -96 -17 40 -23 65 -33 96 z"/>
+      <path class="leaf leaf-3" d="M1078 690 c-8 -35 4 -64 27 -87 -6 33 -10 56 -12 87 z"/>
     </g>
   </g>
 
-  <rect class="night" width="1200" height="800" fill="#170c1c"/>
-  <rect class="warm" width="1200" height="800" fill="url(#warm)"/>
-  <rect width="1200" height="180" fill="url(#settletop)"/>
-  <rect y="620" width="1200" height="180" fill="url(#settlebottom)"/>
+  <!-- hi-hat, left, two plates and a pedal -->
+  <g>
+    <rect x="243" y="404" width="10" height="274" rx="5" fill="#57405f"/>
+    <g stroke="#57405f" stroke-width="10" stroke-linecap="round">
+      <path d="M248 656 L198 684M248 656 L298 684M248 656 L254 686"/>
+    </g>
+    <g class="swing"><ellipse cx="248" cy="418" rx="82" ry="13" fill="#c08a4e"/>
+    <ellipse cx="248" cy="414" rx="82" ry="13" fill="url(#wood)"/>
+    <ellipse cx="248" cy="392" rx="76" ry="12" fill="url(#wood)"/>
+    <ellipse cx="248" cy="390" rx="76" ry="12" fill="#e0b070" fill-opacity="0.5"/></g>
+  </g>
+
+  <!-- ride cymbal, right, tilted -->
+  <g>
+    <rect x="879" y="358" width="10" height="322" rx="5" fill="#57405f"/>
+    <g stroke="#57405f" stroke-width="10" stroke-linecap="round">
+      <path d="M884 658 L834 686M884 658 L934 686M884 658 L890 688"/>
+    </g>
+    <g transform="rotate(-7 884 358)"><g class="swing swing-2">
+      <ellipse cx="884" cy="362" rx="98" ry="16" fill="#8d6234"/>
+      <ellipse cx="884" cy="356" rx="98" ry="16" fill="url(#wood)"/>
+      <ellipse cx="884" cy="356" rx="30" ry="6" fill="#ffe0a3" fill-opacity="0.4"/>
+    </g></g>
+  </g>
+
+  <!-- floor tom, right, behind the bass drum -->
+  <g>
+    <ellipse cx="770" cy="686" rx="92" ry="16" fill="#160c1b" fill-opacity="0.46"/>
+    <rect x="684" y="478" width="172" height="202" rx="14" fill="url(#lit)"/>
+    <ellipse cx="770" cy="478" rx="86" ry="21" fill="#cbb9d2"/>
+    <ellipse cx="770" cy="478" rx="86" ry="21" fill="none" stroke="#f2e9f5" stroke-width="5" stroke-opacity="0.6"/>
+    <g class="head head-3"><ellipse cx="770" cy="478" rx="66" ry="15" fill="#e2d5e8" fill-opacity="0.5"/></g>
+    <g fill="#3f2b49"><rect x="690" y="506" width="12" height="150" rx="5"/><rect x="840" y="506" width="12" height="150" rx="5"/></g>
+  </g>
+
+  <!-- two rack toms, angled over the bass drum -->
+  <g>
+    <g transform="rotate(-12 452 404)">
+      <rect x="378" y="398" width="150" height="122" rx="12" fill="url(#lit)"/>
+      <ellipse cx="453" cy="398" rx="75" ry="19" fill="#cbb9d2"/>
+      <ellipse cx="453" cy="398" rx="75" ry="19" fill="none" stroke="#f2e9f5" stroke-width="5" stroke-opacity="0.6"/>
+      <ellipse cx="453" cy="398" rx="56" ry="13" fill="#e2d5e8" fill-opacity="0.5"/>
+    </g>
+    <g transform="rotate(10 624 400)">
+      <rect x="552" y="394" width="146" height="122" rx="12" fill="url(#lit)"/>
+      <ellipse cx="625" cy="394" rx="73" ry="18" fill="#cbb9d2"/>
+      <ellipse cx="625" cy="394" rx="73" ry="18" fill="none" stroke="#f2e9f5" stroke-width="5" stroke-opacity="0.6"/>
+      <ellipse cx="625" cy="394" rx="54" ry="12" fill="#e2d5e8" fill-opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- THE BASS DRUM, the centre of the picture -->
+  <g>
+    <ellipse cx="540" cy="712" rx="180" ry="26" fill="#160c1b" fill-opacity="0.5"/>
+    <circle cx="540" cy="536" r="164" fill="#4a3356"/>
+    <circle cx="540" cy="536" r="164" fill="url(#lit)" fill-opacity="0.85"/>
+    <g class="head"><circle cx="540" cy="536" r="146" fill="#d8cade"/>
+    <circle cx="540" cy="536" r="146" fill="url(#pale)" fill-opacity="0.75"/>
+    <circle cx="540" cy="536" r="146" fill="none" stroke="#f6f0f8" stroke-width="6" stroke-opacity="0.45"/></g>
+    <circle cx="540" cy="556" r="34" fill="#2b1933"/>
+    <circle cx="540" cy="556" r="34" fill="none" stroke="#6b4a78" stroke-width="5"/>
+    <g fill="#57405f">
+      <rect x="400" y="666" width="46" height="34" rx="9"/><rect x="634" y="666" width="46" height="34" rx="9"/>
+    </g>
+    <g fill="#c8a3d3" fill-opacity="0.34">
+      <circle cx="540" cy="382" r="8"/><circle cx="672" cy="470" r="8"/><circle cx="672" cy="602" r="8"/>
+      <circle cx="408" cy="470" r="8"/><circle cx="408" cy="602" r="8"/><circle cx="540" cy="690" r="8"/>
+    </g>
+  </g>
+
+  <!-- the snare, in front and to the left, with the sticks laid across it -->
+  <g>
+    <ellipse cx="330" cy="676" rx="96" ry="17" fill="#160c1b" fill-opacity="0.46"/>
+    <g stroke="#57405f" stroke-width="10" stroke-linecap="round">
+      <path d="M330 606 L280 676M330 606 L380 676M330 606 L336 678"/>
+    </g>
+    <rect x="248" y="540" width="164" height="76" rx="10" fill="url(#lit)"/>
+    <g class="head head-2"><ellipse cx="330" cy="540" rx="82" ry="21" fill="#e2d5e8"/></g>
+    <ellipse cx="330" cy="540" rx="82" ry="21" fill="none" stroke="#f6f0f8" stroke-width="5" stroke-opacity="0.6"/>
+    <g class="sticks">
+      <g stroke="url(#wood)" stroke-width="11" stroke-linecap="round">
+        <path d="M268 548 L398 520"/><path d="M272 562 L402 536"/>
+      </g>
+    </g>
+  </g>
+
+  <g class="drift" fill="#fff6e2"><circle class="mote" cx="890" cy="360" r="3.5"/><circle class="mote mote-2" cx="831" cy="388" r="2.8"/><circle class="mote mote-3" cx="864" cy="312" r="2.3"/><circle class="mote mote-4" cx="895" cy="404" r="3.4"/><circle class="mote mote-5" cx="795" cy="349" r="3.2"/><circle class="mote mote-6" cx="923" cy="323" r="1.8"/><circle class="mote mote-7" cx="839" cy="434" r="3.1"/><circle class="mote mote-8" cx="817" cy="287" r="3.4"/><circle class="mote mote-9" cx="956" cy="390" r="2.4"/><circle class="mote mote-10" cx="758" cy="398" r="2.7"/><circle class="mote mote-11" cx="910" cy="265" r="3.5"/><circle class="mote mote-12" cx="900" cy="466" r="2.9"/></g>
+  <g fill="#ffe0a3" fill-opacity="0.92">
+    <g transform="translate(300 440)"><g class="note">
+      <ellipse cx="0" cy="0" rx="9" ry="7" transform="rotate(-18)"/>
+      <path d="M8 -3 V-30" stroke="#ffe0a3" stroke-width="3.2" stroke-linecap="round"/>
+    </g></g>
+    <g transform="translate(238 398)"><g class="note note-2">
+      <ellipse cx="0" cy="0" rx="9" ry="7" transform="rotate(-18)"/>
+      <path d="M8 -3 V-30" stroke="#ffe0a3" stroke-width="3.2" stroke-linecap="round"/>
+    </g></g>
+    <g transform="translate(352 414)"><g class="note note-3">
+      <ellipse cx="0" cy="0" rx="9" ry="7" transform="rotate(-18)"/>
+      <path d="M8 -3 V-30" stroke="#ffe0a3" stroke-width="3.2" stroke-linecap="round"/>
+    </g></g>
+  </g>
+  <!-- the near dark. Something between the viewer and the room is what makes
+       it a room you are standing in rather than a picture of some furniture. -->
+  <g fill="#1b1024" fill-opacity="0.94">
+    <path d="M-134 820 C -64 740 -14 600 -16 430 l22 4 C 16 610 -38 752 -108 824 Z"/>
+    <g transform="translate(-100 792) rotate(-6) scale(1 1)"><g class="frond"><path d="M0 0 C 67 -59 149 -67 196 -31 C 145 20 63 27 0 0 Z"/></g></g>
+    <g transform="translate(-83 722) rotate(-12) scale(1 1)"><g class="frond frond-2"><path d="M0 0 C 60 -53 134 -60 177 -28 C 131 18 57 25 0 0 Z"/></g></g>
+    <g transform="translate(-66 652) rotate(-18) scale(1 1)"><g class="frond frond-3"><path d="M0 0 C 54 -47 120 -54 158 -25 C 117 16 50 22 0 0 Z"/></g></g>
+    <g transform="translate(-48 582) rotate(-24) scale(1 1)"><g class="frond frond-4"><path d="M0 0 C 47 -42 105 -47 138 -22 C 102 14 44 19 0 0 Z"/></g></g>
+    <g transform="translate(-31 512) rotate(-30) scale(1 1)"><g class="frond frond-5"><path d="M0 0 C 41 -36 91 -41 119 -19 C 88 12 38 17 0 0 Z"/></g></g>
+    <g transform="translate(-14 442) rotate(-36) scale(1 1)"><g class="frond frond-6"><path d="M0 0 C 34 -30 76 -34 100 -16 C 74 10 32 14 0 0 Z"/></g></g>
+  </g>
+  <rect width="1200" height="800" fill="url(#corner)"/>
+  <rect width="1200" height="800" filter="url(#grain)" opacity="0.26"/>
 </svg>

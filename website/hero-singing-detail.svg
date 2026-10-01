@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Hero colour treatment from the approved Claude voice.svg. Geometry and animation unchanged. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="A drawing of a microphone on a boom stand in a music room, a music stand and a stool beside it and late afternoon light through the window">
+  <defs>
+
+    <radialGradient id="room" cx="0.72" cy="0.28" r="1.02">
+      <stop offset="0" stop-color="#d6aee2"/><stop offset="0.24" stop-color="#9d74ab"/>
+      <stop offset="0.52" stop-color="#674775"/><stop offset="0.8" stop-color="#432b4f"/>
+      <stop offset="1" stop-color="#2a1a34"/>
+    </radialGradient>
+    <linearGradient id="wallFoot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#140a19" stop-opacity="0"/>
+      <stop offset="1" stop-color="#140a19" stop-opacity="0.24"/>
+    </linearGradient>
+
+    <linearGradient id="bdA" x1="1" y1="0" x2="0" y2="0.4">
+      <stop offset="0" stop-color="#b98d78"/><stop offset="0.45" stop-color="#704f52"/>
+      <stop offset="1" stop-color="#3b2733"/>
+    </linearGradient>
+    <linearGradient id="bdB" x1="1" y1="0" x2="0" y2="0.4">
+      <stop offset="0" stop-color="#a87f6d"/><stop offset="0.45" stop-color="#65474d"/>
+      <stop offset="1" stop-color="#34222e"/>
+    </linearGradient>
+    <linearGradient id="bdC" x1="1" y1="0" x2="0" y2="0.4">
+      <stop offset="0" stop-color="#c79a80"/><stop offset="0.45" stop-color="#7a565a"/>
+      <stop offset="1" stop-color="#422c38"/>
+    </linearGradient>
+
+    <linearGradient id="sky" x1="0" y1="0" x2="0.15" y2="1">
+      <stop offset="0" stop-color="#a9c6de"/><stop offset="0.3" stop-color="#e8cfc6"/>
+      <stop offset="0.62" stop-color="#ffd9a8"/><stop offset="1" stop-color="#ffb07a"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff9ec" stop-opacity="0.95"/>
+      <stop offset="0.5" stop-color="#ffd9a8" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ffd9a8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0.35" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#fff5e6" stop-opacity="0.8"/>
+      <stop offset="0.5" stop-color="#ffd6bf" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffd6bf" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="spill" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffdcae" stop-opacity="0.62"/>
+      <stop offset="0.6" stop-color="#ffcfa0" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#ffcfa0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bounce" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ffbe8e" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffbe8e" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="litTop" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#f7ecfa"/><stop offset="0.36" stop-color="#a06fb0"/>
+      <stop offset="1" stop-color="#3f2b4c"/>
+    </linearGradient>
+    <linearGradient id="dark" x1="1" y1="0" x2="0" y2="0.4">
+      <stop offset="0" stop-color="#6b4d78"/><stop offset="1" stop-color="#2c1e38"/>
+    </linearGradient>
+    <linearGradient id="pale" x1="1" y1="0" x2="0" y2="0.2">
+      <stop offset="0" stop-color="#fffdf7"/><stop offset="0.45" stop-color="#eee2f2"/>
+      <stop offset="1" stop-color="#ab99b4"/>
+    </linearGradient>
+    <radialGradient id="corner" cx="0.5" cy="0.46" r="0.78">
+      <stop offset="0.46" stop-color="#140a19" stop-opacity="0"/>
+      <stop offset="0.8" stop-color="#140a19" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#140a19" stop-opacity="0.56"/>
+    </radialGradient>
+
+    <filter id="soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+    <filter id="soft2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" seed="23" result="n"/>
+      <feColorMatrix in="n" type="matrix" result="g"
+        values="0 0 0 0 0.06  0 0 0 0 0.03  0 0 0 0 0.08  0.5 0.3 0.2 0 -0.2"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* ------------------------------------------------------------------ *
+     * THE ROOM BREATHES. Owner, 25 September: ten times the animation.
+     * The rule every one of these obeys: position lives on an OUTER group,
+     * motion on an INNER one, because a CSS transform REPLACES the transform
+     * attribute rather than composing with it. Transform and opacity only,
+     * so the whole thing composites on the GPU and costs a town page nothing.
+     * ------------------------------------------------------------------ */
+
+    /* the light. A cloud crosses the sun once every half minute and the whole
+       room goes quiet with it, which is the single biggest thing in here. */
+    .cloud { animation: cloud 34s ease-in-out infinite; }
+    .glow { animation: glow 9s ease-in-out infinite alternate; }
+    .beamdrift { animation: beamdrift 29s ease-in-out infinite alternate; transform-box: fill-box; }
+    .shimmer { animation: shimmer 13s ease-in-out infinite alternate; }
+    .warmth { animation: warmth 34s ease-in-out infinite; }
+
+    /* dust. Twelve specks, each on its own clock, drifting as well as falling. */
+    .mote { transform-box: fill-box; opacity: 0; animation: mote 16s linear infinite; }
+    .mote-2 { animation-delay: -1.3s }  .mote-3 { animation-delay: -2.6s }
+    .mote-4 { animation-delay: -4s }    .mote-5 { animation-delay: -5.3s }
+    .mote-6 { animation-delay: -6.6s }  .mote-7 { animation-delay: -8s }
+    .mote-8 { animation-delay: -9.3s }  .mote-9 { animation-delay: -10.6s }
+    .mote-10 { animation-delay: -12s }  .mote-11 { animation-delay: -13.3s }
+    .mote-12 { animation-delay: -14.6s }
+    .drift { transform-box: fill-box; animation: drift 21s ease-in-out infinite alternate; }
+
+    /* green things, on two different clocks so they are not a chorus line */
+    .leaf { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 7s ease-in-out infinite alternate; }
+    .leaf-2 { animation-delay: -2.4s } .leaf-3 { animation-delay: -4.8s }
+    .frond { transform-box: fill-box; transform-origin: 50% 100%; animation: draught 13s ease-in-out infinite alternate; }
+    .frond-2 { animation-delay: -2.1s; animation-duration: 15s }
+    .frond-3 { animation-delay: -4.2s; animation-duration: 17s }
+    .frond-4 { animation-delay: -6.3s; animation-duration: 14s }
+    .frond-5 { animation-delay: -8.4s; animation-duration: 16s }
+    .frond-6 { animation-delay: -10.5s; animation-duration: 18s }
+
+    /* notes, on a curve now rather than straight up, and on a 12s phrase */
+    .note { transform-box: fill-box; transform-origin: 50% 100%; opacity: 0; animation: note 12s ease-out infinite; }
+    .note-2 { animation-delay: 1.2s }  .note-3 { animation-delay: 2.6s }
+    .note-4 { animation-delay: 4.1s }  .note-5 { animation-delay: 5.4s }
+    .note-6 { animation-delay: 6.8s }  .note-7 { animation-delay: 8.2s }
+    .note-8 { animation-delay: 9.6s }
+
+    /* strings: the string itself wobbles, and a ghost behind it widens on the
+       attack, which is how a vibrating string reads without motion blur */
+    .string { transform-box: fill-box; transform-origin: 50% 50%; animation: strum 6s ease-out infinite; }
+    .string-2 { animation-delay: 0.06s } .string-3 { animation-delay: 0.12s }
+    .string-4 { animation-delay: 0.18s } .string-5 { animation-delay: 0.24s }
+    .string-6 { animation-delay: 0.3s }
+    .ghost { opacity: 0; animation: ghost 6s ease-out infinite; }
+    .ghost-2 { animation-delay: 0.06s } .ghost-3 { animation-delay: 0.12s }
+    .ghost-4 { animation-delay: 0.18s } .ghost-5 { animation-delay: 0.24s }
+    .ghost-6 { animation-delay: 0.3s }
+    .body { transform-box: fill-box; transform-origin: 50% 50%; animation: resonate 6s ease-out infinite; }
+
+    /* steam off a mug, bunting in a draught, birds a long way off */
+    .steam { animation: steam 5s ease-in-out infinite; transform-box: fill-box; transform-origin: 50% 100%; }
+    .steam-2 { animation-delay: 1.7s } .steam-3 { animation-delay: 3.3s }
+    .bunt { transform-box: fill-box; transform-origin: 50% 0%; animation: flutter 4s ease-in-out infinite alternate; }
+    .bunt-2 { animation-delay: -0.35s } .bunt-3 { animation-delay: -0.7s }
+    .bunt-4 { animation-delay: -1.05s } .bunt-5 { animation-delay: -1.4s }
+    .bunt-6 { animation-delay: -1.75s } .bunt-7 { animation-delay: -2.1s }
+    .bunt-8 { animation-delay: -2.45s } .bunt-9 { animation-delay: -2.8s }
+    .bunt-10 { animation-delay: -3.15s }
+    .bird { transform-box: fill-box; opacity: 0; animation: fly 23s ease-in-out infinite; }
+    .bird-2 { animation-delay: 2.6s } .bird-3 { animation-delay: 11s }
+
+    /* a clock that actually keeps time, one step a second */
+    .tick { transform-box: fill-box; transform-origin: 50% 100%; animation: tick 60s steps(60, end) infinite; }
+    /* paper lifting in the draught, a curtain edge, a page corner */
+    .page { transform-box: fill-box; transform-origin: 0% 100%; animation: lift 8s ease-in-out infinite alternate; }
+    /* a ring of sound leaving whatever is making it */
+    .ring { transform-box: fill-box; transform-origin: 50% 50%; opacity: 0; animation: ring 6s ease-out infinite; }
+    .ring-2 { animation-delay: 2s } .ring-3 { animation-delay: 4s }
+    /* a cymbal rocks on its stand long after it was hit; a drum head gives
+       under the stick and comes back */
+    .swing { transform-box: fill-box; transform-origin: 50% 40%; animation: swing 6s ease-out infinite; }
+    .swing-2 { animation-delay: 0.22s }
+    .head { transform-box: fill-box; transform-origin: 50% 50%; animation: head 6s ease-out infinite; }
+    .head-2 { animation-delay: 0.3s } .head-3 { animation-delay: 1.5s }
+    /* the keyboard plays a phrase rather than twitching at random */
+    .key { transform-box: fill-box; transform-origin: 50% 0%; animation: keypress 12s ease-in-out infinite; }
+    .boom { transform-box: fill-box; transform-origin: 8% 22%; animation: lean 11s ease-in-out infinite alternate; }
+    .page { transform-box: fill-box; transform-origin: 0% 100%; animation: lift 8s ease-in-out infinite alternate; }
+
+    @keyframes cloud {
+      0%, 34% { opacity: 1; }
+      46%, 58% { opacity: 0.38; }
+      72%, 100% { opacity: 1; }
+    }
+    @keyframes warmth {
+      0%, 34% { opacity: 0; }
+      46%, 58% { opacity: 0.22; }
+      72%, 100% { opacity: 0; }
+    }
+    @keyframes glow { from { opacity: 0.7; } to { opacity: 1; } }
+    @keyframes shimmer { from { opacity: 0.5; transform: scale(0.94); } to { opacity: 1; transform: scale(1.06); } }
+    @keyframes beamdrift { from { transform: translateX(-18px) skewX(-0.7deg); }
+                            to { transform: translateX(20px) skewX(0.8deg); } }
+    @keyframes note {
+      0% { opacity: 0; transform: translate(0,0) scale(0.6) rotate(0deg); }
+      6% { opacity: 0.95; }
+      40% { transform: translate(43px,-120px) scale(1.05) rotate(-9deg); }
+      70% { opacity: 0.6; }
+      100% { opacity: 0; transform: translate(-130px,-300px) scale(1.3) rotate(16deg); }
+    }
+    @keyframes mote {
+      0% { opacity: 0; transform: translate(0,0); }
+      12% { opacity: 0.6; }
+      50% { transform: translate(24px, 120px); }
+      88% { opacity: 0.34; }
+      100% { opacity: 0; transform: translate(-48px, 260px); }
+    }
+    @keyframes drift { from { transform: translate(-9px, 4px); } to { transform: translate(11px, -5px); } }
+    @keyframes sway { from { transform: rotate(-3deg) scaleY(0.99); } to { transform: rotate(3.2deg) scaleY(1.01); } }
+    @keyframes draught { from { transform: rotate(-2.6deg) translateY(2px); }
+                          to { transform: rotate(2.8deg) translateY(-3px); } }
+    @keyframes flutter { from { transform: rotate(-6deg); } to { transform: rotate(6.5deg); } }
+    @keyframes fly {
+      0%, 3% { opacity: 0; transform: translate(0,0); }
+      7% { opacity: 0.6; } 26% { opacity: 0.6; }
+      34%, 100% { opacity: 0; transform: translate(96px,-34px); }
+    }
+    @keyframes tick { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes strum {
+      0%, 7% { transform: translateX(0); }
+      0.8% { transform: translateX(-3.2px); } 1.8% { transform: translateX(2.6px); }
+      2.8% { transform: translateX(-1.8px); } 4% { transform: translateX(1.1px); }
+      5.4% { transform: translateX(-0.5px); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes ghost {
+      0% { opacity: 0; }
+      1% { opacity: 0.42; }
+      5% { opacity: 0.22; }
+      12%, 100% { opacity: 0; }
+    }
+    @keyframes resonate {
+      0%, 8% { transform: scale(1); }
+      1.5% { transform: scale(1.012); }
+      3.5% { transform: scale(0.995); }
+      6% { transform: scale(1.004); }
+      100% { transform: scale(1); }
+    }
+    @keyframes steam {
+      0% { opacity: 0; transform: translateY(0) scale(0.6) skewX(0deg); }
+      30% { opacity: 0.55; }
+      60% { transform: translateY(-22px) scale(1.05) skewX(7deg); }
+      100% { opacity: 0; transform: translateY(-44px) scale(1.5) skewX(-5deg); }
+    }
+    @keyframes lift { from { transform: skewX(0deg) translateY(0); }
+                       to { transform: skewX(-6deg) translateY(-3px); } }
+    @keyframes swing {
+      0%, 9% { transform: rotate(0deg); }
+      1% { transform: rotate(-3.4deg) translateY(-2px); }
+      3% { transform: rotate(2.4deg); }
+      5% { transform: rotate(-1.4deg); }
+      7% { transform: rotate(0.7deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes head {
+      0%, 7% { transform: scale(1); }
+      1% { transform: scale(0.985); }
+      3% { transform: scale(1.008); }
+      5% { transform: scale(0.997); }
+      100% { transform: scale(1); }
+    }
+    @keyframes keypress {
+      0%, 4%, 100% { transform: translateY(0); }
+      1.6% { transform: translateY(4px); }
+    }
+    @keyframes ring {
+      0% { opacity: 0.5; transform: scale(0.25); }
+      70% { opacity: 0.12; }
+      100% { opacity: 0; transform: scale(2.6); }
+    }
+    @keyframes lean { from { transform: rotate(-0.8deg); } to { transform: rotate(0.9deg); } }
+    @keyframes lift { from { transform: skewX(0deg); } to { transform: skewX(-4deg); } }
+    /* An image cannot be told by the page that embeds it, so the guard lives
+       in here. Every scene settles lit, still, and with nothing missing. */
+    @media (prefers-reduced-motion: reduce) {
+      .cloud, .glow, .beamdrift, .shimmer, .warmth, .mote, .drift, .leaf, .frond,
+      .note, .string, .ghost, .body, .steam, .bunt, .bird, .tick, .page, .ring,
+      .swing, .head, .key, .boom, .page {
+        animation: none;
+      }
+      .glow { opacity: 0.94; } .shimmer { opacity: 0.8; } .cloud { opacity: 1; }
+      .note, .mote, .steam, .bird, .ring, .ghost, .warmth { opacity: 0; }
+    }
+  </style>
+
+  <rect width="1200" height="800" fill="url(#room)"/>
+  <g>
+    <rect y="232" width="1200" height="12" fill="#3f2b4b"/>
+    <rect y="232" width="1200" height="3.4" fill="#a97ab6" fill-opacity="0.68"/>
+    <rect y="244" width="1200" height="7" fill="#160c1b" fill-opacity="0.26"/>
+  </g>
+  <g>
+    <rect y="560" width="1200" height="16" fill="url(#bdB)"/>
+    <rect y="560" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="562" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="575" width="1200" height="21" fill="url(#bdA)"/>
+    <rect y="575" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="577" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="595" width="1200" height="29" fill="url(#bdC)"/>
+    <rect y="595" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="597" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="623" width="1200" height="39" fill="url(#bdA)"/>
+    <rect y="623" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="625" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="661" width="1200" height="52" fill="url(#bdB)"/>
+    <rect y="661" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="663" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <rect y="712" width="1200" height="71" fill="url(#bdC)"/>
+    <rect y="712" width="1200" height="2" fill="#160c1b" fill-opacity="0.45"/>
+    <rect y="714" width="1200" height="1.4" fill="#ffd2a8" fill-opacity="0.2"/>
+    <g stroke="#160c1b" stroke-opacity="0.38" stroke-width="2.4">
+      <path d="M171 560 175 575"/>
+      <path d="M501 560 505 575"/>
+      <path d="M831 560 835 575"/>
+      <path d="M1161 560 1165 575"/>
+      <path d="M108 575 113 595"/>
+      <path d="M484 575 489 595"/>
+      <path d="M860 575 865 595"/>
+      <path d="M1236 575 1241 595"/>
+      <path d="M45 595 52 623"/>
+      <path d="M467 595 474 623"/>
+      <path d="M889 595 896 623"/>
+      <path d="M-18 623 -9 661"/>
+      <path d="M312 623 321 661"/>
+      <path d="M642 623 651 661"/>
+      <path d="M972 623 981 661"/>
+      <path d="M319 661 331 712"/>
+      <path d="M695 661 707 712"/>
+      <path d="M1071 661 1083 712"/>
+      <path d="M256 712 273 782"/>
+      <path d="M678 712 695 782"/>
+      <path d="M1100 712 1117 782"/>
+    </g>
+    <g fill="#ffd2a8" fill-opacity="0.22">
+      <circle cx="-6" cy="632" r="2.4"/><circle cx="-6" cy="652" r="2.4"/>
+      <circle cx="324" cy="632" r="2.4"/><circle cx="324" cy="652" r="2.4"/>
+      <circle cx="654" cy="632" r="2.4"/><circle cx="654" cy="652" r="2.4"/>
+      <circle cx="984" cy="632" r="2.4"/><circle cx="984" cy="652" r="2.4"/>
+      <circle cx="331" cy="670" r="2.4"/><circle cx="331" cy="703" r="2.4"/>
+      <circle cx="707" cy="670" r="2.4"/><circle cx="707" cy="703" r="2.4"/>
+      <circle cx="1083" cy="670" r="2.4"/><circle cx="1083" cy="703" r="2.4"/>
+      <circle cx="268" cy="721" r="2.4"/><circle cx="268" cy="773" r="2.4"/>
+      <circle cx="690" cy="721" r="2.4"/><circle cx="690" cy="773" r="2.4"/>
+      <circle cx="1112" cy="721" r="2.4"/><circle cx="1112" cy="773" r="2.4"/>
+    </g>
+  </g>
+  <g>
+    <rect y="496" width="1200" height="64" fill="url(#wallFoot)"/>
+    <rect y="534" width="1200" height="26" fill="#3a2744"/>
+    <rect y="534" width="1200" height="4" fill="#9a72a8"/>
+    <rect y="541" width="1200" height="3" fill="#160c1b" fill-opacity="0.4"/>
+    <rect y="547" width="1200" height="13" fill="#2e1f37"/>
+    <rect y="558" width="1200" height="4" fill="#160c1b" fill-opacity="0.55"/>
+  </g>
+
+  <g>
+
+    <rect x="953" y="141" width="226" height="298" rx="7" fill="#241630"/>
+    <rect x="953" y="141" width="226" height="298" rx="7" fill="none" stroke="#160c1b" stroke-opacity="0.5" stroke-width="5"/>
+    <clipPath id="vw"><rect x="980" y="168" width="172" height="244" rx="4"/></clipPath>
+    <g clip-path="url(#vw)">
+      <rect x="980" y="168" width="172" height="244" fill="url(#sky)"/>
+      <circle class="shimmer" cx="1066" cy="358" r="134" fill="url(#sun)"/>
+      <path d="M980 380 H1152 V412 H980 Z" fill="#8a6478" fill-opacity="0.6"/>
+      <g fill="#7d5768" fill-opacity="0.8"><rect x="1001" y="329" width="107" height="59"/><path d="M994 329 h120 l-7 -17 h-107 Z"/></g>
+      <g fill="#ffe9c8" fill-opacity="0.52"><rect x="1014" y="344" width="15" height="22" rx="2"/><rect x="1045" y="344" width="15" height="22" rx="2"/><rect x="1076" y="344" width="15" height="22" rx="2"/></g>
+      <g stroke="#7d5768" stroke-opacity="0.66" stroke-width="2.6" fill="none" stroke-linecap="round">
+        <g transform="translate(1014 217)"><g class="bird"><path d="M0 0 q5 -5 10 0 q5 -5 10 0"/></g></g>
+        <g transform="translate(1056 239)"><g class="bird bird-2"><path d="M0 0 q4 -4 8 0 q4 -4 8 0"/></g></g>
+      </g>
+      <rect x="980" y="168" width="172" height="244" fill="#fff6e2" fill-opacity="0.1"/>
+    </g>
+      <rect x="1060.0" y="168" width="12" height="244" fill="#33203d"/><rect x="1060.0" y="168" width="4" height="244" fill="#8e6aa0" fill-opacity="0.5"/>
+      <rect x="980" y="284.0" width="172" height="12" fill="#33203d"/><rect x="980" y="284.0" width="172" height="4" fill="#a97ab6" fill-opacity="0.55"/>
+
+    <rect x="962" y="150" width="208" height="280" rx="6" fill="none" stroke="#3f2b4b" stroke-width="18"/>
+    <rect x="971" y="159" width="190" height="262" rx="3" fill="none" stroke="#a97ab6" stroke-opacity="0.44" stroke-width="3"/>
+    <rect x="962" y="150" width="208" height="6" rx="3" fill="#c49ad2" fill-opacity="0.5"/>
+
+    <path d="M934 434 h264 l-10 20 h-244 Z" fill="#c8a3d3" fill-opacity="0.72"/>
+    <rect x="938" y="452" width="256" height="13" rx="4" fill="#4a3356"/>
+    <rect x="938" y="463" width="256" height="8" fill="#160c1b" fill-opacity="0.34"/>
+  </g>
+  <g>
+    <rect x="706" y="232" width="208" height="14" rx="5" fill="url(#litTop)"/>
+    <rect x="706" y="232" width="208" height="4" rx="2" fill="#f2e0f7" fill-opacity="0.6"/>
+    <rect x="706" y="246" width="208" height="9" fill="#160c1b" fill-opacity="0.3"/>
+    <g fill="#4a3356"><rect x="724" y="246" width="11" height="24" rx="4"/>
+      <rect x="885" y="246" width="11" height="24" rx="4"/></g>
+  </g>
+  <g>
+    <rect x="724" y="194" width="10" height="38" rx="3" fill="#8d5f8c"/>
+    <rect x="724" y="194" width="3" height="38" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="736" y="187" width="15" height="45" rx="3" fill="#5f7fa8"/>
+    <rect x="736" y="187" width="4" height="45" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="753" y="180" width="11" height="52" rx="3" fill="#a8763f"/>
+    <rect x="753" y="180" width="3" height="52" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="766" y="172" width="15" height="60" rx="3" fill="#6fa88d"/>
+    <rect x="766" y="172" width="5" height="60" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="783" y="187" width="12" height="45" rx="3" fill="#a85f6b"/>
+    <rect x="783" y="187" width="3" height="45" fill="#fff6e2" fill-opacity="0.18"/>
+    <rect x="797" y="180" width="16" height="52" rx="3" fill="#7d6aa8"/>
+    <rect x="797" y="180" width="5" height="52" fill="#fff6e2" fill-opacity="0.18"/>
+  </g>
+  <g>
+    <rect x="556" y="498" width="46" height="34" rx="6" fill="#4a3356"/>
+    <rect x="556" y="498" width="46" height="4" rx="2" fill="#c8a3d3" fill-opacity="0.44"/>
+    <g fill="#241630"><rect x="566" y="509" width="8" height="4" rx="1.5"/>
+      <rect x="584" y="509" width="8" height="4" rx="1.5"/>
+      <rect x="575" y="518" width="8" height="4" rx="1.5"/></g>
+  </g>
+
+  <g class="cloud">
+    <g class="beamdrift" filter="url(#soft)">
+      <path class="glow" d="M962 470 L1170 470 L1500 810 L1127 810 Z" fill="url(#beam)"/>
+    </g>
+    <ellipse class="glow" filter="url(#soft2)" cx="1284" cy="710"
+             rx="300" ry="112" fill="url(#spill)"/>
+    <rect y="400" width="1200" height="160" fill="url(#bounce)"/>
+  </g>
+
+  <rect class="warmth" width="1200" height="810" fill="#26203f" opacity="0"/>
+
+  <g>
+    <ellipse cx="430" cy="704" rx="330" ry="58" fill="#7a4a52"/>
+    <ellipse cx="430" cy="704" rx="330" ry="58" fill="none" stroke="#c98a84" stroke-width="5" stroke-opacity="0.55"/>
+    <ellipse cx="430" cy="704" rx="294" ry="44" fill="none" stroke="#c98a84" stroke-width="3" stroke-opacity="0.4"/>
+    <ellipse cx="430" cy="704" rx="258" ry="31" fill="none" stroke="#c98a84" stroke-width="2.4" stroke-opacity="0.3"/>
+    <g stroke="#c98a84" stroke-width="2.6" stroke-opacity="0.42" stroke-linecap="round"><path d="M108 757 l-3 15"/><path d="M146 757 l-2 15"/><path d="M184 757 l-1 15"/><path d="M222 757 l-3 15"/><path d="M260 757 l-2 15"/><path d="M297 757 l-1 15"/><path d="M335 757 l-3 15"/><path d="M373 757 l-2 15"/><path d="M411 757 l-1 15"/><path d="M449 757 l-3 15"/><path d="M487 757 l-2 15"/><path d="M525 757 l-1 15"/><path d="M563 757 l-3 15"/><path d="M600 757 l-2 15"/><path d="M638 757 l-1 15"/><path d="M676 757 l-3 15"/><path d="M714 757 l-2 15"/><path d="M752 757 l-1 15"/></g>
+  </g>
+
+  <g>
+    <rect x="170" y="176" width="220" height="168" rx="8" fill="#3a2744"/>
+    <rect x="170" y="176" width="220" height="168" rx="8" fill="none" stroke="#a5749f" stroke-width="6" stroke-opacity="0.5"/>
+    <rect x="188" y="194" width="184" height="132" rx="4" fill="#4d3459"/>
+    <path d="M188 326 L248 254 L292 300 L326 268 L372 326 Z" fill="#7a5488"/>
+    <circle cx="330" cy="222" r="17" fill="#ffe0a3" fill-opacity="0.55"/>
+    <rect x="170" y="176" width="14" height="168" rx="7" fill="#d8b6e2" fill-opacity="0.2"/>
+  </g>
+
+  <g>
+    <ellipse cx="430" cy="700" rx="320" ry="56" fill="#4d3459"/>
+    <ellipse cx="430" cy="700" rx="320" ry="56" fill="none" stroke="#a5749f" stroke-width="4" stroke-opacity="0.55"/>
+    <ellipse cx="430" cy="700" rx="286" ry="43" fill="none" stroke="#8d5f8c" stroke-width="3" stroke-opacity="0.45"/>
+  </g>
+
+  <g>
+    <ellipse cx="858" cy="700" rx="108" ry="19" fill="#160c1b" fill-opacity="0.46"/>
+    <path d="M766 694 L786 590 h146 l20 104 z" fill="url(#dark)"/>
+    <path d="M786 590 h146 l4 24 h-154 z" fill="url(#litTop)"/>
+    <g fill="#2b1933" fill-opacity="0.7"><circle cx="859" cy="652" r="32"/></g>
+    <circle cx="859" cy="652" r="32" fill="none" stroke="#a5749f" stroke-width="4" stroke-opacity="0.45"/>
+    <circle cx="859" cy="616" r="12" fill="#2b1933" fill-opacity="0.66"/>
+  </g>
+
+  <g>
+    <ellipse cx="430" cy="702" rx="118" ry="20" fill="#160c1b" fill-opacity="0.5"/>
+    <g stroke="#57405f" stroke-width="13" stroke-linecap="round">
+      <path d="M430 686 L338 712M430 686 L522 712M430 686 L436 716"/>
+    </g>
+    <rect x="422" y="250" width="16" height="442" rx="8" fill="#57405f"/>
+    <rect x="422" y="250" width="5" height="442" fill="#c8a3d3" fill-opacity="0.34"/>
+    <rect x="410" y="404" width="40" height="26" rx="9" fill="#3f2b49"/>
+
+    <g class="boom">
+      <rect x="430" y="240" width="192" height="15" rx="7" transform="rotate(-15 430 248)" fill="#57405f"/>
+      <rect x="430" y="240" width="192" height="5" rx="2.5" transform="rotate(-15 430 248)" fill="#c8a3d3" fill-opacity="0.4"/>
+      <circle cx="430" cy="248" r="17" fill="#3f2b49"/>
+      <circle cx="430" cy="248" r="6" fill="#c8a3d3" fill-opacity="0.5"/>
+
+      <g transform="translate(616 194) rotate(18)">
+        <rect x="-19" y="42" width="38" height="94" rx="13" fill="url(#dark)"/>
+        <rect x="-19" y="42" width="10" height="94" rx="5" fill="#d8c1dd" fill-opacity="0.26"/>
+        <ellipse cx="0" cy="18" rx="34" ry="40" fill="#cbb9d2"/>
+        <ellipse cx="0" cy="18" rx="34" ry="40" fill="url(#pale)" fill-opacity="0.8"/>
+        <g stroke="#7d6486" stroke-width="2.6" stroke-opacity="0.6">
+          <path d="M-30 4 h60M-33 18 h66M-30 32 h60M-20 -10 h40"/>
+          <path d="M-14 -20 V56M0 -22 V58M14 -20 V56"/>
+        </g>
+        <ellipse cx="-11" cy="4" rx="10" ry="13" fill="#fffbf3" fill-opacity="0.5"/>
+        <rect x="-23" y="36" width="46" height="13" rx="6" fill="#3f2b49"/>
+        <g fill="none" stroke="#ff98ae" stroke-width="3">
+          <circle class="ring" cx="0" cy="14" r="46"/>
+          <circle class="ring ring-2" cx="0" cy="14" r="46"/>
+          <circle class="ring ring-3" cx="0" cy="14" r="46"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g>
+    <ellipse cx="672" cy="698" rx="76" ry="13" fill="#160c1b" fill-opacity="0.44"/>
+    <rect x="665" y="524" width="14" height="166" rx="6" fill="#57405f"/>
+    <g stroke="#57405f" stroke-width="11" stroke-linecap="round">
+      <path d="M672 676 L610 694M672 676 L734 694M672 676 L678 696"/>
+    </g>
+  <g>
+    <path d="M606 428 q66.0 -16 66.0 -6 v104 q0 -10 -66.0 6 z" fill="url(#pale)"/>
+    <path d="M738 428 q-66.0 -16 -66.0 -6 v104 q0 -10 66.0 6 z" fill="#e6dbeb"/>
+    <g stroke="#8d7898" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.75">
+      <path d="M620 454 h36.0M620 472 h32.0M620 490 h40.0"/>
+      <path d="M688.0 454 h36.0M688.0 472 h32.0M688.0 490 h40.0"/>
+    </g>
+    <g fill="#5b4566"><circle cx="636" cy="508" r="5.5"/><circle cx="708" cy="508" r="5.5"/></g>
+  </g>
+  </g>
+  <g>
+    <ellipse cx="300" cy="724" rx="97.96" ry="13" fill="#160c1b" fill-opacity="0.46"/>
+    <rect x="221.0" y="592" width="158" height="20" rx="7" fill="url(#litTop)"/>
+    <rect x="221.0" y="592" width="158" height="5" rx="2.5" fill="#d8b6e2" fill-opacity="0.7"/>
+    <g fill="#4a3356">
+      <rect x="233.0" y="612" width="12" height="118" rx="5"/>
+      <rect x="355.0" y="612" width="12" height="118" rx="5"/>
+    </g>
+    <rect x="233.0" y="676.9" width="134" height="9" rx="4" fill="#3f2b49"/>
+  </g>
+
+  <g>
+    <ellipse cx="1078" cy="700" rx="82" ry="15" fill="#160c1b" fill-opacity="0.44"/>
+    <rect x="1002" y="574" width="152" height="18" rx="7" fill="url(#litTop)"/>
+    <rect x="1002" y="574" width="152" height="5" rx="2.5" fill="#d8b6e2" fill-opacity="0.6"/>
+    <g fill="#3f2b49"><rect x="1012" y="592" width="12" height="100" rx="5"/><rect x="1132" y="592" width="12" height="100" rx="5"/></g>
+    <path d="M1054 502 h48 l-6 66 q-1 8 -9 8 h-18 q-8 0 -9 -8 z" fill="#d5fbff" fill-opacity="0.26"/>
+    <path d="M1054 502 h48 l-6 66 q-1 8 -9 8 h-18 q-8 0 -9 -8 z" fill="none" stroke="#d5fbff" stroke-width="3" stroke-opacity="0.5"/>
+    <path d="M1057 528 h42 l-4 40 q-1 8 -9 8 h-18 q-8 0 -9 -8 z" fill="#8fd8e4" fill-opacity="0.34"/>
+  </g>
+
+  <g transform="translate(250 574)">
+    <g class="page">
+      <path d="M0 0 h108 v22 h-108 z" fill="url(#pale)"/>
+      <g stroke="#8d7898" stroke-width="2.4" stroke-opacity="0.6"><path d="M9 8 h72M9 16 h56"/></g>
+    </g>
+  </g>
+
+  <g class="drift" fill="#fff6e2"><circle class="mote" cx="910" cy="360" r="3.5"/><circle class="mote mote-2" cx="851" cy="388" r="2.8"/><circle class="mote mote-3" cx="884" cy="312" r="2.3"/><circle class="mote mote-4" cx="915" cy="404" r="3.4"/><circle class="mote mote-5" cx="815" cy="349" r="3.2"/><circle class="mote mote-6" cx="943" cy="323" r="1.8"/><circle class="mote mote-7" cx="859" cy="434" r="3.1"/><circle class="mote mote-8" cx="837" cy="287" r="3.4"/><circle class="mote mote-9" cx="976" cy="390" r="2.4"/><circle class="mote mote-10" cx="778" cy="398" r="2.7"/><circle class="mote mote-11" cx="930" cy="265" r="3.5"/><circle class="mote mote-12" cx="920" cy="466" r="2.9"/></g>
+  <g fill="#ff98ae" fill-opacity="0.92">
+    <g transform="translate(690 330)"><g class="note">
+      <ellipse cx="0" cy="0" rx="9" ry="7" transform="rotate(-18)"/>
+      <path d="M8 -3 V-30" stroke="#ff98ae" stroke-width="3.2" stroke-linecap="round"/>
+    </g></g>
+    <g transform="translate(748 286)"><g class="note note-2">
+      <ellipse cx="0" cy="0" rx="9" ry="7" transform="rotate(-18)"/>
+      <path d="M8 -3 V-30" stroke="#ff98ae" stroke-width="3.2" stroke-linecap="round"/>
+    </g></g>
+    <g transform="translate(636 308)"><g class="note note-3">
+      <ellipse cx="0" cy="0" rx="9" ry="7" transform="rotate(-18)"/>
+      <path d="M8 -3 V-30" stroke="#ff98ae" stroke-width="3.2" stroke-linecap="round"/>
+    </g></g>
+    <g transform="translate(796 344)"><g class="note note-4">
+      <ellipse cx="0" cy="0" rx="9" ry="7" transform="rotate(-18)"/>
+      <path d="M8 -3 V-30" stroke="#ff98ae" stroke-width="3.2" stroke-linecap="round"/>
+    </g></g>
+  </g>
+
+  <g>
+    <rect x="-20" y="-20" width="86" height="840" fill="#180d1e"/>
+    <rect x="62" y="-20" width="13" height="840" fill="#2e1f37"/>
+    <rect x="72" y="-20" width="4" height="840" fill="#a97ab6" fill-opacity="0.22"/>
+  </g>
+  <rect width="1200" height="800" fill="url(#corner)"/>
+  <rect width="1200" height="800" filter="url(#grain)" opacity="0.26"/>
+</svg>
