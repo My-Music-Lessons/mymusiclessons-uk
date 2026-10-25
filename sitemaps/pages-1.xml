@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://mymusiclessons.uk/how-it-works/</loc><lastmod>2026-10-01</lastmod><priority>1.0</priority></url>
-  <url><loc>https://mymusiclessons.uk/privacy/</loc><lastmod>2026-10-01</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/how-it-works/</loc><lastmod>2026-10-03</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/privacy/</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/bedfordshire/bedford/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/bedfordshire/biggleswade/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/bedfordshire/dunstable/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
@@ -18,9 +18,9 @@
   <url><loc>https://mymusiclessons.uk/berkshire/slough/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/berkshire/thatcham/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/berkshire/windsor/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mymusiclessons.uk/berkshire/wokingham/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mymusiclessons.uk/bristol/bristol/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mymusiclessons.uk/bristol/</loc><lastmod>2026-10-01</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/berkshire/wokingham/</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/bristol/bristol/</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/bristol/</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/buckinghamshire/amersham/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/buckinghamshire/aylesbury/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/buckinghamshire/beaconsfield/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
@@ -43,7 +43,7 @@
   <url><loc>https://mymusiclessons.uk/cheshire/congleton/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/cheshire/crewe/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/cheshire/ellesmere-port/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mymusiclessons.uk/cheshire/</loc><lastmod>2026-10-01</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/cheshire/</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/cheshire/macclesfield/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/cheshire/northwich/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/cheshire/warrington/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
@@ -60,12 +60,12 @@
   <url><loc>https://mymusiclessons.uk/cornwall/st-austell/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/cornwall/truro/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/county-durham/bishop-auckland/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mymusiclessons.uk/county-durham/chester-le-street/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mymusiclessons.uk/county-durham/chester-le-street/</loc><lastmod>2026-10-25</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/county-durham/consett/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/county-durham/darlington/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/county-durham/durham/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/county-durham/hartlepool/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mymusiclessons.uk/county-durham/</loc><lastmod>2026-10-01</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/county-durham/</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/county-durham/newton-aycliffe/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/county-durham/seaham/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/cumbria/barrow-in-furness/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
@@ -189,7 +189,7 @@
   <url><loc>https://mymusiclessons.uk/hertfordshire/stevenage/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/hertfordshire/watford/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/hertfordshire/welwyn-garden-city/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
-  <url><loc>https://mymusiclessons.uk/</loc><lastmod>2026-10-24</lastmod><priority>1.0</priority></url>
+  <url><loc>https://mymusiclessons.uk/</loc><lastmod>2026-10-25</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/isle-of-wight/</loc><lastmod>2026-10-01</lastmod><priority>1.0</priority></url>
   <url><loc>https://mymusiclessons.uk/isle-of-wight/newport/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
   <url><loc>https://mymusiclessons.uk/isle-of-wight/ryde/</loc><lastmod>2026-10-01</lastmod><priority>0.8</priority></url>
