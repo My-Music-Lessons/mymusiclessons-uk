@@ -1,0 +1,123 @@
+/* The resource suite shares MML's quieter surfaces, clear choices and plum accents. */
+.mml-resources{--tool-ink:#35213e;--tool-muted:#65566c;--tool-accent:#70417e;--tool-line:#dcd1e1;--tool-tint:#eee5f3}
+.mml-tool-empty{display:none}
+@media screen{
+ @media(min-width:1101px){
+  .mml-resources .mml-tool-empty{display:block;align-self:start;padding:32px;border:1px solid #dac9e3;border-radius:16px;background:#eee5f3}
+  .mml-resources .resource-tool-layout:has(>.resource-tool-result:not([hidden]))>.mml-tool-empty{display:none}
+  .mml-resources .mml-tool-empty-icon{display:grid;place-items:center;width:48px;height:48px;border:1px solid #cfb8dc;border-radius:12px;background:#fffdfb;color:#70417e;font:400 28px/1 Inter,sans-serif;margin-bottom:26px}
+  .mml-resources .mml-tool-empty h3{font:400 44px/1.08 'League Gothic',Impact,sans-serif;color:#35213e;margin:14px 0 20px}
+  .mml-resources .mml-tool-empty p{font-size:14px;color:#65566c}
+  .mml-resources .mml-tool-empty ul{margin:24px 0;padding:20px 0 0 18px;border-top:1px solid #d9c9e1;font:400 14px/1.7 Inter,sans-serif;color:#55305f}
+  .mml-resources .mml-tool-empty li+li{margin-top:10px}
+  .mml-resources .mml-tool-empty>span:last-child{font:650 11px/1.7 Inter,sans-serif;color:#70417e}
+ }
+ .mml-resources :is(.resource-workspace,.planner-workshop,.student-poster-workspace){background:#f7f3f8;border-color:var(--tool-line)}
+ .mml-resources :is(.resource-workspace fieldset,.planner-panel,.student-poster-controls fieldset){background:#fffdfb;border:1px solid var(--tool-line);border-radius:14px}
+ .mml-resources :is(.resource-workspace legend,.planner-panel legend,.student-poster-controls legend){color:var(--tool-ink)}
+ .mml-resources :is(.resource-workspace,.planner-workshop,.student-poster-workspace) :is(input:not([type=checkbox]):not([type=radio]),select,textarea){border:1px solid #9c83a8;border-radius:8px;background:#fff;color:var(--tool-ink);font-size:16px;line-height:1.5}
+ .mml-resources :is(.resource-workspace,.planner-workshop,.student-poster-workspace) input[type=file]{padding:8px}
+ .mml-resources input[type=file]::file-selector-button{border:1px solid #d8c9e0;border-radius:6px;padding:8px 12px;margin-right:12px;background:#f2eaf6;color:#55305f;font:650 13px/1.4 Inter,system-ui,sans-serif;cursor:pointer}
+ .mml-resources :is(button,a,input,select,textarea,summary):focus-visible{outline:3px solid #845593;outline-offset:3px}
+ .mml-resources :is(.resource-tool-result,.proposal-result,.launch-path-result){border:1px solid #cdbad6;border-radius:16px;background:#fffdfb;box-shadow:0 12px 32px #37213f0a;overflow:hidden}
+ .mml-resources :is(.resource-tool-result,.proposal-result,.launch-path-result) .eyebrow{color:#70417e}
+ .mml-resources :is(.proposal-result-head,.launch-path-result-head){background:#eae0ef;border-color:var(--tool-line)}
+ .mml-resources :is(.resource-print,.planner-reset){background:#fffdfb;border:1px solid #cbb8d4;color:#55305f;box-shadow:none;border-radius:8px}
+ .mml-resources :is(.resource-calculate,.planner-print-button){background:#55305f;border-color:#55305f;color:#fff;box-shadow:0 2px 3px #37213f12;border-radius:8px;cursor:pointer}
+ .mml-resources :is(.resource-calculate,.planner-print-button):hover{background:#693b76}
+ .mml-resources :is(.resource-print,.planner-reset):hover{background:#f1e9f5}
+ .mml-resources :is(.resource-table-wrap thead th,.expansion-callout,.expansion-cost-totals>div,.expansion-site-result,.resource-embed-share){background:#f0e9f5;border-color:var(--tool-line)}
+ .mml-resources .resource-embed-share{border-radius:14px}
+ .mml-resources .resource-embed-share textarea{font-size:16px;border-color:#9c83a8;border-radius:8px}
+ .mml-resources :is(.resource-assumptions,.resource-method,.resource-table-wrap td,.resource-table-wrap th){border-color:var(--tool-line)}
+ .mml-resources .expansion-intro{background:#e9f2ed;border:1px solid #c6dbcd;border-radius:12px;box-shadow:none}
+ .mml-resources .expansion-empty{background:#fffdfb;border-color:#cab7d3;border-radius:12px}
+ .mml-resources .expansion-callout{border-left:3px solid #896095;border-radius:0 10px 10px 0}
+ .mml-resources .expansion-cost-totals>div{border-radius:12px}
+ .mml-resources .proposal-import{border:1px solid var(--tool-line);border-radius:12px;background:#fffdfb}
+ .mml-resources .proposal-steps button{border:1px solid #d7c8de;border-radius:10px;background:#fffdfb;color:#55305f;box-shadow:none;cursor:pointer}
+ .mml-resources .proposal-steps button[aria-current]{border-color:#80518f;background:#e9def0;box-shadow:inset 0 -3px #80518f}
+ .mml-resources .proposal-instruments span{background:#fff;border-color:#d2c0db;border-radius:8px}
+ .mml-resources .proposal-instruments input:checked+span{background:#e9def0;border-color:#80518f;box-shadow:inset 0 0 0 1px #80518f}
+ .mml-resources :is(.proposal-stale,.launch-path-stale){background:#f2eaf6;border-color:#cfbbd9;color:#55305f}
+ .mml-resources [data-launch-path-tool] .launch-path-self-report{background:#fffdfb;border-color:#91669f;border-radius:0 10px 10px 0}
+ .mml-resources [data-launch-path-tool] :is(.launch-path-question-number,.launch-path-route h4 a){color:#70417e}
+ .mml-resources [data-launch-path-tool] .launch-path-number{background:#e9def0;border-color:#c9aed6;color:#55305f}
+ .mml-resources [data-launch-path-tool] :is(.launch-path-task,.launch-path-record){background:#f5f0f7;border-color:var(--tool-line)}
+ .mml-resources [data-launch-path-tool] .launch-path-route>li{border-color:var(--tool-line)}
+ .mml-resources .planner-panel::after{display:none}
+ .mml-resources .planner-panel legend>span{background:#e9def0;border-color:#c6acd3;color:#55305f}
+ .mml-resources .planner-panel>p{font-size:14px}
+ .mml-resources :is(.planner-instrument,.planner-option){background:#fff;border:1px solid #d4c5dc;border-radius:10px;box-shadow:none;transition:border-color .16s,background-color .16s}
+ .mml-resources :is(.planner-instrument,.planner-option):has(input:checked){background:#eae0f0;border:1px solid #80518f;box-shadow:inset 0 0 0 1px #80518f}
+ .mml-resources .planner-instrument:hover{transform:none;background:#f4edf7}
+ .mml-resources :is(.planner-instrument,.planner-option,.planner-check):has(input:focus-visible){outline:3px solid #845593;outline-offset:3px}
+ .mml-resources .planner-instrument-art{color:#70417e}
+ .mml-resources .planner-instrument:has(input:checked) .planner-tile-check{background:#70417e;border-color:#70417e;color:#fff}
+ .mml-resources .planner-option strong{font-size:13px}
+ .mml-resources .planner-option small{font-size:12px;color:#65566c}
+ .mml-resources .planner-option:has(input:checked) i{border-color:#70417e;background:#fff}
+ .mml-resources .planner-check:has(input:checked) .planner-check-box{background:#70417e;border-color:#70417e;color:#fff}
+ .mml-resources .planner-check:has(input:checked) .planner-check-box::before{border-color:#fff}
+ .mml-resources .planner-lineup-foot>span:last-child{color:#70417e}
+ .mml-resources .planner-plan-body{background:#fffdfb}
+ .mml-resources .planner-plan-block li{border-color:#d1bddb;background:#e9def0;border-radius:5px}
+ .mml-resources .planner-plan-block li:nth-child(3n+2){background:#dce9ef}
+ .mml-resources .planner-plan-block li:nth-child(3n){background:#e1eddf}
+ .mml-resources .planner-plan-model{background:#edf4ef;border-color:#c8dbce;border-radius:10px}
+ .mml-resources .planner-plan-details>div{border-color:var(--tool-line)}
+ .mml-resources .planner-panel progress{accent-color:#70417e;background:#e7dfec}
+ .mml-resources .planner-panel progress::-webkit-progress-bar{background:#e7dfec}
+ .mml-resources .planner-panel progress::-webkit-progress-value{background:#70417e}
+ .mml-resources .planner-panel progress::-moz-progress-bar{background:#70417e}
+ .mml-resources .student-poster-school-note{background:#edf4ef;border-color:#c8dbce;border-radius:10px}
+ .mml-resources .student-poster-controls label{font-size:13px}
+ .mml-resources .student-poster-controls fieldset>p{font-size:12px}
+ .mml-resources .student-poster-instrument-options label>span,.mml-resources .student-poster-style label{background:#fff;border:1px solid #d3c1dc;border-radius:8px}
+ .mml-resources .student-poster-instrument-options label:has(input:checked)>span{background:#e9def0;border-color:#80518f;box-shadow:inset 0 0 0 1px #80518f}
+ .mml-resources .student-poster-style label:has(input:checked){background:#f1e9f5;border-color:#80518f}
+ .mml-resources .product-guide-contents{width:min(1040px,calc(100% - 96px));margin:0 auto 24px;padding:26px 32px;background:#f0e9f5;border:1px solid #ded0e5;border-radius:14px}
+ .mml-resources .product-guide-contents>strong{display:block;margin-bottom:10px;color:#55305f}
+ .mml-resources .product-guide-contents a{color:#55305f}
+ .mml-resources .product-article>.website-section.place-slice{max-width:1040px;padding:36px 32px}
+ .mml-resources .product-article>.website-section.place-slice h2{font-size:clamp(34px,3.5vw,48px);max-width:27ch;margin-top:0}
+ .mml-resources .product-article>.website-section.place-slice+.place-slice{border-top:1px solid #e9dfed}
+ .mml-resources .resource-letter{border-color:#d5c4de;border-radius:12px;background:#f5eff8}
+ .mml-resources .resource-directory-card:focus-visible,.mml-resources .product-links a:focus-visible{outline:3px solid #845593;outline-offset:4px}
+ @media(min-width:761px){.mml-resources .resource-fields label{display:grid;align-content:start;grid-template-rows:minmax(42px,auto) auto}}
+ @media(max-width:760px){
+  .mml-resources .product-guide-contents{width:calc(100% - 40px);padding:22px}
+  .mml-resources .product-article>.website-section.place-slice{padding:30px 20px}
+  .mml-resources .resource-tool-actions>button{width:100%}
+ }
+}
+
+/* Printable school artwork keeps its energy while using the MML palette. */
+.mml-resources .student-poster{background:#fffdf8}
+.mml-resources .student-poster::before{display:none}
+.mml-resources .student-poster:not([data-style=ink]) .student-poster-main h2 em{background:#e4d1ed;color:#35213e;box-shadow:none}
+.mml-resources .student-poster-art>span{background:#dce9ef;border:1px solid #b9cdd7;box-shadow:none;border-radius:12px;transform:none}
+.mml-resources .student-poster-art>span:nth-child(2){background:#e7d9ee;border-color:#cdb7d8;transform:translateY(-5px)}
+.mml-resources .student-poster-art>span:nth-child(3){background:#e1eddf;border-color:#c3d8be;transform:none}
+.mml-resources .student-poster:not([data-style=ink]) .student-poster-signup{background:#e7dfef;border-color:#cbb8d5;border-radius:12px}
+.mml-resources .student-poster-lineup li{background:#fffdfb;border-color:#cdbcd5;border-radius:5px}
+.mml-resources .student-poster[data-style=ink] :is(.student-poster-header,.student-poster-footer,.student-poster-art>span,.student-poster-art>i,.student-poster-signup,.student-poster-lineup li){background:#fff;border-color:#777}
+.mml-resources .student-poster[data-style=ink] .student-poster-header img{background:transparent;filter:brightness(0)}
+.mml-resources .planner-plan-block li{background:#e9def0;border-color:#d1bddb;border-radius:5px}
+.mml-resources .planner-plan-block li:nth-child(3n+2){background:#dce9ef}
+.mml-resources .planner-plan-block li:nth-child(3n){background:#e1eddf}
+.mml-resources .planner-plan-model{background:#edf4ef;border-color:#c8dbce;border-radius:10px}
+
+@media print{
+ .mml-resources .product-page:has(>.resource-workspace)>:not(.resource-workspace),
+ .mml-resources .product-page:has(>.diary-workspace)>:not(.diary-workspace){display:none!important}
+ .mml-resources .product-guide-contents{display:none!important}
+ .mml-resources .product-article::before{content:'My Music Lessons · free school music guide';display:block;font:650 9pt/1.5 Inter,sans-serif;margin-bottom:12pt}
+ .mml-resources .product-article>.mml-resource-hero{display:block!important;width:auto;margin:0 0 20pt;padding:0}
+ .mml-resources .product-article .mml-resource-hero-note,.mml-resources .product-article>.website-section:has(>.product-links){display:none!important}
+ .mml-resources .product-article .mml-resource-hero h1{font-size:28pt;max-width:none;margin:10pt 0}
+ .mml-resources .student-poster[data-style=ink] :is(.student-poster-main h2 em,.student-poster-school){color:#111}
+ .mml-resources .resource-tool-result{border-color:#bfa9cb;border-radius:8px}
+ .mml-resources .resource-table-wrap thead th{background:#f1e9f5;color:#35213e}
+}
+@media(prefers-reduced-motion:reduce){.mml-resources :is(.planner-instrument,.planner-option){transition:none}}
