@@ -1,10 +1,17 @@
 /* MML school toolkit. The public service keeps its established visual identity. */
 .mml-resources{--text:#2b1933;--muted:#655a69;--line:#ddd4df;--surface:#fffdf9;--raised:#f3edf5;color:#2b1933;background:#fffdf9}
 .mml-resources *, .mml-resource-promo *{box-sizing:border-box}
-.mml-resources .website-nav .website-logo-art{width:78px;height:88px;display:flex;align-items:center;justify-content:center;background:none;border:0;box-shadow:none;clip-path:none;transform:none}
-.mml-resources .website-nav .website-logo-art img{width:72px;height:80px;object-fit:contain;transform:none;filter:none;animation:none}
+.mml-resources .public-nav.website-nav .brand{width:84px;min-width:84px;height:96px;flex:0 0 84px}
+.mml-resources .website-nav .website-logo-art{position:static;inset:auto;width:78px;height:88px;display:flex;align-items:center;justify-content:center;background:none;border:0;box-shadow:none;clip-path:none;transform:none}
+.mml-resources .public-nav.website-nav .brand img{position:static;inset:auto;width:68px;min-width:0;height:80px;flex:0 0 68px;object-fit:contain;transform:none;filter:none;animation:none}
+.product-skip{background:#55305f;color:#fffafc;clip-path:inset(50%)}
+.product-skip:focus{clip-path:none}
 .mml-resources .website-footer-brand img{width:150px;height:auto;max-height:180px;object-fit:contain}
 .mml-resources .website-footer-brand{background:none;clip-path:none;transform:none}
+.mml-resources .website-footer{--text:#fffafc;--muted:#e0d3e5;--ice:#d5fbff;--line:#e7d5ec33;color:var(--text)}
+.mml-resources .website-footer h2,.mml-resources .website-footer-note h3{color:var(--text)}
+.mml-resources .website-footer-brand img{margin:0 auto 20px}
+.mml-resources .website-menu-sheet{background:#fffdf9;--ice:#754482;--lilac:#754482;color:#2b1933;border-color:#ddd4df}
 .mml-resources .public-nav.website-nav>nav{gap:16px}
 .mml-resources .public-nav.website-nav>nav>a{padding:10px 2px}
 .mml-resources .product-page{padding-top:0}
@@ -28,7 +35,7 @@
 .mml-resources .resource-print,.mml-resources .planner-reset{border-radius:8px}
 .mml-resources .product-links a{border-color:#dfd4e2;background:#fffdf9;border-radius:12px}
 .mml-resources .diary-workspace{--diary-ink:#2b1933;--diary-muted:#685c6d;--diary-cream:#fffdfb;--diary-blue:#e9dfed;--diary-yellow:#e2d0e8;--diary-line:#e0d6e3;background:#f7f3f8;border-color:#e0d6e3;box-shadow:0 14px 50px #37213f08}
-.mml-resources .diary-app-brand>img{width:40px;height:48px;object-fit:contain}
+.mml-resources .diary-app-brand>img{width:40px;height:48px;flex:0 0 44px;object-fit:contain}
 .mml-resources .diary-button-primary{background:#55305f!important;color:#fff!important;border-color:#55305f!important;box-shadow:0 2px 3px #37213f12}
 .mml-resources .diary-free-badge{background:#e9f3ed;color:#31543c;border-color:#cde0d3}
 .mml-resources .diary-calendar-count{background:#70417c;color:#fff}
@@ -61,9 +68,15 @@
 @media print{.mml-resource-hero,.mml-resource-service,.mml-resource-promo{display:none!important}.mml-resources .planner-plan,.mml-resources .student-poster{box-shadow:none}.mml-resources .student-poster-header img{width:60px;height:70px}}
 
 .mml-resources .eyebrow{color:#6c4777}
+.mml-resources .website-footer .eyebrow{color:#d8c1dd}
 .mml-resources .website-nav .website-logo-art{width:84px;height:96px;background:#35213e;border-radius:12px;padding:8px}
 .mml-resources .website-nav .website-logo-art img{width:68px;height:80px}
 .mml-resources .diary-app-brand>img{background:#55305f;border-radius:7px;padding:5px;width:44px;height:54px}
 @media(min-width:1280px){.mml-resources .public-nav.website-nav>nav{display:flex;flex-wrap:nowrap;gap:18px}}
 
 .mml-resources .student-poster-header img{background:#55305f;border-radius:10px;padding:8px;box-sizing:content-box}
+@media(max-width:760px){
+ .mml-resources .diary-workspace .diary-app-header{flex-wrap:wrap}
+ .mml-resources .premium-ready .diary-app-header-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}
+ .mml-resources .diary-app-header-actions .diary-button{width:100%;min-width:0;min-height:44px;white-space:normal;overflow-wrap:normal;flex:none;margin-left:0;justify-content:center}
+}
