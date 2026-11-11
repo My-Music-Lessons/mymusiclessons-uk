@@ -1,0 +1,549 @@
+.resource-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+.resource-directory-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 28px;
+  border: 1.5px solid #30232a;
+  background: #fff8e9;
+  border-radius: 4px;
+  box-shadow: 3px 3px 0 #30232a;
+  transition: transform 0.18s;
+}
+.resource-directory-card:nth-child(3n + 2) {
+  background: #ffdc42;
+}
+.resource-directory-card:nth-child(3n) {
+  background: #abd3e4;
+}
+.resource-directory-card:hover {
+  transform: translateY(-3px);
+}
+.resource-directory-card > span:first-child {
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  font-weight: 750;
+}
+.mml-resources .resource-directory-card h3 {
+  font:
+    400 clamp(2rem, 2.9vw, 2.75rem)/1.05 "League Gothic",
+    Impact,
+    sans-serif;
+  letter-spacing: -0.01em;
+  margin: 23px 0 15px;
+}
+.mml-resources .resource-directory-card p {
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+.resource-directory-card > span:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #30232a40;
+  padding-top: 18px;
+  margin-top: auto;
+  font-size: 12px;
+  font-weight: 700;
+  min-height: 44px;
+}
+.resource-workspace {
+  padding: 65px max(6%, calc((100% - 1500px) / 2));
+  background: #f3ecda;
+  border-block: 1px solid #bbae94;
+}
+.resource-workspace-head {
+  max-width: 850px;
+  margin-bottom: 34px;
+}
+.mml-resources .resource-workspace h2 {
+  font:
+    400 clamp(2.7rem, 4.2vw, 4.3rem)/1.05 "League Gothic",
+    Impact,
+    sans-serif;
+  margin: 14px 0 20px;
+}
+.resource-workspace p {
+  line-height: 1.75;
+}
+.resource-tool-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+.resource-tool-controls {
+  min-width: 0;
+}
+.resource-workspace fieldset {
+  min-width: 0;
+  border: 1px solid #ad9d84;
+  padding: 26px;
+  margin: 0 0 22px;
+  background: #fffaf0;
+}
+.resource-workspace legend {
+  padding: 0 10px;
+  font:
+    400 30px/1.1 "League Gothic",
+    Impact,
+    sans-serif;
+  color: #30232a;
+  max-width: 100%;
+}
+.resource-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 20px;
+}
+.resource-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 650;
+  color: #30232a;
+  min-width: 0;
+  line-height: 1.5;
+}
+.resource-fields input,
+.resource-fields textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 48px;
+  border: 1px solid #9f8f76;
+  background: #fffdf7;
+  border-radius: 4px;
+  padding: 11px 13px;
+  color: #30232a;
+  font:
+    400 16px/1.5 Inter,
+    sans-serif;
+  resize: vertical;
+}
+.resource-fields small {
+  font-size: 12px;
+  font-weight: 400;
+  color: #58483b;
+  line-height: 1.65;
+}
+.resource-fields textarea {
+  min-height: 112px;
+}
+.resource-tool-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.resource-calculate,
+.resource-print {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 20px;
+  min-height: 50px;
+  border: 1.5px solid #30232a;
+  border-radius: 3px;
+  font:
+    700 14px/1.5 Inter,
+    sans-serif;
+  background: #ffda27;
+  color: #30232a;
+  max-width: 100%;
+}
+.resource-calculate {
+  box-shadow: 3px 3px 0 #30232a;
+}
+.resource-print {
+  background: #fffaf0;
+}
+.resource-print:disabled {
+  opacity: 0.6;
+}
+.mml-resources .resource-tool-message {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 23px 0 0;
+  max-width: 70ch;
+}
+.resource-tool-result {
+  border: 1.5px solid #30232a;
+  background: #a5cfe2;
+  padding: 30px;
+  box-shadow: 5px 5px 0 #30232a;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.resource-print-brand {
+  display: none;
+}
+.resource-tool-result h3 {
+  font:
+    400 38px/1.1 "League Gothic",
+    Impact,
+    sans-serif;
+  margin: 18px 0 24px;
+}
+.resource-result-number {
+  font:
+    400 clamp(2.7rem, 4vw, 4.2rem)/1.1 "League Gothic",
+    Impact,
+    sans-serif;
+  display: block;
+  margin-bottom: 15px;
+  color: #30232a;
+}
+.mml-resources .resource-tool-result p {
+  font-size: 14px;
+  margin: 16px 0;
+}
+.resource-table-wrap {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 24px 0 0;
+}
+.resource-table-wrap table {
+  font-size: 13px;
+  color: #30232a;
+}
+.resource-table-wrap caption {
+  text-align: left;
+  font-weight: 700;
+  padding-bottom: 14px;
+}
+.resource-table-wrap td,
+.resource-table-wrap th {
+  border-bottom: 1px solid #30232a44;
+  padding: 12px;
+  text-align: left;
+  min-width: 0;
+  white-space: normal;
+}
+.resource-table-wrap thead th {
+  background: #fff6dc;
+  font-size: 12px;
+  color: #30232a;
+}
+.resource-tool-result .resource-assumptions {
+  font-size: 12px;
+  line-height: 1.75;
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px solid #30232a44;
+}
+.resource-budget-breakdown {
+  display: block;
+  font-size: 14px;
+}
+.resource-budget-breakdown > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 20px;
+  border-color: #30232a44;
+}
+.resource-budget-breakdown dt {
+  color: #30232a;
+}
+.resource-budget-breakdown dd {
+  font-weight: 700;
+  flex: none;
+}
+.resource-method {
+  max-width: 900px;
+  margin-top: 45px;
+  padding-top: 28px;
+  border-top: 1px solid #ad9d84;
+}
+.resource-method h3 {
+  font:
+    400 32px/1.1 "League Gothic",
+    Impact,
+    sans-serif;
+  margin-bottom: 18px;
+}
+.resource-method p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.resource-method a {
+  font-weight: 700;
+  text-decoration: underline;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.resource-action-controls {
+  max-width: 1000px;
+}
+.resource-action-controls > .resource-fields {
+  margin-bottom: 35px;
+}
+.resource-action-strand legend span {
+  font-size: 22px;
+  padding-right: 10px;
+}
+.resource-action-output {
+  display: none;
+}
+.resource-letter {
+  white-space: pre-wrap;
+  font:
+    400 15px/1.8 Inter,
+    sans-serif;
+  max-width: 76ch;
+  background: #fff9ec;
+  border: 1px solid #b5a286;
+  padding: 28px;
+  color: #35292a;
+  margin-top: 25px;
+  overflow-wrap: anywhere;
+}
+.product-guide-contents {
+  padding: 30px 6%;
+  background: #fff3d0;
+  border-block: 1px solid #b5a286;
+}
+.product-guide-contents > p {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.product-guide-contents ol {
+  margin: 0;
+  padding-left: 23px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 40px;
+  max-width: 1200px;
+}
+.product-guide-contents a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.product-guide-contents li {
+  padding-left: 5px;
+  min-width: 0;
+}
+@media (max-width: 1100px) {
+  .resource-directory-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .resource-tool-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .resource-tool-result {
+    max-width: 900px;
+  }
+}
+@media (max-width: 700px) {
+  .resource-directory-grid,
+  .resource-fields,
+  .product-guide-contents ol {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .resource-directory-card {
+    padding: 24px;
+  }
+  .resource-workspace {
+    padding: 40px 6%;
+  }
+  .resource-workspace fieldset {
+    padding: 23px 18px;
+  }
+  .resource-workspace legend {
+    font-size: 27px;
+  }
+  .resource-tool-result {
+    padding: 24px 20px;
+  }
+  .resource-tool-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .resource-letter {
+    padding: 22px;
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .resource-directory-card {
+    transition: none;
+  }
+  .resource-directory-card:hover {
+    transform: none;
+  }
+}
+@media print {
+  html,
+  body,
+  .website-editorial,
+  .place-main,
+  .resource-page {
+    background: #fff !important;
+    color: #30232a !important;
+  }
+  .website-editorial {
+    min-height: 0 !important;
+  }
+  .resource-print-brand {
+    display: block;
+    font-size: 9pt !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 13mm;
+  }
+  .resource-page .website-hero,
+  .resource-page .product-closing,
+  .resource-page .product-guide-contents,
+  .resource-page .place-crumbs,
+  .resource-page .website-section:not(.resource-workspace) {
+    display: none !important;
+  }
+  .resource-workspace {
+    padding: 0 !important;
+    border: 0;
+    background: white !important;
+  }
+  .resource-workspace-head,
+  .resource-tool-controls,
+  .resource-method {
+    display: none !important;
+  }
+  .resource-tool-layout {
+    display: block;
+  }
+  .resource-tool-result {
+    border: 1px solid #30232a;
+    box-shadow: none;
+    background: white !important;
+    padding: 20px;
+    max-width: none;
+  }
+  .resource-tool-result[hidden] {
+    display: none !important;
+  }
+  .resource-tool-result h3 {
+    font-size: 26px;
+  }
+  .resource-result-number {
+    font-size: 34px;
+  }
+  .resource-table-wrap {
+    overflow: visible;
+  }
+  .resource-table-wrap tr {
+    break-inside: avoid;
+  }
+  .resource-table-wrap table {
+    font-size: 10pt;
+  }
+  .resource-action-workspace.resource-enhanced .resource-action-controls {
+    display: none !important;
+  }
+  .resource-action-output {
+    display: block;
+  }
+  .resource-action-output h3 {
+    font:
+      400 30px/1.1 "League Gothic",
+      Impact,
+      sans-serif;
+    margin: 10px 0 15px;
+  }
+  .resource-action-output h4 {
+    font-size: 14px;
+    margin: 20px 0 12px;
+  }
+  .resource-action-print-strand {
+    break-inside: avoid;
+  }
+  .resource-action-output dl {
+    display: block;
+    margin: 0;
+  }
+  .resource-action-output dl > div {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr);
+    gap: 15px;
+    padding: 8px 0;
+  }
+  .resource-action-output dd {
+    text-align: left;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .resource-print-foot {
+    font-size: 9pt !important;
+    margin-top: 25px;
+  }
+  .resource-action-workspace:not(.resource-enhanced) .resource-action-output {
+    display: none;
+  }
+  .resource-action-workspace:not(.resource-enhanced)
+    .resource-action-controls
+    button,
+  .resource-action-workspace:not(.resource-enhanced) .resource-tool-message {
+    display: none;
+  }
+}
+
+.resource-embed-share {
+  padding: 28px;
+  margin-top: 35px;
+  border: 1px solid #30232a66;
+  background: #fff7e2;
+  max-width: 1100px;
+}
+.resource-embed-share h3 {
+  font:
+    400 34px/1.1 "League Gothic",
+    Impact,
+    sans-serif;
+  margin: 17px 0;
+}
+.resource-embed-share p {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 80ch;
+}
+.resource-embed-share summary {
+  cursor: pointer;
+  min-height: 48px;
+  align-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.resource-embed-share details {
+  margin-top: 22px;
+}
+.resource-embed-share label {
+  display: grid;
+  gap: 12px;
+  font-size: 14px;
+  margin: 18px 0;
+}
+.resource-embed-share textarea {
+  width: 100%;
+  font: 400 14px/1.6 monospace;
+  background: #fffdf7;
+  border: 1px solid #9f8f76;
+  padding: 16px;
+  resize: vertical;
+  box-sizing: border-box;
+}

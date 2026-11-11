@@ -1,0 +1,69 @@
+/* MML school toolkit. The public service keeps its established visual identity. */
+.mml-resources{--text:#2b1933;--muted:#655a69;--line:#ddd4df;--surface:#fffdf9;--raised:#f3edf5;color:#2b1933;background:#fffdf9}
+.mml-resources *, .mml-resource-promo *{box-sizing:border-box}
+.mml-resources .website-nav .website-logo-art{width:78px;height:88px;display:flex;align-items:center;justify-content:center;background:none;border:0;box-shadow:none;clip-path:none;transform:none}
+.mml-resources .website-nav .website-logo-art img{width:72px;height:80px;object-fit:contain;transform:none;filter:none;animation:none}
+.mml-resources .website-footer-brand img{width:150px;height:auto;max-height:180px;object-fit:contain}
+.mml-resources .website-footer-brand{background:none;clip-path:none;transform:none}
+.mml-resources .public-nav.website-nav>nav{gap:16px}
+.mml-resources .public-nav.website-nav>nav>a{padding:10px 2px}
+.mml-resources .product-page{padding-top:0}
+.mml-resources .place-crumbs{padding-top:20px}
+.mml-resource-hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.8fr);gap:clamp(28px,6vw,100px);align-items:center;padding:52px 0 64px;margin:0 auto;width:min(1440px,calc(100% - 96px))}
+.mml-resource-hero h1{font:400 clamp(48px,5.7vw,86px)/1.02 'League Gothic',Impact,sans-serif;letter-spacing:-.015em;max-width:18ch;margin:18px 0 24px;color:#2b1933}
+.mml-resource-hero>div>p:not(.eyebrow){font:400 17px/1.8 Inter,system-ui,sans-serif;max-width:65ch;color:#5e5360}
+.mml-resource-hero>div>.mml-resource-promise{font-weight:650;color:#3c2c42;margin-bottom:12px}
+.mml-resource-hero-note{position:relative;padding:32px;border:1px solid #d8c7df;border-radius:20px;background:linear-gradient(145deg,#eee4f1,#f6f1f8);box-shadow:0 14px 36px #36213c08;overflow:hidden}
+.mml-resource-note-mark{display:block;font:400 70px/1 'League Gothic',sans-serif;color:#7d518a;margin-bottom:26px}
+.mml-resource-hero-note h2{font:400 44px/1.05 'League Gothic',sans-serif;margin:16px 0;color:#35213e}
+.mml-resource-hero-note>p:not(.eyebrow){font-size:14px;line-height:1.75;color:#625468}
+.mml-resource-hero-note>span:last-child{display:block;margin-top:26px;padding-top:18px;border-top:1px solid #d7c9dc;font:700 9px/1.5 Inter,sans-serif;letter-spacing:.1em}
+.mml-resources .resource-directory-card,.mml-resources .product-resource-card{border:1px solid #ded5df;border-radius:16px;box-shadow:0 6px 20px #38243e05;background:#fffdfb;transform:none;transition:border-color .16s,box-shadow .16s}
+.mml-resources .resource-directory-card:nth-child(3n+2){background:#f1eaf4}.mml-resources .resource-directory-card:nth-child(3n){background:#edf5f2}
+.mml-resources .resource-directory-card:hover{transform:none;border-color:#9c7aa7;box-shadow:0 10px 24px #38243e10}
+.mml-resources .resource-workspace,.mml-resources .planner-workspace{background:#f8f5f9;border-color:#ded4e1}
+.mml-resources .resource-workspace-head,.mml-resources .resource-tool-result,.mml-resources .resource-tool-controls,.mml-resources .proposal-editor,.mml-resources .expansion-controls{border-radius:16px}
+.mml-resources input,.mml-resources textarea,.mml-resources select{accent-color:#754482;color:#2b1933;background-color:#fff}
+.mml-resources .resource-calculate,.mml-resources .planner-print-button{background:#55305f;color:#fff;border-color:#55305f;box-shadow:none;border-radius:8px}
+.mml-resources .resource-print,.mml-resources .planner-reset{border-radius:8px}
+.mml-resources .product-links a{border-color:#dfd4e2;background:#fffdf9;border-radius:12px}
+.mml-resources .diary-workspace{--diary-ink:#2b1933;--diary-muted:#685c6d;--diary-cream:#fffdfb;--diary-blue:#e9dfed;--diary-yellow:#e2d0e8;--diary-line:#e0d6e3;background:#f7f3f8;border-color:#e0d6e3;box-shadow:0 14px 50px #37213f08}
+.mml-resources .diary-app-brand>img{width:40px;height:48px;object-fit:contain}
+.mml-resources .diary-button-primary{background:#55305f!important;color:#fff!important;border-color:#55305f!important;box-shadow:0 2px 3px #37213f12}
+.mml-resources .diary-free-badge{background:#e9f3ed;color:#31543c;border-color:#cde0d3}
+.mml-resources .diary-calendar-count{background:#70417c;color:#fff}
+.mml-resources .diary-calendar-date:hover:enabled{background:#f0e7f4;border-color:#aa88b6}
+.mml-resources .diary-calendar-session{background:#e8dcef;color:#35213e}
+.mml-resources .diary-app-header,.mml-resources .diary-date-toolbar,.mml-resources .diary-save-strip{background:#fffdfb}
+.mml-resources .diary-board{background:#fbf9fc}
+.mml-resources .diary-calendar-month{background:#fff;border-color:#e0d6e3}
+.mml-resources .diary-calendar-date{background:#faf7fb;border-color:#e9e1ed}
+.mml-resources .diary-account-dialog{background:#fffdfb;border-color:#d8c9df}
+.mml-resources .diary-account-dialog [role=status]{background:#f0e6f4}
+.mml-resources .diary-account-top [data-account-close]{white-space:nowrap;flex-shrink:0}
+.mml-resources .planner-plan,.mml-resources .student-poster{border:1px solid #ccc0d2;border-radius:14px;box-shadow:0 12px 36px #37213f12;transform:none;clip-path:none}
+.mml-resources .planner-plan-head,.mml-resources .student-poster-header{background:#e5d5eb;color:#35213e}
+.mml-resources .planner-plan-seal{background:#eaf5ee;color:#35533e;clip-path:none;border:1px solid #bed2c4;border-radius:50%;transform:none}
+.mml-resources .planner-plan-top,.mml-resources .planner-plan-bottom{background:#55305f;color:#fff}
+.mml-resources .student-poster-page{--poster-ink:#35213e;--poster-orange:#dac6e3;--poster-yellow:#e7f1df;--poster-blue:#d8e8ef}
+.mml-resources .student-poster-header img{width:76px;height:88px;object-fit:contain;filter:none;transform:none}
+.mml-resources .student-poster-art i{clip-path:none;border-radius:50%;background:#d4e7db;transform:rotate(-5deg)}
+.mml-resources .student-poster-school{color:#55305f}
+.mml-resources .student-poster-footer{background:#f1eaf4;color:#35213e}
+.mml-resource-service,.mml-resource-promo{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:center;width:min(1440px,calc(100% - 96px));margin:40px auto 72px;padding:40px;border:1px solid #d9c9e0;border-radius:20px;background:#efe6f3;color:#35213e}
+.mml-resource-service h2,.mml-resource-promo h2{font:400 clamp(36px,4vw,54px)/1.05 'League Gothic',sans-serif;margin:12px 0}
+.mml-resource-service p,.mml-resource-promo p{max-width:65ch;font:400 15px/1.75 Inter,sans-serif}
+.mml-resource-promo>div:last-child{display:grid;gap:12px}.mml-resource-promo a{padding:14px 18px;border:1px solid #cbb6d4;border-radius:10px;background:#fffafc;font:650 13px/1.5 Inter,sans-serif;color:#55305f;text-decoration:none}
+.mml-resource-privacy{width:min(1280px,calc(100% - 64px));margin:40px auto}
+.mml-resources .resource-print-brand,.mml-resources .planner-plan-top{overflow-wrap:anywhere}
+@media(max-width:1100px){.mml-resource-hero{grid-template-columns:minmax(0,1fr) 300px;width:calc(100% - 64px);gap:36px}.mml-resources .public-nav.website-nav>nav,.mml-resources .public-nav.website-nav>.mml-button{display:none}.mml-resources .public-nav.website-nav>.website-menu{display:block}}
+@media(max-width:760px){.mml-resource-hero{display:block;width:calc(100% - 40px);padding:30px 0 40px}.mml-resource-hero h1{font-size:58px}.mml-resource-hero-note{margin-top:28px;padding:24px}.mml-resource-note-mark{display:none}.mml-resource-hero-note h2{font-size:36px}.mml-resource-service,.mml-resource-promo{width:calc(100% - 40px);grid-template-columns:1fr;padding:24px;gap:18px}.mml-resource-hero>div>p:not(.eyebrow){font-size:16px}}
+@media print{.mml-resource-hero,.mml-resource-service,.mml-resource-promo{display:none!important}.mml-resources .planner-plan,.mml-resources .student-poster{box-shadow:none}.mml-resources .student-poster-header img{width:60px;height:70px}}
+
+.mml-resources .eyebrow{color:#6c4777}
+.mml-resources .website-nav .website-logo-art{width:84px;height:96px;background:#35213e;border-radius:12px;padding:8px}
+.mml-resources .website-nav .website-logo-art img{width:68px;height:80px}
+.mml-resources .diary-app-brand>img{background:#55305f;border-radius:7px;padding:5px;width:44px;height:54px}
+@media(min-width:1280px){.mml-resources .public-nav.website-nav>nav{display:flex;flex-wrap:nowrap;gap:18px}}
+
+.mml-resources .student-poster-header img{background:#55305f;border-radius:10px;padding:8px;box-sizing:content-box}
