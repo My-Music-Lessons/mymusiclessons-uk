@@ -23,12 +23,12 @@ export function mountDiaryAccount({root,getDiary,replaceDiary,onSaved,onStatus})
  dialog.querySelector("[data-account-close]").addEventListener("click",()=>dialog.close());
  form.addEventListener("submit",async e=>{e.preventDefault();if(!config.enabled||busy)return;busy=true;const submit=e.submitter,mode=submit?.value||"login";submit.disabled=true;show("Please wait…");try{
   await init();let result;
-  if(form.dataset.mode==="password"){result=await client.auth.updateUser({password:password.value});if(result.error)throw result.error;delete form.dataset.mode;password.value="";show("Password updated. You can now open your saved diary.");controls();return;}
+  if(form.dataset.mode==="password"){result=await client.auth.updateUser({password:password.value});if(result.error)throw result.error;delete form.dataset.mode;password.value="";show("Password updated. Your saved My Music Lessons diary is ready below.");controls();return;}
   if(mode==="reset"){if(!email.value||!email.checkValidity())throw Error("Enter your school email address first.");result=await client.auth.resetPasswordForEmail(email.value,{redirectTo:config.authReturnUrl||location.origin+location.pathname});}
   else if(mode==="signup")result=await client.auth.signUp({email:email.value,password:password.value,options:{emailRedirectTo:config.authReturnUrl||location.origin+location.pathname}});
   else result=await client.auth.signInWithPassword({email:email.value,password:password.value});
   if(result.error)throw result.error;
-  password.value="";if(mode==="signup")show("Check your email for the verification link. It opens our shared BOOMOS account service. Confirm there, then return to this MML diary and log in.");if(mode==="reset")show("If an account exists for that address, a reset email has been requested. Reset links open our shared BOOMOS account service. After choosing a password there, return here to log in.");
+  password.value="";if(mode==="signup")show("Check your school email for a confirmation link. It brings you back to this My Music Lessons diary so you can continue here.");if(mode==="reset")show("If an account exists for that address, a password reset email has been requested. The secure link brings you back to this My Music Lessons diary to choose a new password.");
  }catch(e){show("Could not complete that request. "+e.message);}finally{busy=false;submit.disabled=false;}});
  async function flush(){
   if(busy||!connected||!pending)return;busy=true;const epoch=generation;
