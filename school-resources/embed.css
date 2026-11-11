@@ -102,6 +102,21 @@ footer a {
   outline: 3px solid #176bc1;
   outline-offset: 4px;
 }
+
+/* Match the MML resources when the planner is shared on another school's site. */
+body{background:#fffdf9;color:#35213e}
+.embed-brand{background:#f1e9f5;border-color:#d8c9df;gap:18px}
+.embed-brand a>img{width:60px;height:70px;object-fit:contain;background:#55305f;border-radius:8px;padding:7px}
+.resource-workspace{background:#f7f3f8}
+.resource-workspace fieldset{background:#fffdfb;border-color:#d8c9df;border-radius:12px}
+.resource-workspace legend{color:#55305f}
+.resource-fields input{border-color:#9c83a8;border-radius:8px;background:#fff;color:#35213e}
+.resource-calculate{background:#55305f;color:#fff;border-color:#55305f;box-shadow:none;border-radius:8px}
+.resource-print{background:#fffdfb;color:#55305f;border-color:#cbb8d4;box-shadow:none;border-radius:8px}
+.resource-tool-result{background:#fffdfb;border-color:#cdbad6;border-radius:12px;box-shadow:none}
+.resource-table-wrap thead th{background:#f0e9f5}
+footer{border-color:#d8c9df}
+:focus-visible{outline-color:#845593}
 .product-text-link {
   display: inline-flex;
   align-items: center;
