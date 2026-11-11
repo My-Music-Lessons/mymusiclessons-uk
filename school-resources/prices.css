@@ -1,0 +1,72 @@
+.prices-main{color:#f4eaf6}
+.prices-hero{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(290px,.9fr);gap:clamp(28px,6vw,88px);align-items:center;width:min(1320px,calc(100% - 96px));margin:0 auto;padding:64px 0 84px}
+.prices-kicker{display:flex;align-items:center;gap:13px;margin:0 0 20px;color:#e5c8ed;font:750 12px/1.4 Inter,system-ui,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+.prices-kicker:before{content:"";display:block;width:34px;height:1px;background:#e5c8ed}
+.prices-hero h1{max-width:12ch;margin:0 0 22px;color:#fffafc;font:400 clamp(58px,7vw,102px)/.94 "League Gothic",Impact,sans-serif;letter-spacing:-.018em}
+.prices-lede{max-width:61ch;margin:0;color:#e0d3e5;font:400 clamp(17px,1.5vw,20px)/1.75 Inter,system-ui,sans-serif}
+.prices-hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:18px;margin-top:30px}
+.prices-hero-actions .text-link{color:#f4eaf6;text-underline-offset:4px;font:650 14px/1.6 Inter,system-ui,sans-serif}
+.prices-hero-note{position:relative;overflow:hidden;padding:clamp(27px,4vw,42px);border:1px solid #d7c5df;border-radius:22px;background:linear-gradient(145deg,#f5edf7,#e7d9ed);color:#35213e;box-shadow:0 18px 50px #140d181f}
+.prices-hero-note:after{position:absolute;right:-46px;bottom:-62px;width:190px;height:190px;border:22px solid #c6afd0;border-radius:50%;content:"";opacity:.32}
+.prices-note-top{position:relative;z-index:1;display:flex;align-items:center;gap:12px;color:#70417c;font:750 11px/1.4 Inter,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.prices-note-mark{display:grid;place-items:center;width:46px;height:46px;border:1px solid #b99ac5;border-radius:13px;background:#fffafc;color:#55305f;font:400 25px/1 "League Gothic",Impact,sans-serif}
+.prices-hero-note h2{position:relative;z-index:1;max-width:14ch;margin:25px 0 13px;color:#35213e;font:400 clamp(34px,4vw,51px)/1.02 "League Gothic",Impact,sans-serif}
+.prices-hero-note p{position:relative;z-index:1;max-width:48ch;margin:0;color:#625468;font:400 14px/1.75 Inter,system-ui,sans-serif}
+.prices-note-rule{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px;padding-top:19px;border-top:1px solid #d7c9dc}
+.prices-note-rule div{display:grid;gap:4px}
+.prices-note-rule span{color:#786b7d;font:650 10px/1.45 Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em}
+.prices-note-rule strong{color:#35213e;font:700 13px/1.45 Inter,system-ui,sans-serif}
+.prices-section{padding:76px max(6%,calc((100% - 1320px)/2))}
+.prices-section-light{background:#f4eddf;color:#2b1933;border-block:1px solid #dbcdb5}
+.prices-section-heading{max-width:780px;margin:0 0 34px}
+.prices-section-heading .eyebrow{color:#70417c}
+.prices-section-heading h2,.prices-share h2,.prices-school-share h2{margin:10px 0 14px;color:inherit;font:400 clamp(42px,5vw,66px)/1 "League Gothic",Impact,sans-serif;letter-spacing:-.012em}
+.prices-section-heading p{max-width:66ch;margin:0;color:#62566a;font:400 16px/1.75 Inter,system-ui,sans-serif}
+.prices-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.prices-step{display:flex;flex-direction:column;min-width:0;min-height:265px;padding:24px;border:1px solid #d8cbdb;border-radius:17px;background:#fffdf9;box-shadow:0 8px 22px #35213e0b}
+.prices-step:nth-child(2){background:#eee5f2}.prices-step:nth-child(3){background:#e6f0ed}.prices-step:nth-child(4){background:#e8eef4}
+.prices-step-number{display:grid;place-items:center;width:43px;height:43px;border:1px solid #a987b3;border-radius:12px;color:#55305f;font:400 25px/1 "League Gothic",Impact,sans-serif}
+.prices-step h3{margin:25px 0 10px;color:#35213e;font:400 30px/1.02 "League Gothic",Impact,sans-serif}
+.prices-step p{margin:0;color:#62566a;font:400 13px/1.7 Inter,system-ui,sans-serif}
+.prices-share{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,6vw,80px);align-items:center;width:min(1320px,calc(100% - 96px));margin:76px auto;padding:clamp(28px,5vw,58px);border:1px solid #684e73;border-radius:23px;background:linear-gradient(135deg,#392543,#302039);box-shadow:0 20px 55px #140d1820}
+.prices-share .eyebrow,.prices-school-share .eyebrow{color:#e5c8ed}
+.prices-share h2{color:#fffafc}
+.prices-share-copy>p:not(.eyebrow){max-width:59ch;color:#e0d3e5;font:400 15px/1.8 Inter,system-ui,sans-serif}
+.prices-formula{overflow:hidden;border:1px solid #d7c5df;border-radius:16px;background:#fffdf9;color:#35213e}
+.prices-formula-head{padding:19px 22px;background:#e9ddec;color:#55305f;font:750 11px/1.45 Inter,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.prices-formula-list{display:grid;gap:0;margin:0;padding:12px 22px 18px;list-style:none}
+.prices-formula-list li{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 0;border-bottom:1px solid #ece5ed;color:#4e4254;font:550 13px/1.5 Inter,system-ui,sans-serif}
+.prices-formula-list li:last-child{border:0}
+.prices-formula-list li span:last-child{color:#70417c;font-weight:750}
+.prices-formula-result{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:17px 22px;background:#e8f0e9;color:#24472f;font:750 13px/1.5 Inter,system-ui,sans-serif}
+.prices-school-share{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.7fr);gap:36px;align-items:center;width:min(1320px,calc(100% - 96px));margin:0 auto 78px;padding:clamp(30px,5vw,54px);border:1px solid #bcd2c2;border-radius:22px;background:linear-gradient(135deg,#e8f0e9,#dce9df);color:#24472f}
+.prices-school-share .eyebrow{color:#315b3b}
+.prices-school-share h2{color:#24472f}
+.prices-school-share p{max-width:60ch;margin:0;color:#3e5e46;font:400 15px/1.8 Inter,system-ui,sans-serif}
+.prices-reinvestment-list{display:grid;grid-template-columns:1fr;gap:10px;margin:0;padding:0;list-style:none}
+.prices-reinvestment-list li{display:flex;align-items:center;gap:11px;min-height:58px;padding:13px 15px;border:1px solid #bfd2c4;border-radius:12px;background:#f7fbf7;color:#31533a;font:700 12px/1.5 Inter,system-ui,sans-serif}
+.prices-reinvestment-list li:before{content:"+";display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#d5e7d9;color:#315b3b;font:750 15px/1 Inter,system-ui,sans-serif}
+.prices-faq{width:min(1100px,calc(100% - 96px));margin:0 auto 84px;color:#f4eaf6}
+.prices-faq .eyebrow{color:#e5c8ed}
+.prices-faq h2{margin:10px 0 26px;color:#fffafc;font:400 clamp(42px,5vw,64px)/1 "League Gothic",Impact,sans-serif}
+.prices-faq details{border-top:1px solid #60496b;padding:18px 0}
+.prices-faq details:last-child{border-bottom:1px solid #60496b}
+.prices-faq summary{min-height:44px;align-content:center;cursor:pointer;color:#fffafc;font:700 15px/1.55 Inter,system-ui,sans-serif}
+.prices-faq details p{max-width:70ch;margin:12px 0 2px;color:#d8c9de;font:400 14px/1.75 Inter,system-ui,sans-serif}
+.prices-cta{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding:42px max(6%,calc((100% - 1320px)/2));background:#e9ddec;color:#35213e}
+.prices-cta h2{margin:0 0 8px;font:400 clamp(36px,4vw,52px)/1 "League Gothic",Impact,sans-serif}
+.prices-cta p{margin:0;color:#625468;font:400 14px/1.7 Inter,system-ui,sans-serif}
+.prices-cta .mml-button{white-space:nowrap}
+@media(max-width:1000px){.prices-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.prices-step{min-height:220px}.prices-share,.prices-school-share{grid-template-columns:1fr}}
+@media(max-width:760px){.prices-hero{display:block;width:calc(100% - 40px);padding:34px 0 46px}.prices-hero h1{font-size:60px}.prices-hero-note{margin-top:28px;padding:25px}.prices-section{padding:50px 20px}.prices-section-heading{margin-bottom:24px}.prices-steps{grid-template-columns:1fr}.prices-step{min-height:0;padding:22px}.prices-step h3{margin-top:18px}.prices-share,.prices-school-share{width:calc(100% - 40px);margin:42px auto;padding:24px;border-radius:18px}.prices-formula-head{padding:16px}.prices-formula-list{padding:8px 16px 14px}.prices-formula-result{padding:16px;align-items:flex-start;flex-direction:column;gap:4px}.prices-school-share{margin-bottom:48px}.prices-reinvestment-list{grid-template-columns:1fr}.prices-faq{width:calc(100% - 40px);margin-bottom:54px}.prices-cta{grid-template-columns:1fr;padding:30px 20px}.prices-cta .mml-button{width:max-content}}
+@media(prefers-reduced-motion:reduce){.prices-page *{scroll-behavior:auto!important;transition:none!important}}
+.prices-related{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:30px;align-items:center;padding:42px max(6%,calc((100% - 1320px)/2));border-block:1px solid #d8cbdb;background:#f4eddf;color:#2b1933}
+.prices-related .eyebrow{margin:0 0 8px;color:#70417c}
+.prices-related h2{margin:0;color:#35213e;font:400 clamp(34px,4vw,48px)/1 "League Gothic",Impact,sans-serif}
+.prices-related-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.prices-related-links a{display:flex;min-height:98px;flex-direction:column;justify-content:space-between;gap:12px;padding:15px 16px;border:1px solid #d8cbdb;border-radius:13px;background:#fffdf9;color:#35213e;text-decoration:none;font:650 14px/1.5 Inter,system-ui,sans-serif;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.prices-related-links a:after{align-self:flex-end;color:#754482;content:"↗"}
+.prices-related-links a:hover{transform:translateY(-2px);border-color:#754482;box-shadow:0 9px 20px #35213e12}
+@media(max-width:1000px){.prices-related{grid-template-columns:1fr}}
+@media(max-width:760px){.prices-related{padding:34px 20px}.prices-related-links{grid-template-columns:1fr}.prices-related-links a{min-height:64px}}
+@media(prefers-reduced-motion:reduce){.prices-related-links a{transition:none}}.prices-related-links a:focus-visible{outline:3px solid #754482;outline-offset:3px}
