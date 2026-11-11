@@ -1,5 +1,5 @@
-import {diaryAccountConfig} from "./diary-account-config.js";
-import { mountDiaryAccount } from "./diary-account.js";
+import {diaryAccountConfig} from "./diary-account-config.js?v=20261111-mml-auth1";
+import { mountDiaryAccount } from "./diary-account.js?v=20261111-mml-auth1";
 import { calendarRange, shiftPeriod, renderCalendar } from "./diary-calendar.js";
 import { validateDiary } from "./diary-model.js";
 import { diaryToIcs, diaryToCsv, wallTimeToUtc } from "./diary-export.js";

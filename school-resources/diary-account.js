@@ -1,4 +1,4 @@
-import { diaryAccountConfig as config } from "./diary-account-config.js";
+import { diaryAccountConfig as config } from "./diary-account-config.js?v=20261111-mml-auth1";
 import { createCloudDiaryStore } from "./diary-cloud-store.js";
 export function mountDiaryAccount({root,getDiary,replaceDiary,onSaved,onStatus}) {
  if(!config.enabled){for(const button of root.querySelectorAll("[data-account-open]"))button.hidden=true;const backup=root.querySelector("[data-diary-quick-backup]");backup?.classList.replace("diary-button-quiet","diary-button-primary");}
