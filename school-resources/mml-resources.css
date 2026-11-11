@@ -100,3 +100,64 @@
 @media(min-width:1280px){.public-nav.website-nav.mml-toolkit-nav>.website-menu{display:none}}
 @media(max-width:760px){.mml-location-tools{width:calc(100% - 40px);padding:24px;margin:28px auto 44px}.mml-location-tools>nav{grid-template-columns:1fr}.mml-location-tools>nav>a{padding:18px}}
 @media print{.mml-location-tools{display:none}}
+
+/* Bring the adopted resource pages into the established MML plum site. */
+.mml-resources{
+ --text:#f4eaf6;
+ --muted:#c8b2cf;
+ --line:#60496b;
+ --surface:#372440;
+ --raised:#432e4d;
+ color:var(--text);
+ background:radial-gradient(ellipse at 13% 4%,#54365f88 0,transparent 35%),radial-gradient(ellipse at 92% 36%,#412b4c99 0,transparent 42%),#2b1933;
+}
+.mml-resources .public-nav.website-nav .brand{width:84px;min-width:84px;height:96px;flex:0 0 84px}
+.mml-resources .website-nav .website-logo-art{width:84px;height:96px;background:none;border:0;border-radius:0;padding:0}
+.mml-resources .public-nav.website-nav .brand img{width:84px;min-width:0;height:96px;flex:0 0 84px;object-fit:contain}
+.mml-resources .public-nav.website-nav>nav>a{color:#f4eaf6}
+.mml-resources .public-nav.website-nav>nav>a:hover{color:#d5fbff}
+.mml-resources .public-nav.website-nav>.website-menu>summary{color:#f4eaf6;border-color:#977e9f;background:#392443}
+.mml-resources .public-nav.website-nav>.website-menu .website-menu-bars i{background:#f4eaf6}
+.mml-resources .place-crumbs{color:#c8b2cf}
+.mml-resources .place-crumbs a{color:#f4eaf6}
+.mml-resources .mml-resource-hero{color:#f4eaf6}
+.mml-resources .mml-resource-hero h1{color:#f4eaf6}
+.mml-resources .mml-resource-hero>div>p:not(.eyebrow){color:#d8c9de}
+.mml-resources .mml-resource-hero>div>.mml-resource-promise{color:#f4eaf6}
+.mml-resources .mml-resource-hero>.mml-resource-hero-note{color:#35213e}
+.mml-resources .mml-resource-hero>.mml-resource-hero-note p:not(.eyebrow){color:#625468}
+.mml-resources .mml-resource-hero>div>.eyebrow,.mml-resources .website-section>.eyebrow{color:#e5c8ed}
+.mml-resources .mml-resource-hero .product-text-link{color:#f2dcf7}
+.mml-resources .website-section{color:var(--text)}
+.mml-resources .website-section>p{color:var(--muted)}
+.mml-resources :is(.resource-workspace,.planner-workspace,.planner-workshop,.student-poster-workspace,.resource-directory-card,.product-resource-card,.product-setup-card,.product-card,.resource-embed-share){--text:#35213e;--muted:#65566c;color:#35213e}
+.mml-resources .resource-directory-card{color:#35213e}
+.mml-resources .resource-directory-card :is(h2,h3,p,span){color:#35213e}
+.mml-resources .product-resource-card{color:#2b2026}
+.mml-resources .product-resource-card :is(h2,h3,p,span){color:inherit}
+
+/* One generously sized mobile menu, with the whole logo clear of its first link. */
+.public-nav.website-nav.mml-toolkit-nav .website-menu-sheet{
+ top:0!important;
+ bottom:0;
+ padding: max(140px,calc(env(safe-area-inset-top,0px) + 126px)) clamp(20px,6vw,48px) max(32px,env(safe-area-inset-bottom,0px));
+ overflow-y:auto;
+ overscroll-behavior:contain;
+ background:#2b1933;
+ color:#f4eaf6;
+ border-color:#60496b;
+}
+.public-nav.website-nav.mml-toolkit-nav .website-menu-sheet>nav>a{
+ color:#f4eaf6;
+ font:400 clamp(1.8rem,4vw,2.25rem)/1.1 'League Gothic',Impact,sans-serif;
+ letter-spacing:.01em;
+ text-transform:none;
+}
+.public-nav.website-nav.mml-toolkit-nav .website-menu-sheet>nav>a:hover{color:#d5fbff;border-color:#795e84}
+.public-nav.website-nav.mml-toolkit-nav .website-menu-sheet>nav>a svg{width:20px;height:20px;color:#c8b2cf}
+.public-nav.website-nav.mml-toolkit-nav .website-menu-sheet .website-menu-aside{color:#c8b2cf}
+@media(max-width:760px){
+ .mml-resources .public-nav.website-nav .brand{width:96px;min-width:96px;height:106px;flex:0 0 96px}
+ .mml-resources .website-nav .website-logo-art{width:96px;height:106px}
+ .mml-resources .public-nav.website-nav .brand img{width:96px;height:106px;flex:0 0 96px}
+}
