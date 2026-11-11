@@ -80,3 +80,23 @@
  .mml-resources .premium-ready .diary-app-header-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:8px}
  .mml-resources .diary-app-header-actions .diary-button{width:100%;min-width:0;min-height:44px;white-space:normal;overflow-wrap:normal;flex:none;margin-left:0;justify-content:center}
 }
+
+/* Shared discovery links respect the existing dark location pages and light tools. */
+.public-nav.website-nav.mml-toolkit-nav{gap:clamp(12px,1.5vw,24px)}
+.public-nav.website-nav.mml-toolkit-nav>nav{display:flex;align-items:center;flex-wrap:nowrap;gap:clamp(12px,1.4vw,22px);min-width:0}
+.public-nav.website-nav.mml-toolkit-nav>nav>a{white-space:nowrap}
+.mml-location-tools{box-sizing:border-box;width:min(1440px,calc(100% - 12%));margin:40px auto 64px;padding:36px;border:1px solid #d9c9e0;border-radius:20px;background:#f1e9f5;color:#35213e}
+.mml-location-tools .eyebrow{color:#70447e}
+.mml-location-tools h2{font:400 clamp(36px,4vw,54px)/1.05 'League Gothic',Impact,sans-serif;color:#35213e;margin:12px 0 16px}
+.mml-location-tools p{color:#62516a;font:400 15px/1.75 Inter,system-ui,sans-serif;max-width:65ch}
+.mml-location-tools>nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0 20px}
+.mml-location-tools>nav>a{display:grid;gap:10px;padding:22px;border:1px solid #d7c7df;border-radius:12px;background:#fffdfb;color:#55305f;text-decoration:none;min-width:0}
+.mml-location-tools>nav>a strong{font:650 15px/1.5 Inter,system-ui,sans-serif}
+.mml-location-tools>nav>a>span{color:#65566b;font:400 13px/1.6 Inter,system-ui,sans-serif}
+.mml-location-tools-all{font:650 14px/1.6 Inter,system-ui,sans-serif;color:#55305f;text-underline-offset:4px}
+.mml-location-tools a:focus-visible{outline:3px solid #754482;outline-offset:4px}
+.mml-location-tools>nav>a:hover{border-color:#9565a3;background:#fbf7fd}
+@media(max-width:1279px){.public-nav.website-nav.mml-toolkit-nav>nav,.public-nav.website-nav.mml-toolkit-nav>.mml-button{display:none}.public-nav.website-nav.mml-toolkit-nav>.website-menu{display:block}}
+@media(min-width:1280px){.public-nav.website-nav.mml-toolkit-nav>.website-menu{display:none}}
+@media(max-width:760px){.mml-location-tools{width:calc(100% - 40px);padding:24px;margin:28px auto 44px}.mml-location-tools>nav{grid-template-columns:1fr}.mml-location-tools>nav>a{padding:18px}}
+@media print{.mml-location-tools{display:none}}
