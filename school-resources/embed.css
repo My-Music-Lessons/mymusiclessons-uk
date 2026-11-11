@@ -1,0 +1,136 @@
+@font-face {
+  font-family: Inter;
+  src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "League Gothic";
+  src: url("/fonts/league-gothic-latin-wdth-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #fff8ea;
+  color: #30232a;
+  font:
+    400 16px/1.7 Inter,
+    Arial,
+    sans-serif;
+  color-scheme: light;
+}
+a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+[hidden] {
+  display: none !important;
+}
+.embed-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 5%;
+  background: #9acbe1;
+  border-bottom: 1px solid #30232a;
+}
+.embed-brand img {
+  display: block;
+  width: 150px;
+  height: auto;
+  max-width: 100%;
+}
+.embed-brand p {
+  font-size: 13px;
+}
+main > h1 {
+  font:
+    400 clamp(2.3rem, 7vw, 3.6rem)/1.1 "League Gothic",
+    Impact,
+    sans-serif;
+  margin: 28px 5%;
+}
+.resource-workspace {
+  padding: 25px 5%;
+  border: 0;
+}
+.resource-workspace-head h2 {
+  font:
+    400 34px/1.1 "League Gothic",
+    Impact,
+    sans-serif;
+}
+.resource-tool-layout {
+  grid-template-columns: minmax(0, 1fr);
+}
+.resource-workspace fieldset {
+  padding: 22px 16px;
+}
+.resource-workspace legend {
+  font-size: 25px;
+}
+.resource-tool-result {
+  margin-top: 10px;
+}
+footer {
+  padding: 25px 5%;
+  border-top: 1px solid #ad9d84;
+  font-size: 13px;
+}
+footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 700;
+}
+:focus-visible {
+  outline: 3px solid #176bc1;
+  outline-offset: 4px;
+}
+.product-text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+@media (max-width: 480px) {
+  .resource-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .embed-brand {
+    gap: 15px;
+  }
+  .embed-brand p {
+    font-size: 12px;
+  }
+  .embed-brand img {
+    width: 125px;
+  }
+}
+@media print {
+  header,
+  main > h1,
+  footer {
+    display: none !important;
+  }
+  .resource-workspace {
+    padding: 0 !important;
+  }
+  .resource-workspace-head {
+    display: none !important;
+  }
+}

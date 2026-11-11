@@ -1,0 +1,253 @@
+[data-proposal-tool] [hidden] {
+  display: none !important;
+}
+.proposal-import {
+  padding: 23px;
+  border: 1px solid #b29e7b;
+  background: #fff9e9;
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+.proposal-import label {
+  display: grid;
+  gap: 14px;
+  font-weight: 650;
+  font-size: 14px;
+}
+.proposal-import input {
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  min-height: 48px;
+}
+.proposal-import p {
+  font-size: 13px;
+  margin-top: 15px;
+}
+.proposal-import [role="status"]:empty {
+  display: none;
+}
+.proposal-steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 1000px;
+  margin-bottom: 32px;
+}
+.proposal-steps button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 60px;
+  padding: 15px;
+  border: 1px solid #30232a;
+  background: #fff9eb;
+  color: #30232a;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.proposal-steps button[aria-current] {
+  background: #ffdb2b;
+  box-shadow: 3px 3px 0 #30232a;
+}
+.proposal-steps button span {
+  font:
+    400 27px/1 "League Gothic",
+    Impact,
+    sans-serif;
+}
+.proposal-editor {
+  max-width: 1000px;
+}
+.proposal-editor .proposal-wide {
+  grid-column: 1/-1;
+}
+.proposal-editor fieldset > p {
+  font-size: 14px;
+  margin: 10px 0 24px;
+}
+.proposal-editor .proposal-field-label {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 27px 0 12px;
+}
+.proposal-editor select {
+  font-size: 16px;
+  min-height: 48px;
+  background: #fffdf7;
+  border: 1px solid #9f8f76;
+  color: #30232a;
+  width: 100%;
+  border-radius: 4px;
+  padding: 11px 13px;
+}
+.proposal-instruments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.proposal-instruments label {
+  position: relative;
+  cursor: pointer;
+}
+.proposal-instruments input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.proposal-instruments span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #a9987d;
+  background: #fffdf7;
+  font-size: 14px;
+  color: #30232a;
+}
+.proposal-instruments input:checked + span {
+  background: #a8d1e2;
+  border-color: #30232a;
+  box-shadow: 2px 2px 0 #30232a;
+}
+.proposal-instruments input:focus-visible + span {
+  outline: 3px solid #176bc1;
+  outline-offset: 3px;
+}
+.proposal-editor-actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.proposal-result {
+  max-width: 1050px;
+  border: 1.5px solid #30232a;
+  background: #fffdf7;
+  margin-top: 45px;
+  box-shadow: 5px 5px 0 #30232a;
+}
+.proposal-result-head {
+  padding: 28px;
+  background: #9dcee3;
+  border-bottom: 1px solid #30232a;
+}
+.proposal-result-head p {
+  font-size: 14px;
+}
+.proposal-result-head h2 {
+  margin-top: 18px !important;
+}
+.proposal-result [data-proposal-paper] {
+  padding: 32px;
+}
+.proposal-result h3 {
+  font:
+    400 35px/1.15 "League Gothic",
+    Impact,
+    sans-serif;
+  margin: 0 0 25px;
+  overflow-wrap: anywhere;
+}
+.proposal-result [data-proposal-paper] section {
+  padding: 22px 0;
+  border-top: 1px solid #30232a33;
+  break-inside: avoid;
+}
+.proposal-result h4 {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+.proposal-result [data-proposal-paper] p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.proposal-downloads {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 25px;
+  border-top: 1px solid #30232a33;
+}
+@media (max-width: 700px) {
+  .proposal-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .proposal-steps button {
+    font-size: 13px;
+  }
+  .proposal-instruments {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .proposal-editor-actions {
+    gap: 14px;
+  }
+  .proposal-result [data-proposal-paper],
+  .proposal-result-head {
+    padding: 23px;
+  }
+  .proposal-result h3 {
+    font-size: 30px;
+  }
+}
+@media print {
+  .proposal-result,
+  .proposal-result-head,
+  .proposal-result [data-proposal-paper] {
+    background: #fff !important;
+  }
+  .proposal-import,
+  .proposal-steps,
+  .proposal-editor,
+  .proposal-workspace > .resource-workspace-head,
+  .proposal-downloads {
+    display: none !important;
+  }
+  .proposal-result {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    max-width: none;
+  }
+  .proposal-result-head {
+    padding: 0 0 15px;
+    background: #fff;
+    border-color: #aaa;
+  }
+  .proposal-result-head h2 {
+    font-size: 28px !important;
+  }
+  .proposal-result [data-proposal-paper] {
+    padding: 0;
+  }
+  .proposal-result h3 {
+    font-size: 25px;
+  }
+  .proposal-result [data-proposal-paper] section {
+    padding: 12px 0;
+  }
+  .proposal-result [data-proposal-paper] p {
+    font-size: 10pt !important;
+    line-height: 1.6;
+  }
+  .proposal-result h4 {
+    font-size: 12pt;
+    margin-bottom: 8px;
+  }
+}
+
+@media print {
+  .proposal-result [data-proposal-paper] section {
+    background: #fff !important;
+  }
+  .proposal-result [data-proposal-paper] section:nth-of-type(4) {
+    break-before: page;
+  }
+}

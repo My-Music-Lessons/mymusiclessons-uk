@@ -1,0 +1,77 @@
+[data-launch-path-tool] [hidden] { display: none !important; }
+[data-launch-path-tool] { color: #30232a; }
+[data-launch-path-tool] .launch-path-self-report { padding: 16px 20px; border-left: 4px solid #176bc1; background: #fffaf0; font-size: 14px; }
+[data-launch-path-tool] .launch-path-layout { display: grid; grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); gap: 35px; align-items: start; }
+[data-launch-path-tool] .launch-path-controls { min-width: 0; }
+[data-launch-path-tool] .launch-path-controls label { display: flex; flex-direction: column; gap: 12px; color: #30232a; font: 650 16px/1.5 Inter, sans-serif; }
+[data-launch-path-tool] .launch-path-controls select { display: block; width: 100%; max-width: 100%; min-height: 48px; padding: 12px 36px 12px 13px; border: 1px solid #9f8f76; border-radius: 4px; background: #fffdf7; color: #30232a; font: 400 16px/1.5 Inter, sans-serif; }
+[data-launch-path-tool] .launch-path-question-intro { font-size: 14px; margin: 3px 0 24px; }
+[data-launch-path-tool] .launch-path-questions { display: grid; gap: 25px; }
+[data-launch-path-tool] .launch-path-question { min-width: 0; border-top: 1px solid #30232a33; padding-top: 22px; }
+[data-launch-path-tool] .launch-path-question label { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; margin-bottom: 12px; }
+[data-launch-path-tool] .launch-path-question-number { font: 400 29px/1.1 "League Gothic", Impact, sans-serif; color: #176bc1; }
+[data-launch-path-tool] .launch-path-question > p { font-size: 13px; color: #58483b; margin: 11px 0 0; line-height: 1.7; }
+[data-launch-path-tool] .launch-path-actions { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+[data-launch-path-tool] .launch-path-local-note, [data-launch-path-tool] .launch-path-nojs { font-size: 13px; margin-top: 20px; max-width: 65ch; }
+[data-launch-path-tool] .launch-path-result { border: 1.5px solid #30232a; border-radius: 4px; background: #fffaf0; box-shadow: 5px 5px 0 #30232a; min-width: 0; }
+[data-launch-path-tool] .launch-path-result-head { background: #a8d1e2; padding: 28px; border-bottom: 1.5px solid #30232a; }
+[data-launch-path-tool] .launch-path-result-head .eyebrow { font-size: 10px; letter-spacing: 0.07em; }
+[data-launch-path-tool] .launch-path-result-head h3 { color: #30232a; font: 400 clamp(2.4rem, 3.3vw, 3.4rem)/1.04 "League Gothic", Impact, sans-serif; margin: 18px 0; scroll-margin-top: 25px; }
+[data-launch-path-tool] .launch-path-result-head > p:last-child { margin-bottom: 0; font-size: 14px; }
+[data-launch-path-tool] .launch-path-route { list-style: none; padding: 0; margin: 0; }
+[data-launch-path-tool] .launch-path-route > li { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 17px; padding: 25px 28px; border-bottom: 1px solid #30232a44; break-inside: avoid; }
+[data-launch-path-tool] .launch-path-number { display: flex; align-items: center; justify-content: center; align-self: start; min-height: 40px; border: 1px solid #30232a; border-radius: 50%; background: #ffdc42; font: 400 25px/1 "League Gothic", Impact, sans-serif; }
+[data-launch-path-tool] .launch-path-route h4 { margin: 0 0 11px; font: 400 28px/1.15 "League Gothic", Impact, sans-serif; }
+[data-launch-path-tool] .launch-path-route h4 a { display: inline-flex; min-height: 44px; align-items: center; flex-wrap: wrap; color: #155da8; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+[data-launch-path-tool] .launch-path-route h4 a:hover { color: #30232a; }
+[data-launch-path-tool] .launch-path-route p { font-size: 13px; line-height: 1.75; margin: 10px 0 0; }
+[data-launch-path-tool] .launch-path-task { padding: 12px 14px; background: #f0eadb; }
+[data-launch-path-tool] .launch-path-record { padding: 23px 28px; background: #fff4c9; border-bottom: 1px solid #30232a44; }
+[data-launch-path-tool] .launch-path-record h4 { font: 400 26px/1.15 "League Gothic", Impact, sans-serif; margin: 0 0 12px; }
+[data-launch-path-tool] .launch-path-record > p { font-size: 13px; margin: 0 0 12px; }
+[data-launch-path-tool] .launch-path-record dl { display: grid; margin: 0; }
+[data-launch-path-tool] .launch-path-record dl > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr); gap: 15px; padding: 10px 0; border-top: 1px solid #30232a22; font-size: 12px; line-height: 1.6; }
+[data-launch-path-tool] .launch-path-record dt { font-weight: 650; }
+[data-launch-path-tool] .launch-path-record dd { margin: 0; }
+[data-launch-path-tool] .launch-path-result-foot { padding: 24px 28px; }
+[data-launch-path-tool] .launch-path-result-foot p { font-size: 12px; line-height: 1.75; margin: 0 0 16px; }
+[data-launch-path-tool] .launch-path-result-foot button { margin-top: 8px; }
+[data-launch-path-tool] .launch-path-stale { padding: 18px 28px; background: #ffdc42; font-size: 14px; font-weight: 650; margin: 0; border-bottom: 1px solid #30232a; }
+[data-launch-path-tool] .launch-path-print-url, [data-launch-path-tool] .launch-path-print-brand { display: none; }
+[data-launch-path-tool] :is(button, select, a):focus-visible { outline: 3px solid #176bc1; outline-offset: 4px; }
+[data-launch-path-tool] .launch-path-more { margin-top: 40px; }
+@media (max-width: 1100px) {
+  [data-launch-path-tool] .launch-path-layout { grid-template-columns: minmax(0, 1fr); }
+  [data-launch-path-tool] .launch-path-result { max-width: 900px; }
+}
+@media (max-width: 700px) {
+  [data-launch-path-tool] .launch-path-result-head, [data-launch-path-tool] .launch-path-record, [data-launch-path-tool] .launch-path-result-foot { padding: 23px 20px; }
+  [data-launch-path-tool] .launch-path-route > li { padding: 22px 18px; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; }
+  [data-launch-path-tool] .launch-path-number { min-height: 32px; font-size: 22px; }
+  [data-launch-path-tool] .launch-path-record dl > div { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  [data-launch-path-tool] .launch-path-actions { align-items: stretch; flex-direction: column; }
+  [data-launch-path-tool] .launch-path-route h4 { font-size: 26px; }
+  [data-launch-path-tool] .launch-path-stale { padding: 18px 20px; }
+}
+@media print {
+  [data-launch-path-tool] .launch-path-controls, [data-launch-path-tool] .launch-path-more, [data-launch-path-tool] button { display: none !important; }
+  [data-launch-path-tool] .launch-path-layout { display: block; }
+  [data-launch-path-tool] .launch-path-result { border: 0; box-shadow: none; background: white; max-width: none; }
+  [data-launch-path-tool] .launch-path-result-head { padding: 0 0 14px; background: white; border-bottom: 1px solid #999; }
+  [data-launch-path-tool] .launch-path-result-head h3 { font-size: 27pt; margin: 10px 0; }
+  [data-launch-path-tool] .launch-path-result-head > p:last-child { font-size: 10pt; }
+  [data-launch-path-tool] .launch-path-record { background: white; padding: 15px 0; }
+  [data-launch-path-tool] .launch-path-record h4 { font-size: 17pt; }
+  [data-launch-path-tool] .launch-path-record dl > div { grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr); padding: 5px 0; font-size: 9pt; }
+  [data-launch-path-tool] .launch-path-record > p { font-size: 9pt; }
+  [data-launch-path-tool] .launch-path-route > li { padding: 13px 0; gap: 12px; grid-template-columns: 28px minmax(0, 1fr); }
+  [data-launch-path-tool] .launch-path-number { min-height: 28px; font-size: 18pt; background: white; }
+  [data-launch-path-tool] .launch-path-route h4 { font-size: 19pt; margin: 0 0 4px; }
+  [data-launch-path-tool] .launch-path-route h4 a { min-height: 0; color: #30232a; text-decoration: none; }
+  [data-launch-path-tool] .launch-path-route p { font-size: 9pt; line-height: 1.5; margin: 6px 0; }
+  [data-launch-path-tool] .launch-path-task { background: white; padding: 0; }
+  [data-launch-path-tool] .launch-path-print-url, [data-launch-path-tool] .launch-path-print-brand { display: block; font-size: 8pt; overflow-wrap: anywhere; }
+  [data-launch-path-tool] .launch-path-result-foot { padding: 15px 0 0; }
+  [data-launch-path-tool] .launch-path-result-foot p { font-size: 8pt; line-height: 1.5; margin-bottom: 9px; }
+  [data-launch-path-tool] .launch-path-stale { background: white; padding: 12px 0; font-size: 10pt; }
+}

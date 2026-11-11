@@ -1,0 +1,1 @@
+export const diaryAccountConfig = {"enabled":true,"url":"https://useggfrihwmkihuxgewp.supabase.co","publishableKey":"sb_publishable_Poag6bZy-jkVrVr6HNwl4A_PKRPIUfP","authReturnUrl":"https://boomos.co.uk/school-music-diary/"};
